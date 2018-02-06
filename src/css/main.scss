@@ -26,7 +26,7 @@
         }
 
         .text {
-            padding: 22px 0 0 83px;
+            padding: 19px 0 0 83px;
 
             .title {
                 font-size: 24px;
@@ -38,7 +38,8 @@
             .subtitle {
                 font-size: 13px;
                 color: rgb(136, 41, 108);
-                line-height: 2.154;
+                line-height: 1;
+                display: block;
             }
         }
     }
@@ -59,11 +60,16 @@
             }
         }
     }
+
     .icons {
         right: 40px;
 
         li {
             padding: 0 2px;
+
+            &:nth-child(3) {
+                margin-right: 24px;
+            }
 
             a {
                 font-size: 16px;
@@ -72,11 +78,14 @@
                 line-height: 1.563;
                 text-align: center;
                 padding-left: 9px;
-            }
-        }
+                max-width: none;
 
-        li:nth-child(3) {
-            margin-right: 24px;
+                img {
+                    max-width: none;
+                    width: 21px;
+                    height: 21px;
+                }
+            }
         }
 
         .circle {
@@ -98,6 +107,22 @@
                 background: rgb(184, 20, 76);
                 color: white;
             }
+
+            &.instagram, &.linkedin, &.facebook, &.is-active, &:hover {
+                border: none;
+            }
+
+            &.instagram {
+                background: $instagram;
+            }
+    
+            &.linkedin {
+                background: $linkedin;
+            }
+    
+            &.facebook {
+                background: $facebook;
+            }
         }
     }
 }
@@ -106,6 +131,44 @@
     height: 350px;
     width: 100%;
     @include background(180deg, #d2205a, 0%, #632b9c, 100%);
+}
+
+.projects {
+    margin: 50px 100px;
+
+    .grid-x {
+        margin-bottom: 18px;
+        
+        .cell {
+            height: 360px;
+            border-radius: 3px;
+            background-color:  #729da0;
+    
+            .title, .description {
+                color: white;
+                position: relative;
+                margin-left: 31px;
+                z-index: 1;
+            }
+    
+            .title {
+                font-size: 30px;
+                font-weight: bold;
+                line-height: 2.442;
+                margin-top: 250px;
+            }
+    
+            .description {
+                font-size: 18px;
+                line-height: 4.071;
+                font-weight: 300;
+                bottom: 60px;
+            }
+        }
+    }
+
+    
+    
 }
   
   
