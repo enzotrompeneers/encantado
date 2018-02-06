@@ -1,0 +1,115 @@
+@import 'foundation';
+@import 'variables';
+@import 'mixins';
+
+
+
+.body {
+    font-family: $font-primary;
+}
+
+.header {
+    height: 109px;
+    background: white;
+    align-items: center;
+
+    .logo {
+        position: sticky;
+        left: 40px;
+        width: 240px;
+        height: 70px;
+
+        .image {
+            width: 70px;
+            height: 70px;
+            float: left;
+        }
+
+        .text {
+            padding: 22px 0 0 83px;
+
+            .title {
+                font-size: 24px;
+                color: rgb(93, 92, 92);
+                font-weight: bold;
+                line-height: 1.167;
+            }
+    
+            .subtitle {
+                font-size: 13px;
+                color: rgb(136, 41, 108);
+                line-height: 2.154;
+            }
+        }
+    }
+
+    .menu {
+        li {
+            a {
+                font-size: 18px;
+                color: #212121;
+                font-weight: bold;
+                text-transform: uppercase;
+                line-height: 1.389;
+                text-align: center;
+
+                &.is-active, &:hover {
+                    color: rgb(184, 20, 76);
+                }
+            }
+        }
+    }
+    .icons {
+        right: 40px;
+
+        li {
+            padding: 0 2px;
+
+            a {
+                font-size: 16px;
+                color: rgb(33, 33, 33);
+                text-transform: uppercase;
+                line-height: 1.563;
+                text-align: center;
+                padding-left: 9px;
+            }
+        }
+
+        li:nth-child(3) {
+            margin-right: 24px;
+        }
+
+        .circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 16px;
+            line-height: 40px;
+            text-align: center;
+            background: white;
+            border: 1px solid rgb(228, 228, 228);
+            text-transform: uppercase;
+            display: inherit;
+            align-items: center;
+            color: #212121;
+            font-weight: 400;
+
+            &.is-active, &:hover {
+                background: rgb(184, 20, 76);
+                color: white;
+            }
+        }
+    }
+}
+
+.hero-slider {
+    height: 350px;
+    width: 100%;
+    @include background(180deg, #d2205a, 0%, #632b9c, 100%);
+}
+  
+  
+
+    
+
+  
