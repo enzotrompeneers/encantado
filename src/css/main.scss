@@ -2,8 +2,6 @@
 @import 'variables';
 @import 'mixins';
 
-
-
 .body {
     font-family: $font-primary;
 }
@@ -138,38 +136,39 @@
 
     .grid-x {
         margin-bottom: 18px;
-        
+
         .cell {
-            height: 360px;
+            position: relative;
+            height: calc(33.33333% - 1.875rem);
+            padding-bottom: calc(33.33333%*0.75 - 1.875rem*0.75);
             border-radius: 3px;
             background-color:  #729da0;
     
             .title, .description {
                 color: white;
-                position: relative;
-                margin-left: 31px;
+                position: absolute;
                 z-index: 1;
+                left: 30px;
             }
     
             .title {
                 font-size: 30px;
                 font-weight: bold;
-                line-height: 2.442;
-                margin-top: 250px;
+                line-height: 30px;
+                bottom: 50px;
             }
     
             .description {
                 font-size: 18px;
                 line-height: 4.071;
                 font-weight: 300;
-                bottom: 60px;
+                bottom: 0;
             }
         }
-    }
-
-    
-    
+    }   
 }
+
+
   
   
 
