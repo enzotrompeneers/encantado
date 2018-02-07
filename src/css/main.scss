@@ -214,6 +214,7 @@
             }
         }
     }
+
     .small-5 {
         width: calc(41.66667% - 100px);
         margin-right: 100px;
@@ -235,11 +236,20 @@
     h4 {
         text-align: center;
         padding-top: 55px;
-        padding-bottom: 50px;
         color: white;
         font-size: 36px;
         font-weight: 800;
         line-height: 34px;
+    }
+
+    hr {
+        margin-top: -18px;
+        width: 155px;
+        height: 10px;
+        background: #ebe2f5;
+        border-bottom: none;
+        margin-bottom: 50px;
+        opacity: 0.22;
     }
 
     .grid-x {
@@ -248,9 +258,7 @@
 
         .cell {
             border-radius: 4px;
-            border-width: 1px;
-            border-color:  #d5a7bd;
-            border-style: solid;
+            border: 1px solid #d5a7bd;
             width: 368px;
             height: 146px;
             margin: 0 auto;
@@ -276,6 +284,7 @@
                 dd {
                     display: inline-block;
                     color:  #ede8f2;
+
                     a {
                         color:  #ede8f2;
                         font-size: 16px;
@@ -287,8 +296,84 @@
             }
         }
     }
+}
 
-    
+.why {
+    padding-top: 100px;
+    width: 100%;
+    height: 400px;
+
+    h4 {
+        color:  #212121;
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 34px;
+    }
+
+    hr {
+        margin: -18px 0 0 0;
+        width: 275px;
+        height: 10px;
+        background: #ebe2f5;
+        text-align: left;
+        border-bottom: none;
+    }
+
+    .grid-x {
+        width: $container-large;
+        margin: 0 auto;
+
+        .cell {
+            width: 368px;
+            height: 146px;
+            margin: 0 auto;
+            padding-top: 32px;
+            padding-left: 25px;
+
+            ul {
+                list-style-type: none;
+
+                li {
+                    color:  #5d5b5b;
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 24px;
+                }
+            }
+
+            &.checkmark {
+                ul {
+                    li:before {
+                        content: ' ';
+                        float: left;
+                        margin-top: 3px;
+                        margin-left: -2.5em;
+                        width: 25px;
+                        height: 25px;
+                        display: block;
+                        background: #cf84a8;
+                        //background: url("../../dist/graphics/svg/noun_1016411.svg") center center no-repeat;
+                    }
+                }
+            }
+
+            &.cross {
+                ul {
+                    li:before {
+                        content: ' ';
+                        float: left;
+                        margin-top: 3px;
+                        margin-left: -2.5em;
+                        width: 25px;
+                        height: 25px;
+                        display: block;
+                        background: #9b6895;
+                        //background: url("../../dist/graphics/svg/noun_1016411.svg") center center no-repeat;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
