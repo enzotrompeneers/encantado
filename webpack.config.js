@@ -1,17 +1,16 @@
 path = require('path');
 webpack = require('webpack');
+HtmlWebpackPlugin = require('html-webpack-plugin');
 ExtractTextPlugin = require('extract-text-webpack-plugin');
 extractPlugin = new ExtractTextPlugin({
     filename: 'main.css',
 });
-HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: './src/js/app.js', 
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
-        //publicPath: '/dist'
     },
     module: {
         rules: [
@@ -44,7 +43,6 @@ module.exports = {
                         options: {
                             name: '[name].[ext]',
                             outputPath: 'graphics/'
-                            
                         }
                     }
                 ]
