@@ -128,7 +128,7 @@
 .hero-slider {
     height: 350px;
     width: 100%;
-    @include background(180deg, #d2205a, 0%, #632b9c, 100%);
+    @include background(180deg, -90deg, #d2205a, 0%, #632b9c, 100%);
 }
 
 .projects {
@@ -376,10 +376,31 @@
     }
 }
 
-
-  
-  
-
+.contact {
+    height: 628px;
+    width: 100%;
+    @include background(-139deg, 229deg, #86ddcd, 20%, #b4db63, 80%);
     
+    .small-5 {
+        background: purple;
 
-  
+        h4 {
+            font-size: 32px;
+            color: rgb(158, 218, 127);
+            line-height: 0.938;
+            z-index: 1;
+
+            &.above {
+                font-size: 32px;
+                color: white;
+                margin-top: -41px;
+            }
+        }
+    }
+
+    .small-7 {
+        background: cyan;
+
+    }
+
+}

@@ -1,8 +1,8 @@
-@mixin background($degree, $color1, $percent1, $color2, $percent2 ) {
-    background: -webkit-linear-gradient($degree, $color1 $percent1, $color2 $percent2);
-    background: -moz-linear-gradient($degree, $color1 $percent1, $color2 $percent2);
-    background: -o-linear-gradient($degree, $color1 $percent1, $color2 $percent2);
-    background: -ms-linear-gradient($degree, $color1 $percent1, $color2 $percent2);
-    background: linear-gradient($degree - 280, $color1 $percent1, $color2 $percent2);
+@mixin background($degree1, $degree2, $color1, $percent1, $color2, $percent2 ) {
+    background: -webkit-linear-gradient($degree1, $color1 $percent1, $color2 $percent2);
+    background: -moz-linear-gradient($degree1, $color1 $percent1, $color2 $percent2);
+    background: -o-linear-gradient($degree1, $color1 $percent1, $color2 $percent2);
+    background: -ms-linear-gradient($degree1, $color1 $percent1, $color2 $percent2);
+    background: linear-gradient($degree2, $color1 $percent1, $color2 $percent2);
 }
 
