@@ -37,6 +37,18 @@ module.exports = {
                 use: ['html-loader']
             },
             {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: 'file-loader', 
+                        options: {
+                            name: '[name].[ext]'
+                        }
+                    }
+                ],
+                exclude: path.resolve(__dirname, 'src/index.html' )
+            },
+            {
                 test: /\.(jpg|png|svg)$/,
                 use: [
                     {
@@ -53,7 +65,6 @@ module.exports = {
     plugins: [
         extractPlugin,
         new webpack.optimize.UglifyJsPlugin({
-            // ...
         }),
         new HtmlWebpackPlugin({
             template: 'src/index.html'

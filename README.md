@@ -22,7 +22,7 @@
 - `npm install 'foundation-sites' –save`
 
 - in **package.json**, add these lines:  
-``` html
+``` javascript
  "scripts": {
     "build": "webpack-dev-server",
     "build:prod": "webpack -p"
@@ -30,7 +30,7 @@
 ```
 
 - create **webpack.config.json**, add these lines:  
-``` html
+``` javascript
 path = require('path');
 webpack = require('webpack');
 HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -70,6 +70,18 @@ module.exports = {
                 use: ['html-loader']
             },
             {
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: 'file-loader', 
+                        options: {
+                            name: '[name].[ext]'
+                        }
+                    }
+                ],
+                exclude: path.resolve(__dirname, 'src/index.html' )
+            },
+            {
                 test: /\.(jpg|png|svg)$/,
                 use: [
                     {
@@ -86,7 +98,6 @@ module.exports = {
     plugins: [
         extractPlugin,
         new webpack.optimize.UglifyJsPlugin({
-            // ...
         }),
         new HtmlWebpackPlugin({
             template: 'src/index.html'
