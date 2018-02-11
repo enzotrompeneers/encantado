@@ -63,6 +63,10 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jquery: 'jquery'
+        }),
         extractPlugin,
         new webpack.optimize.UglifyJsPlugin({
         }),

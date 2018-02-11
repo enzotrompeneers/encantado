@@ -8,8 +8,8 @@
     "build": "webpack-dev-server",
     "build:prod": "webpack -p"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "creativos",
+  "license": "UNLICENSED",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -27,6 +27,7 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
-    "foundation-sites": "^6.4.4-rc1"
+    "foundation-sites": "^6.4.4-rc1",
+    "jquery": "^3.3.1"
   }
 }
