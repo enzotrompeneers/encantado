@@ -1,9 +1,9 @@
-path = require('path');
-webpack = require('webpack');
-HtmlWebpackPlugin = require('html-webpack-plugin');
-CleanWebpackPlugin = require('clean-webpack-plugin');
-ExtractTextPlugin = require('extract-text-webpack-plugin');
-extractPlugin = new ExtractTextPlugin({
+let path = require('path');
+let webpack = require('webpack');
+let HtmlWebpackPlugin = require('html-webpack-plugin');
+let CleanWebpackPlugin = require('clean-webpack-plugin');
+let ExtractTextPlugin = require('extract-text-webpack-plugin');
+let extractPlugin = new ExtractTextPlugin({
     filename: 'main.css',
 });
 
@@ -65,14 +65,19 @@ module.exports = {
     plugins: [
         new webpack.ProvidePlugin({
             $: 'jquery',
-            jquery: 'jquery'
+            jquery: 'jquery',
+            jQuery: 'jquery',
+            "window.jQuery": "jquery"
         }),
+        
         extractPlugin,
         new webpack.optimize.UglifyJsPlugin({
         }),
+
         new HtmlWebpackPlugin({
             template: 'src/index.html'
         }),
+        
         new CleanWebpackPlugin(['dist'])
     ]
 };

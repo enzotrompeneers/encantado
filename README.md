@@ -12,15 +12,16 @@
 - `npm install babel-core babel-loader babel-preset-es2015 --save-dev` (babel compiler, transpiling js files and preset es15 plugins)
 - `npm install html-loader html-webpack-plugin file-loader --save-dev` (minimize html, create html file and emit the required object as file and to return its public URL)
 - `npm install clean-webpack-plugin --save-dev` (remove dist folder and create new one without unused files because of changes)
-- `npm install 'jquery' –-save` (install jquery)
-- `npm install 'foundation-sites' –-save` (install foundation)
-
+- `npm install jquery –-save` (install jquery)
+- `npm install foundation-sites –-save` (install foundation)
+- `npm install particles.js --save` (install particles)
+- `npm install typed.js --save` (install auto typer)
 
 
 ## Quick install
 - `npm init -y`
 - `npm install --save-dev webpack webpack-dev-server sass-loader node-sass css-loader extract-webpack-plugin babel-core babel-loader babel-preset-es2015 html-loader html-webpack-plugin file-loader clean-webpack-plugin`
-- `npm install --save foundation-sites jquery`
+- `npm install --save jquery foundation-sites particles.js typed.js`
 
 - in **package.json**, add these lines:  
 ``` javascript

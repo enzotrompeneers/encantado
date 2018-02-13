@@ -139,10 +139,38 @@ h4 {
     }
 }
 
+
 .hero-slider {
     height: 350px;
     width: 100%;
     @include background(180deg, -90deg, #d2205a, 0%, #632b9c, 100%);
+    line-height: 350px;
+    position: relative;
+
+    #particles-js{
+        width: 100%;
+        height: 100%;
+    } 
+    .container {
+        width: 800px;
+        position: absolute;
+        top: 20%;
+        left: 25%;
+
+        h1 {
+            color: white;
+            font-size: 62px;
+            font-weight: 900;
+            line-height: 74px;
+        }
+    
+        p {
+            color:  white;
+            font-size: 26px;
+            font-weight: 300;
+            line-height: 80px;
+        }
+    }
 }
 
 .projects {
@@ -183,7 +211,7 @@ h4 {
 }
 
 .intro {
-    margin-bottom: 100px;
+    padding-bottom: 100px;
 
     .small-7 {
         width: calc(58.33333% - 100px);
@@ -230,6 +258,8 @@ h4 {
         margin-right: 100px;
         text-align: center;
         padding-top: 75px;
+        position: relative;
+
 
         img {
             width: 383px;
@@ -312,15 +342,18 @@ h4 {
     h4 {
         color:  #212121;
         line-height: 34px;
-    }
+        position: absolute;
+        z-index: 1;
 
-    hr {
-        margin: -18px 0 0 0;
-        width: 275px;
-        height: 10px;
-        background: #ebe2f5;
-        text-align: left;
-        border-bottom: none;
+        &:after {
+            content: "";
+            position: absolute;
+            border-bottom: 10px solid #ebe2f5;
+            width: 100%;
+            bottom: 0;
+            display: block;
+            z-index: -1;
+        }
     }
 
     .grid-x {
@@ -606,7 +639,20 @@ h4 {
                 font-size: 32px;
                 font-weight: 800;
                 line-height: 34px;
+                position: relative;
+                z-index: 1;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    border-bottom: 10px solid #ebe2f5;
+                    width: 100%;
+                    bottom: 0;
+                    display: block;
+                    z-index: -1;
+                }
             }
+            
         }
     }
 
@@ -624,7 +670,7 @@ h4 {
 
         a {
             color: #8f2782;
-            text-decoration: underline;
+            text-decoration: none;
         }
     }
 
@@ -636,4 +682,3 @@ h4 {
         text-decoration: underline;
     }
 }
-  
