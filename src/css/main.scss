@@ -6,6 +6,20 @@
     font-family: $font-primary;
 }
 
+h2 {
+    font-size: 35px;
+    color: #212121;
+    font-weight: bold;
+    line-height: 1.167;
+}
+
+h4 {
+    font-size: 32px;
+    color: white;
+    font-weight: 800;
+    line-height: 34px;
+}
+
 .header {
     height: 109px;
     background: white;
@@ -182,10 +196,6 @@
             text-align: left;
 
             h2 {
-                font-size: 35px;
-                color: #212121;
-                font-weight: bold;
-                line-height: 1.167;
                 margin-bottom: 45px;
             }
 
@@ -236,10 +246,6 @@
     h4 {
         text-align: center;
         padding-top: 55px;
-        color: white;
-        font-size: 36px;
-        font-weight: 800;
-        line-height: 34px;
     }
 
     hr {
@@ -305,8 +311,6 @@
 
     h4 {
         color:  #212121;
-        font-size: 32px;
-        font-weight: 800;
         line-height: 34px;
     }
 
@@ -351,8 +355,7 @@
                         width: 25px;
                         height: 25px;
                         display: block;
-                        background: #cf84a8;
-                        //background: url("graphics/svg/noun_1016411.svg") center center no-repeat;
+                        background: url("../graphics/svg/noun_1016411.svg") center center no-repeat;
                     }
                 }
             }
@@ -364,11 +367,10 @@
                         float: left;
                         margin-top: 3px;
                         margin-left: -2.5em;
-                        width: 25px;
-                        height: 25px;
+                        width: 22px;
+                        height: 22px;
                         display: block;
-                        background: #9b6895;
-                        //background: url("graphics/svg/noun_1016411.svg") center center no-repeat;
+                        background: url("../graphics/svg/cross.svg") center center no-repeat;
                     }
                 }
             }
@@ -379,28 +381,259 @@
 .contact {
     height: 628px;
     width: 100%;
+    padding: 0 100px;
     @include background(-139deg, 229deg, #86ddcd, 20%, #b4db63, 80%);
     
     .small-5 {
-        background: purple;
+        padding-top: 144px;
+        margin: 0 auto;
+        width: 360px;
 
         h4 {
-            font-size: 32px;
             color: rgb(158, 218, 127);
             line-height: 0.938;
             z-index: 1;
 
             &.above {
-                font-size: 32px;
                 color: white;
                 margin-top: -41px;
             }
         }
+
+        p {
+            padding-top: 30px;
+            color: white;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 30px;
+            text-align: left;
+            text-shadow: 0px 1px 2px rgba(113, 149, 39, 0.23);
+
+            span {
+                content: ' ';
+                float: right;
+                width: 100px;
+                height: 100px;
+                display: block;
+                background: url("../graphics/svg/noun_864507.svg") center center no-repeat;
+                transform: rotate(120deg) scaleX(-1);
+                margin-top: -30px;
+                margin-right: -50px;
+            }
+        }
+
+        
     }
 
     .small-7 {
-        background: cyan;
+        border-radius: 3px;
+        background-color: white;
+        box-shadow: 0px 2px 4px 0px rgba(46, 46, 46, 0.1);
+        width: 670px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+        text-align: center;
+        position: relative;
+        margin-bottom: 100px;
 
+        h4 {
+            padding-top: 40px;
+            color:  #272727;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        hr {
+            margin-top: -18px;
+            width: 305px;
+            height: 10px;
+            background: #eff8dd;
+            border-bottom: none;
+        }
+
+        form {
+            label {
+                font-size: 18px;
+                color: rgb(81, 80, 80);
+                line-height: 1.333;
+                padding-bottom: 13px;
+                text-align: left;
+                margin-left: 15px;
+            }
+            
+            input {
+                border-radius: 3px;
+                background-color: rgb(245, 245, 245);
+                width: 285px;
+                height: 39px;
+                margin: 0 auto;
+                border: none;
+            }
+
+            hr {
+                display: block;
+                @include background(180deg, -90deg, #77d5cd, 0%, #92ddb3, 100%);
+                height: 3px;
+                margin-top: -3px;
+                width: 285px;
+                margin-bottom: 0;
+                margin-bottom: 20px;
+            }
+
+            select {
+                margin-top: 13px;
+            }
+
+            textarea {
+                resize: none;
+                margin-top: 13px;
+            }
+
+            .buttons {
+
+                .circle {
+                    border-radius: 50%;
+                    background: #7364f5;
+                    display: block;
+                    position: absolute;
+                }
+                
+                .prev{
+                    .circle {
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        bottom: -20px;
+                        left: calc(50% - 36px);
+                        margin-left: -45px;
+                    }
+        
+                    img {
+                        width: 27px;
+                        height: 27px;
+                    }
+                }
+
+                .next {
+                    .circle {
+                        width: 72px;
+                        height: 72px;
+                        line-height: 72px;
+                        bottom: -36px;
+                        left: calc(50% - 36px);
+                    }
+        
+                    img {
+                        transform:scaleX(-1);
+                        width: 42px;
+                        height: 42px;
+                    }
+                }
+                .submit {
+                    .circle {
+                        width: 72px;
+                        height: 72px;
+                        line-height: 72px;
+                        bottom: -36px;
+                        left: calc(50% - 36px);
+                    }
+        
+                    img {
+                        width: 42px;
+                        height: 42px;
+                    }
+                }
+            }
+        }
+
+        form.multi-form {
+            padding: 20px;
+            
+            fieldset:not(.active) {
+              display: none;
+            }
+            
+            fieldset.active:first-of-type ~ .buttons {
+                .prev,
+                .submit {
+                display: none;
+                }
+            }
+        
+            fieldset.active:not(:last-of-type) ~ .buttons {
+                .submit {
+                display: none;
+                }
+            }
+        
+            fieldset.active:last-of-type ~ .buttons {
+                .next {
+                display: none;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background: white;
+    width: 100%;
+    height: 300px;
+    padding:  55px 150px;
+
+    .small-1, .small-3 {
+        padding-top: 72px;
     }
 
+    .logo {
+        left: 40px;
+        width: 240px;
+        height: 70px;
+        margin-left: -67px;
+
+        .image {
+            width: 50px;
+            height: 50px;
+            float: left;
+        }
+
+        .text {
+            padding: 10px 0 0 65px;
+
+            .title {
+                color:  #212121;
+                font-size: 32px;
+                font-weight: 800;
+                line-height: 34px;
+            }
+        }
+    }
+
+    p {
+        color:  #5d5b5b;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+
+        b {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px;
+        }
+
+        a {
+            color: #8f2782;
+            text-decoration: underline;
+        }
+    }
+
+    a {
+        color:  #5d5b5b;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        text-decoration: underline;
+    }
 }
+  
