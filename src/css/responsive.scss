@@ -1,0 +1,26 @@
+$breakpoints: (
+  small: $container-small,
+  medium: $container-medium,
+  large: $container-large,
+  xlarge: $container-xlarge,
+  xxlarge: $container-xxlarge
+);
+
+// small only 420px
+@media screen and (max-width: $container-small) {
+
+}
+
+// medium and up 768px
+@media screen and (min-width: $container-medium) {
+
+}
+
+// large and up 980px
+@media screen and (min-width: $container-large) {
+    /*
+    .linkedin, .instagram, .facebook {
+        display: none;
+    }
+    */
+}

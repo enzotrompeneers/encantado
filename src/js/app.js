@@ -1,6 +1,8 @@
 import 'jquery';
 import Typed from 'typed.js';
+import foundation from 'foundation-sites';
 import '../css/main.scss';
+
 
 // START: multi form
 $('form.multi-form a.next').click(function() {
@@ -24,3 +26,6 @@ let typer = new Typed('.typer', {
 });
 // END: typed
 
+// START: foundation
+$(document).foundation()
+// END: foundation

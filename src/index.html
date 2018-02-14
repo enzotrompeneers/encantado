@@ -96,8 +96,6 @@
 	</div>
 </section>
 
-
-
 <section class="intro grid-x">
 	<div id="triangle-grey"></div>
 	<div class="small-7 cell">
@@ -225,23 +223,23 @@
 		<h4>Pide su presupuesto</h4>
 		<hr>
 
-		<form class="multi-form" data-abide novalidate action="#" method="get">
+		<form id="contact-form" class="multi-form" data-abide novalidate action="#contact-form" method="get">
+			<!-- Mensaje de error
 			<div data-abide-error class="alert callout" style="display: none;">
 				<p><i class="fi-alert"></i>Mensaje de error</p>
 			</div>
-
+			-->
 			<fieldset class="active">
 				<div class="grid-x">
 					<div class="small-6 cell">
 						<label for="nombre">Nombre*</label>
 						<input type="text" id="nombre" name="nombre" required pattern="[a-zA-Z\s]+">
-						<hr>
+						
 					</div>
 
 					<div class="small-6 cell">
 						<label for="apellido">Apellido(s)*</label>
 						<input type="text" id="apellido" name="apellido" required pattern="[a-zA-Z\s]+">
-						<hr>
 					</div>
 				</div>
 
@@ -249,13 +247,11 @@
 					<div class="small-6 cell">
 						<label for="email">E-mail*</label>
 						<input type="text" id="email" name="email" required pattern="email">
-						<hr>
 					</div>
 
 					<div class="small-6 cell">
 						<label for="telefono">Teléfono*</label>
 						<input type="text" id="telefono" name="telefono" required pattern="number">
-						<hr>
 					</div>
 				</div>
 
@@ -263,13 +259,11 @@
 					<div class="small-6 cell">
 						<label for="empresa">Empresa</label>
 						<input type="text" id="empresa" name="empresa">
-						<hr>
 					</div>
 
 					<div class="small-6 cell">
 						<label for="localidad">Localidad*</label>
 						<input type="text" id="localidad" name="localidad" required pattern="[a-zA-Z\s]+">
-						<hr>
 					</div>
 				</div>
 			</fieldset>
@@ -278,7 +272,8 @@
 				<div class="grid-x">
 					<div class="small-12 cell">
 						<label for="categoria">Categoría*
-							<select id="categoria" name="categoria">
+							<select id="categoria" name="categoria" required>
+								<option value=""></option>
 								<option value="immo">immo</option>
 								<option value="hotel">hotel</option>
 								<option value="ventas">ventas</option>
@@ -303,7 +298,7 @@
 					</div>
 				</a>
 
-				<a class="next">
+				<a class="next" form="myform">
 					<div class="circle">
 						<img src="graphics/svg/noun_1086550.svg" alt="Next" type="image/svg+xml"/>
 					</div>

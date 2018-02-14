@@ -2976,19 +2976,20 @@ select {
     background-image: none; }
 
 .is-invalid-input:not(:focus) {
-  border-color: #cc4b37;
+  border-bottom: 5px solid #cc4b37 !important;
   background-color: #f9ecea; }
   .is-invalid-input:not(:focus)::-webkit-input-placeholder {
-    color: #cc4b37; }
+    border-bottom: 5px solid #cc4b37 !important;
+   }
   .is-invalid-input:not(:focus)::-moz-placeholder {
-    color: #cc4b37; }
+    border-bottom: 5px solid #cc4b37 !important;}
   .is-invalid-input:not(:focus):-ms-input-placeholder {
-    color: #cc4b37; }
+    border-bottom: 5px solid #cc4b37 !important;}
   .is-invalid-input:not(:focus)::placeholder {
-    color: #cc4b37; }
+    border-bottom: 5px solid #cc4b37 !important; }
 
 .is-invalid-label {
-  color: #cc4b37; }
+  color: #cc4b37 !important; }
 
 .form-error {
   display: none;
