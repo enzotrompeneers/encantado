@@ -1,6 +1,7 @@
 import 'jquery';
 import Typed from 'typed.js';
 import foundation from 'foundation-sites';
+import ajaxForm from 'jquery-form';
 import '../css/main.scss';
 
 
@@ -29,3 +30,10 @@ let typer = new Typed('.typer', {
 // START: foundation
 $(document).foundation()
 // END: foundation
+
+// START: form submit message (when valid)
+$('#contact-form').ajaxForm(function() { 
+  $('#contact-form').clearForm();
+  $("#callout").removeClass("hide");
+}); 
+// END: form submit message

@@ -502,8 +502,6 @@ h4 {
                 margin-right: -50px;
             }
         }
-
-        
     }
 
     .small-7 {
@@ -517,6 +515,13 @@ h4 {
         text-align: center;
         position: relative;
         margin-bottom: 100px;
+
+        .callout {
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            padding-top: 30px;
+        }
 
         h4 {
             padding-top: 40px;
@@ -548,7 +553,10 @@ h4 {
                 background-color: rgb(245, 245, 245);
                 width: 285px;
                 height: 39px;
-                margin: 0 auto;
+                margin-top: 0;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 13px;
                 border: none;
                
             }
@@ -557,7 +565,7 @@ h4 {
                 background-image: linear-gradient(-90deg, #77d5cd 0%, #92ddb3 100%);
                 background-repeat: no-repeat;
                 background-position: 0 calc(100% + 3px),0 0;
-                background-size: 100% 5px;
+                background-size: 100% 4px;
                 box-shadow: none;
                 border-bottom: 5px solid #77d5cd;
                 border-color: transparent;
@@ -565,17 +573,17 @@ h4 {
               }
 
             select {
+                border-bottom: 3px solid #77d5cd;
+            }
+
+            select, textarea {
                 margin-top: 13px;
                 border-radius: 3px;
                 background-color: rgb(245, 245, 245);
-                border-bottom: 3px solid #77d5cd;
             }
 
             textarea {
                 resize: none;
-                margin-top: 13px;
-                border-radius: 3px;
-                background-color: rgb(245, 245, 245);
             }
 
             .buttons {

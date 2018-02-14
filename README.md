@@ -11,17 +11,19 @@
 - `npm install sass-loader node-sass css-loader extract-text-webpack-plugin --save-dev` (loads sass files and compiles to css and bundle the files)
 - `npm install babel-core babel-loader babel-preset-es2015 --save-dev` (babel compiler, transpiling js files and preset es15 plugins)
 - `npm install html-loader html-webpack-plugin file-loader --save-dev` (minimize html, create html file and emit the required object as file and to return its public URL)
-- `npm install clean-webpack-plugin --save-dev` (remove dist folder and create new one without unused files because of changes)
+- `npm install clean-webpack-plugin --save-dev` (remove dist folder and create new one without unused files because of changes)  
+
 - `npm install jquery –-save` (install jquery)
 - `npm install foundation-sites –-save` (install foundation)
 - `npm install particles.js --save` (install particles)
 - `npm install typed.js --save` (install auto typer)
+- `npm install jquery-form --save` (install to use AJAX in forms)
 
 
 ## Quick install
 - `npm init -y`
 - `npm install --save-dev webpack webpack-dev-server sass-loader node-sass css-loader extract-webpack-plugin babel-core babel-loader babel-preset-es2015 html-loader html-webpack-plugin file-loader clean-webpack-plugin`
-- `npm install --save jquery foundation-sites particles.js typed.js`
+- `npm install --save jquery foundation-sites particles.js typed.js jquery-form`
 
 - in **package.json**, add these lines:  
 ``` javascript
