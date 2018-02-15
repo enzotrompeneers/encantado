@@ -20,6 +20,7 @@
      * 3. Prevent adjustments of font size after orientation changes in
      *    IE on Windows Phone and in iOS.
      */
+@import 'variables';
 html {
   font-family: sans-serif;
   /* 1 */
@@ -5194,43 +5195,43 @@ a.thumbnail {
 .invisible {
   visibility: hidden; }
 
-@media screen and (max-width: 39.9375em) {
+@media screen and (max-width: $container-small) {
   .hide-for-small-only {
     display: none !important; } }
 
-@media screen and (max-width: 0em), screen and (min-width: 40em) {
+@media screen and (max-width: 0em), screen and (min-width: $container-small) {
   .show-for-small-only {
     display: none !important; } }
 
-@media print, screen and (min-width: 40em) {
+@media print, screen and (min-width: $container-small) {
   .hide-for-medium {
     display: none !important; } }
 
-@media screen and (max-width: 39.9375em) {
+@media screen and (max-width: $container-small) {
   .show-for-medium {
     display: none !important; } }
 
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+@media screen and (min-width: $container-small) and (max-width: $container-medium) {
   .hide-for-medium-only {
     display: none !important; } }
 
-@media screen and (max-width: 39.9375em), screen and (min-width: 64em) {
+@media screen and (max-width: $container-small), screen and (min-width: $container-medium) {
   .show-for-medium-only {
     display: none !important; } }
 
-@media print, screen and (min-width: 64em) {
+@media print, screen and (min-width: $container-medium) {
   .hide-for-large {
     display: none !important; } }
 
-@media screen and (max-width: 63.9375em) {
+@media screen and (max-width: $container-large) {
   .show-for-large {
     display: none !important; } }
 
-@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+@media screen and (min-width: $container-medium) and (max-width: $container-large) {
   .hide-for-large-only {
     display: none !important; } }
 
-@media screen and (max-width: 63.9375em), screen and (min-width: 75em) {
+@media screen and (max-width: $container-medium), screen and (min-width: $container-large) {
   .show-for-large-only {
     display: none !important; } }
 

@@ -2,8 +2,7 @@ import 'jquery';
 import Typed from 'typed.js';
 import foundation from 'foundation-sites';
 import ajaxForm from 'jquery-form';
-import '../css/main.scss';
-
+import '../css/style.scss';
 
 // START: multi form
 $('form.multi-form a.next').click(function() {
