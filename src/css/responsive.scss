@@ -44,6 +44,17 @@ $breakpoints: (
             }
         }
     }
+
+    .intro {
+        .cell {
+            .container {
+                h2 {
+                    font-size: 36px;
+                    line-height: 36px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 800px){
@@ -95,6 +106,27 @@ $breakpoints: (
             }
         }
     }
+
+    .intro {
+        .cell {
+            .container {
+                h2 {
+                    font-size: 32px;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 690px){
+    .intro {
+        .cell {
+            .container {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media (max-width: 639px){
@@ -118,6 +150,6 @@ $breakpoints: (
     }
 
     .projects {
-        margin: 50px 75px;
+        margin: 50px 25px;
     }
 }

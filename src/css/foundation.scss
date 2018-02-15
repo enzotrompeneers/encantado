@@ -5223,7 +5223,7 @@ a.thumbnail {
   .hide-for-large {
     display: none !important; } }
 
-@media screen and (max-width: $container-large) {
+@media screen and (max-width: 1024px) {
   .show-for-large {
     display: none !important; } }
 

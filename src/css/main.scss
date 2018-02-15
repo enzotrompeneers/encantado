@@ -168,7 +168,7 @@ h4 {
 
         h1 {
             color: white;
-            font-size: 3.875rem;
+            font-size: 58px;
             font-weight: 900;
             line-height: 1.194;
             padding: 0 20px;
@@ -240,13 +240,11 @@ h4 {
         z-index: -1;
     }
 
-    .small-7 {
-        width: calc(58.33333% - 100px);
-        margin-left: 100px;
-        text-align: center;
+    .large-7 {
+        padding: 0 20px;
 
         .container {
-            width: 700px;
+            width: 690px;
             margin: 0 auto;
             text-align: left;
 
@@ -280,16 +278,17 @@ h4 {
         }
     }
 
-    .small-5 {
-        width: calc(41.66667% - 100px);
-        margin-right: 100px;
+    .large-5 {
+        width: calc(100%-690px);
         text-align: center;
         padding-top: 75px;
         position: relative;
+        margin: 0 auto;
 
         img {
-            width: 383px;
-            height: 367px;
+            padding-left: 100px;
+            padding-right: 50px;
+            width: 100%;
             z-index: 10;
         }
     }
