@@ -6,6 +6,53 @@ $breakpoints: (
   xxlarge: $container-xxlarge
 );
 
+@media (max-width: 1200px){
+    .services {
+        height: auto;
+        padding-bottom: 93px;
+
+        #triangle-left { //, #triangle-middle, #triangle-right {
+            position: absolute;
+            bottom: 0;
+            right: 636px;
+            height: 0;
+            border-bottom: 747px solid #af246f;
+            border-left: 787px solid transparent;
+            z-index: -1;
+        }
+
+        #triangle-middle { //, #triangle-middle, #triangle-right {
+            position: absolute;
+            bottom: 0;
+            right: 318px;
+            height: 0;
+            border-bottom: 747px solid #a12577;
+            border-left: 787px solid transparent;
+            z-index: -1;
+        }
+
+        #triangle-right { 
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 0;
+            border-bottom: 747px solid #8f2782;
+            border-left: 787px solid transparent;
+            z-index: -1;
+        }
+
+        .grid-x {
+            width: 914px;
+
+            .cell {
+                width: 280px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+}
+
 @media (max-width: 1140px){
     .hero-slider {
         .container {
@@ -46,12 +93,33 @@ $breakpoints: (
     }
 
     .intro {
+        #triangle-grey {
+            display: none;
+        }
         .cell {
             .container {
                 h2 {
                     font-size: 36px;
                     line-height: 36px;
                 }
+            }
+        }
+    }
+
+    .services {
+        @include background(0deg, 90deg, #af246f, 0%, #a12577, 100%);
+        padding-bottom: 63px;
+
+        #triangle-left, #triangle-middle, #triangle-right {
+            display: none;
+        }
+
+        .grid-x {
+            width: 480px;
+
+            .cell {
+                width: 100%;
+                margin: 10px 0;
             }
         }
     }
@@ -139,6 +207,16 @@ $breakpoints: (
         }
     }
 }
+
+@media (max-width: 480px){
+    .services {
+        .grid-x {
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+}
+
 @media (max-width: 420px){
     .hero-slider {
         .container {

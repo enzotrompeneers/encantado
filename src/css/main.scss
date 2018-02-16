@@ -224,7 +224,7 @@ h4 {
 
 .intro {
     padding-bottom: 100px;
-    z-index: 1;
+    z-index: 3;
     width: 100%;
     background: white;
     position: relative;
@@ -237,11 +237,12 @@ h4 {
         height: 0;
         border-bottom: 697px solid #edf2f4;
         border-left: 660px solid transparent;
-        z-index: -1;
+        z-index: 4;
     }
 
     .large-7 {
         padding: 0 20px;
+        z-index: 5;
 
         .container {
             width: 690px;
@@ -284,6 +285,7 @@ h4 {
         padding-top: 75px;
         position: relative;
         margin: 0 auto;
+        z-index: 5;
 
         img {
             padding-left: 100px;
@@ -299,7 +301,7 @@ h4 {
     height: 375px;
     background:  #b7236a;
     position: relative;
-    z-index: -2;
+    z-index: 1;
 
     #triangle-left {
         position: absolute;
@@ -308,7 +310,7 @@ h4 {
         height: 0;
         border-bottom: 697px solid #af246f;
         border-left: 737px solid transparent;
-        z-index: -1;
+        z-index: 2;
     }
 
     #triangle-middle {
@@ -318,7 +320,7 @@ h4 {
         height: 0;
         border-bottom: 697px solid #a12577;
         border-left: 737px solid transparent;
-        z-index: -1;
+        z-index: 2;
     }
 
     #triangle-right {
@@ -328,7 +330,7 @@ h4 {
         height: 0;
         border-bottom: 697px solid #8f2782;
         border-left: 737px solid transparent;
-        z-index: -1;
+        z-index: 2;
     }
 
     h4 {
@@ -354,7 +356,6 @@ h4 {
             border-radius: 4px;
             border: 1px solid #d5a7bd;
             width: 368px;
-            height: 146px;
             margin: 0 auto;
             padding-top: 32px;
             padding-left: 25px;
