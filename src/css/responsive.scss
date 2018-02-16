@@ -11,34 +11,20 @@ $breakpoints: (
         height: auto;
         padding-bottom: 93px;
 
-        #triangle-left { //, #triangle-middle, #triangle-right {
-            position: absolute;
-            bottom: 0;
-            right: 636px;
-            height: 0;
+        #triangle-left  {
             border-bottom: 747px solid #af246f;
             border-left: 787px solid transparent;
-            z-index: -1;
         }
 
-        #triangle-middle { //, #triangle-middle, #triangle-right {
-            position: absolute;
-            bottom: 0;
-            right: 318px;
-            height: 0;
+        #triangle-middle {
             border-bottom: 747px solid #a12577;
             border-left: 787px solid transparent;
-            z-index: -1;
         }
 
         #triangle-right { 
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            height: 0;
+
             border-bottom: 747px solid #8f2782;
             border-left: 787px solid transparent;
-            z-index: -1;
         }
 
         .grid-x {
@@ -101,9 +87,6 @@ $breakpoints: (
             width: 540px;
 
             form {
-                label {
-                    //text-align: center;
-                }
                 input {
                     width: 90%;
                     text-align: left;
@@ -114,7 +97,7 @@ $breakpoints: (
     }
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1023px){
     .why {
         padding-top: 63px;
 
@@ -125,6 +108,14 @@ $breakpoints: (
                 h4 {
                     text-align: center;
                 }
+            }
+        }
+    }
+
+    .footer {
+        .grid-x {
+            .large-5, .large-8 {
+                padding-top: 0;
             }
         }
     }
@@ -186,6 +177,12 @@ $breakpoints: (
                 font-size: 20px;
                 line-height: 30px;
             }
+        }
+    }
+
+    .footer {
+        p, a {
+            font-size: 18px;
         }
     }
 }
@@ -308,10 +305,18 @@ $breakpoints: (
     }
 
     .contact {
-        padding: 30px 0;;
+        padding: 30px 0 0 0;
 
         .small-5 {
             padding: 0 50px;
+        }
+    }
+
+    .footer {
+        .grid-x {
+            .large-4 {
+                padding-top: 0;
+            }
         }
     }
 }
