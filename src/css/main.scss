@@ -471,9 +471,8 @@ h4 {
 }
 
 .contact {
-    height: 628px;
     width: 100%;
-    padding: 0 100px;
+    //padding: 0 20px;
     @include background(-139deg, 229deg, #86ddcd, 20%, #b4db63, 80%);
     
     .small-5 {
@@ -575,7 +574,7 @@ h4 {
             input, textarea {
                 background-image: linear-gradient(-90deg, #77d5cd 0%, #92ddb3 100%);
                 background-repeat: no-repeat;
-                background-position: 0 calc(100% + 3px),0 0;
+                background-position: 0 calc(100% + 4px),0 0;
                 background-size: 100% 4px;
                 box-shadow: none;
                 border-bottom: 5px solid #77d5cd;
@@ -598,6 +597,7 @@ h4 {
             }
 
             .buttons {
+                padding-top: 30px;
 
                 .circle {
                     border-radius: 50%;
