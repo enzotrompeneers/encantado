@@ -8,7 +8,8 @@
 	
 </head>
 <body>
-<section class="header grid-x">
+
+<section id="header-menu" class="header grid-x">
 	<div class="small-3 cell container-logo">
 		<div class="logo">
 			<img class="image" src="graphics/svg/encantado.svg" alt="encantado"  >
@@ -19,12 +20,53 @@
 		</div>
 	</div>
 
+	<div class="off-canvas position-right " id="offCanvasRightOverlap" data-off-canvas data-transition="overlap">
+		<aside class="right-off-canvas-menu menu">
+			<button class="close-button" aria-label="Close menu" type="button" data-close>
+				<img src="graphics/svg/cross.svg" alt="close">
+			</button>
+
+			<ul class="menu mobile-languages">
+				<li><a class="is-active" href="#">es</a></li>
+				<li><a href="#">en</a></li>
+				<li><a href="#">nl</a></li>
+			</ul>
+			
+	
+			<ul class="vertical menu drilldown" data-drilldown>
+				<li><a class="is-active" href="#">inicio</a></li>
+				<li><a href="#">nosotros</a></li>
+				<li><a href="#">trabajos</a></li>
+				<li><a href="#">servicios</a>
+					<ul class="submenu menu vertical nested">
+						<li><a href="#">servicio 1</a></li>
+						<li><a href="#">servicio 2</a></li>
+						<li><a href="#">servicio 3</a></li>
+					</ul>
+				</li>
+				<li><a href="#">contacto</a></li>
+			</ul>
+
+			<ul class="menu align-right icons">
+				<li><a class="circle instagram" href="#"><img src="graphics/svg/instagram.svg" alt="instagram" type="image/svg+xml" ></a></li>
+				<li><a class="circle linkedin" href="#"><img src="graphics/svg/linkedin.svg" alt="linkedin" type="image/svg+xml" ></a></li>
+				<li><a class="circle facebook" href="#"><img src="graphics/svg/facebook.svg" alt="facebook" type="image/svg+xml" ></a></li>
+			</ul>
+		</aside>
+	</div>
+
 	<div class="small-6 cell">
-		<ul class="menu align-center">
+		<ul class="menu align-center dropdown header-menu" data-dropdown-menu>
 			<li><a class="is-active" href="#">inicio</a></li>
 			<li><a href="#">nosotros</a></li>
 			<li><a href="#">trabajos</a></li>
-			<li><a href="#">servicios</a></li>
+			<li><a href="#">servicios</a>
+				<ul class="submenu">
+					<li><a href="#">servicio 1</a></li>
+					<li><a href="#">servicio 2</a></li>
+					<li><a href="#">servicio 3</a></li>
+				</ul>
+			</li>
 			<li><a href="#">contacto</a></li>
 		</ul>
 	</div>
@@ -39,6 +81,13 @@
 			<li><a class="circle" href="#">en</a></li>
 			<li><a class="circle" href="#">nl</a></li>
 		</ul>
+	</div>
+
+	<div class="title-bar">
+		<button type="button" data-open="offCanvasRightOverlap" aria-hidden="true">
+			<span>Menu</span>
+			<img src="graphics/svg/hamburger.svg" alt="menu">
+		</button>
 	</div>
 </section>
 

@@ -72,7 +72,7 @@ $breakpoints: (
                 }
             }
         }
-        
+
         .container-icons {
             right: 20px;
         }
@@ -232,6 +232,14 @@ $breakpoints: (
         .small-7 {
             width: 90%;
             margin-top: 0;
+        }
+    }
+}
+
+@media (min-width: 941px){
+    .header {
+        .title-bar {
+            display: none;
         }
     }
 }
@@ -406,5 +414,20 @@ $breakpoints: (
 
     .projects {
         margin: 50px 25px;
+    }
+}
+
+
+@media (max-width: 400px){
+    .header {
+        .container-logo {
+            left: 20px;
+    
+            .logo {
+                .text {
+                    display: none;
+                }
+            }
+        }
     }
 }
