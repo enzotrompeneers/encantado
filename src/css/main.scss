@@ -34,33 +34,33 @@ h4 {
     background: white;
     align-items: center;
 
-    .logo {
-        position: sticky;
+    .container-logo {
         left: 40px;
-        width: 240px;
-        height: 70px;
+        position: absolute;
 
-        .image {
-            width: 70px;
-            height: 70px;
-            float: left;
-        }
-
-        .text {
-            padding: 19px 0 0 83px;
-
-            .title {
-                font-size: 24px;
-                color: rgb(93, 92, 92);
-                font-weight: bold;
-                line-height: 1.167;
+        .logo {
+            .image {
+                width: 70px;
+                height: 70px;
+                float: left;
             }
-    
-            .subtitle {
-                font-size: 13px;
-                color: rgb(136, 41, 108);
-                line-height: 1;
-                display: block;
+
+            .text {
+                padding: 19px 0 0 83px;
+
+                .title {
+                    font-size: 24px;
+                    color: rgb(93, 92, 92);
+                    font-weight: bold;
+                    line-height: 1.167;
+                }
+        
+                .subtitle {
+                    font-size: 13px;
+                    color: rgb(136, 41, 108);
+                    line-height: 1;
+                    display: block;
+                }
             }
         }
     }
@@ -82,67 +82,75 @@ h4 {
         }
     }
 
-    .icons {
+    .small-6 {
+        width: 620px;
+        margin: 0 auto;
+    }
+
+    .container-icons {
+        position: absolute;
         right: 40px;
 
-        li {
-            padding: 0 2px;
+        .icons {
+            li {
+                padding: 0 2px;
 
-            &:nth-child(3) {
-                margin-right: 24px;
-            }
+                &:nth-child(3) {
+                    margin-right: 24px;
+                }
 
-            a {
-                font-size: 16px;
-                color: rgb(33, 33, 33);
-                text-transform: uppercase;
-                line-height: 1.563;
-                text-align: center;
-                padding-left: 9px;
-                max-width: none;
-
-                img {
+                a {
+                    font-size: 16px;
+                    color: rgb(33, 33, 33);
+                    text-transform: uppercase;
+                    line-height: 1.563;
+                    text-align: center;
+                    padding-left: 9px;
                     max-width: none;
-                    width: 21px;
-                    height: 21px;
+
+                    img {
+                        max-width: none;
+                        width: 21px;
+                        height: 21px;
+                    }
                 }
             }
-        }
 
-        .circle {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            font-size: 16px;
-            line-height: 40px;
-            text-align: center;
-            background: white;
-            border: 1px solid rgb(228, 228, 228);
-            text-transform: uppercase;
-            display: inherit;
-            align-items: center;
-            color: #212121;
-            font-weight: 400;
+            .circle {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                font-size: 16px;
+                line-height: 40px;
+                text-align: center;
+                background: white;
+                border: 1px solid rgb(228, 228, 228);
+                text-transform: uppercase;
+                display: inherit;
+                align-items: center;
+                color: #212121;
+                font-weight: 400;
 
-            &.is-active, &:hover {
-                background: rgb(184, 20, 76);
-                color: white;
-            }
+                &.is-active, &:hover {
+                    background: rgb(184, 20, 76);
+                    color: white;
+                }
 
-            &.instagram, &.linkedin, &.facebook, &.is-active, &:hover {
-                border: none;
-            }
+                &.instagram, &.linkedin, &.facebook, &.is-active, &:hover {
+                    border: none;
+                }
 
-            &.instagram {
-                background: $instagram;
-            }
-    
-            &.linkedin {
-                background: $linkedin;
-            }
-    
-            &.facebook {
-                background: $facebook;
+                &.instagram {
+                    background: $instagram;
+                }
+        
+                &.linkedin {
+                    background: $linkedin;
+                }
+        
+                &.facebook {
+                    background: $facebook;
+                }
             }
         }
     }
