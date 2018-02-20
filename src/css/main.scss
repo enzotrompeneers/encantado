@@ -171,7 +171,6 @@ h4 {
             }
         }
 
-
         .menu {
             li {
                 float: none;
@@ -192,6 +191,42 @@ h4 {
             height: 50px;
             align-items: center;
             background: #f4f2f2;
+        }
+
+        .mobile-social {
+            .circle {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                line-height: 15px;
+                text-align: center;
+                border: 1px solid rgb(228, 228, 228);
+                display: inherit;
+                align-items: center;
+                padding: 10px;
+                margin: 10px;
+
+                &.is-active, &:hover {
+                    background: rgb(184, 20, 76);
+                    color: white;
+                }
+
+                &.instagram, &.linkedin, &.facebook, &.is-active, &:hover {
+                    border: none;
+                }
+
+                &.instagram {
+                    background: $instagram;
+                }
+        
+                &.linkedin {
+                    background: $linkedin;
+                }
+        
+                &.facebook {
+                    background: $facebook;
+                }
+            }
         }
 
         .vertical, .drilldown {
