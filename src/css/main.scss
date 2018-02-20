@@ -3,7 +3,7 @@
 @import 'mixins';
 @import 'responsive';
 
-.body {
+.body, html {
     font-family: $font-primary;
     height: 100%;
 	width: 100%;
@@ -12,7 +12,6 @@
 	margin: 0;
 	font-size: 100%;
     position: relative;
-
 }
 
 h2 {
@@ -300,38 +299,36 @@ h4 {
 }
 
 .projects {
-    margin: 50px 100px;
+    margin: 50px 90px;
 
     .grid-x {
         margin-bottom: 18px;
 
         .cell {
-            margin: 10px;
             position: relative;
-            width: calc(33.33333% - 1.875rem);
-            padding-bottom: calc((33.33333% - 1.875rem)*0.75);
             border-radius: 3px;
             background-color:  #729da0;
+            padding-bottom: calc((33.33333% - 1.875rem)*0.75);
+           
 
             .title, .description {
                 color: white;
                 position: absolute;
                 z-index: 1;
-                left: 30px;
+                margin: 0 30px;
             }
     
             .title {
-                font-size: 30px;
+                font-size: 1.875rem;
                 font-weight: bold;
-                line-height: 30px;
-                bottom: 50px;
+                bottom: 55px;
+                
             }
     
             .description {
-                font-size: 18px;
-                line-height: 18px;
+                font-size: 1.125rem;
                 font-weight: 300;
-                bottom: 0;
+                bottom: 30px;
             }
         }
     }  
