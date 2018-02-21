@@ -12,7 +12,7 @@
 }
 
 @media (max-width: 1270px){
-    .intro .grid-x, .services .grid-x {
+    .intro .grid-x, .services .grid-x, .why .grid-x {
         width: 100%;
     }
 }
@@ -115,17 +115,6 @@
         }
     }
 
-    .why {
-        .grid-x {
-            .cell {
-                h4 {
-                    font-size: 30px;
-                    line-height: 30px;
-                }
-            }
-        }
-    }
-
     .contact {
         .small-7 {
             width: 540px;
@@ -169,8 +158,6 @@
 
         .grid-x {
             .cell {
-                padding-top: 32px;
-
                 h4 {
                     text-align: center;
                 }
@@ -209,7 +196,7 @@
         padding-bottom: 63px;
 
         .grid-x {
-            width: 480px;
+            width: 100%;
 
             .cell {
                 width: 100%;
@@ -343,6 +330,10 @@
             }
         }
     }
+
+    .why {
+        padding-bottom: 50px;
+    }
 }
 
 @media (max-width: 690px){
@@ -391,14 +382,16 @@
     }
 }
 
-@media (max-width: 480px){
+@media (max-width: 580px){
     .services {
         .grid-x {
             width: 100%;
             padding: 0 20px;
         }
     }
+}
 
+@media (max-width: 480px){
     .contact {
         .small-7 {
             h4 {
