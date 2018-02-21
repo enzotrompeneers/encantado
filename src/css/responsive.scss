@@ -117,7 +117,7 @@
 
     .contact {
         .small-7 {
-            width: 540px;
+            width: 420px;
 
             form {
                 input {
@@ -205,15 +205,6 @@
         }
     }
 
-    .contact {
-        .small-5 {
-            p {
-                font-size: 20px;
-                line-height: 30px;
-            }
-        }
-    }
-
     .footer {
         p, a {
             font-size: 18px;
@@ -247,8 +238,8 @@
         }
 
         .small-7 {
-            width: 90%;
             margin-top: 0;
+            width: 100%;
         }
     }
 }
@@ -336,21 +327,6 @@
     }
 }
 
-@media (max-width: 690px){
-    .contact {
-        .small-7 {
-            h4 {
-                font-size: 28px;
-                line-height: 28px;
-            }
-
-            hr {
-                width: 275px;
-            }
-        }
-    }
-}
-
 @media (max-width: 639px){
     html {
         font-size: 60%;
@@ -362,14 +338,6 @@
                 width: 100%;
                 padding-bottom: calc((100% - 1.875rem)*0.75);
             }
-        }
-    }
-
-    .contact {
-        padding: 30px 0 0 0;
-
-        .small-5 {
-            padding: 0 50px;
         }
     }
 
@@ -387,21 +355,6 @@
         .grid-x {
             width: 100%;
             padding: 0 20px;
-        }
-    }
-}
-
-@media (max-width: 480px){
-    .contact {
-        .small-7 {
-            h4 {
-                font-size: 23px;
-                line-height: 23px;
-            }
-
-            hr {
-                width: 220px;
-            }
         }
     }
 }

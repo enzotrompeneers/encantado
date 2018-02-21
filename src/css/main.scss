@@ -152,14 +152,26 @@ h4 {
 
                 &.instagram {
                     background: $instagram;
+
+                    &:hover {
+                        background: darken($instagram, 5%);
+                    }
                 }
         
                 &.linkedin {
                     background: $linkedin;
+
+                    &:hover {
+                        background: darken($linkedin, 5%);
+                    }
                 }
         
                 &.facebook {
                     background: $facebook;
+
+                    &:hover {
+                        background: darken($facebook, 5%);
+                    }
                 }
             }
         }
@@ -491,7 +503,7 @@ h4 {
 }
 
 .why {
-    padding: 0px 50px 100px 50px;
+    padding: 100px 50px;
 
     h4 {
         color:  $color-primary;
@@ -569,7 +581,7 @@ h4 {
 }
 
 .contact {
-    width: 100%;
+    padding: 0 50px;
     @include background(-139deg, 229deg, #86ddcd, 20%, #b4db63, 80%);
     
     .small-5 {
@@ -579,21 +591,19 @@ h4 {
 
         h4 {
             color: rgb(158, 218, 127);
-            line-height: 0.938;
             z-index: 1;
 
             &.above {
                 color: white;
-                margin-top: -41px;
+                margin-top: -3.563rem;
             }
         }
 
         p {
             padding-top: 30px;
             color: white;
-            font-size: 22px;
+            font-size: 1.375rem;
             font-weight: 500;
-            line-height: 30px;
             text-align: left;
             text-shadow: 0px 1px 2px rgba(113, 149, 39, 0.23);
 
@@ -615,7 +625,7 @@ h4 {
         border-radius: 3px;
         background-color: white;
         box-shadow: 0px 2px 4px 0px rgba(46, 46, 46, 0.1);
-        width: 670px;
+        width: 610px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 100px;
@@ -631,25 +641,23 @@ h4 {
         }
 
         h4 {
-            padding-top: 40px;
+            padding-top: 2.5rem;
             color:  #272727;
-            line-height: 30px;
             text-align: center;
         }
 
         hr {
-            margin-top: -18px;
-            width: 305px;
-            height: 10px;
+            margin-top: -1.5rem;
+            width: 19.06rem;
+            height: 0.625rem;
             background: #eff8dd;
             border-bottom: none;
         }
 
         form {
             label {
-                font-size: 18px;
+                font-size: 1.125rem;
                 color: rgb(81, 80, 80);
-                line-height: 1.333;
                 padding-bottom: 13px;
                 text-align: left;
                 margin-left: 15px;
@@ -658,7 +666,7 @@ h4 {
             input {
                 border-radius: 3px;
                 background-color: rgb(245, 245, 245);
-                width: 285px;
+                width: 255px;
                 height: 39px;
                 margin-top: 0;
                 margin-left: auto;
@@ -701,51 +709,60 @@ h4 {
                     background: #7364f5;
                     display: block;
                     position: absolute;
+
+                    &:hover {
+                        background: darken(#7364f5, 5%);
+                    }
                 }
                 
                 .prev{
                     .circle {
-                        width: 40px;
-                        height: 40px;
-                        line-height: 40px;
-                        bottom: -20px;
-                        left: calc(50% - 36px);
-                        margin-left: -45px;
+                        width: 3rem;
+                        height: 3rem;
+                        line-height: 3rem;
+                        bottom: -1.5rem;
+                        left: calc(50% - 2.5rem);
+                        margin-left: -3rem;
                     }
         
                     img {
-                        width: 27px;
-                        height: 27px;
+                        width: 1.688rem;
+                        height: 1.688rem;
+                        margin-left: -0.625rem;
+                        
                     }
                 }
 
                 .next {
                     .circle {
-                        width: 72px;
-                        height: 72px;
-                        line-height: 72px;
-                        bottom: -36px;
-                        left: calc(50% - 36px);
+                        width: 4.5rem;
+                        height: 4.5rem;
+                        line-height: 4.5rem;
+                        bottom: -2.25rem;
+                        left: calc(50% - 2.25rem);
                     }
         
                     img {
                         transform:scaleX(-1);
-                        width: 42px;
-                        height: 42px;
+                        width: 2.625rem;
+                        height: 2.625rem;
+                        margin-left: 0.625rem;
                     }
                 }
+                
                 .submit {
                     .circle {
-                        width: 72px;
-                        height: 72px;
-                        line-height: 72px;
-                        bottom: -36px;
-                        left: calc(50% - 36px);
+                        width: 4.5rem;
+                        height: 4.5rem;
+                        line-height: 4.5rem;
+                        bottom: -2.25rem;
+                        left: calc(50% - 2.25rem);
                     }
         
                     img {
-                        width: 42px;
-                        height: 42px;
+                        width: 2.625rem;
+                        height: 2.625rem;
+                        margin-left: -0.5rem;
                     }
                 }
             }
