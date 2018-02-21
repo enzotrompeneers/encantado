@@ -12,20 +12,19 @@
 	margin: 0;
 	font-size: 100%;
     position: relative;
+    background: white;
 }
 
 h2 {
-    font-size: 35px;
+    font-size: 2.188rem;
     color: $color-primary;
     font-weight: bold;
-    line-height: 1.167;
 }
 
 h4 {
-    font-size: 32px;
+    font-size: 2rem;
     color: white;
     font-weight: 800;
-    line-height: 32px;
 }
 
 .header {
@@ -302,44 +301,41 @@ h4 {
     margin: 50px 90px;
 
     .grid-x {
-        margin-bottom: 18px;
+        margin-bottom: 25px;
 
         .cell {
             position: relative;
             border-radius: 3px;
             background-color:  #729da0;
             padding-bottom: calc((33.33333% - 1.875rem)*0.75);
+            z-index: 4;
            
-
             .title, .description {
                 color: white;
                 position: absolute;
-                z-index: 1;
-                margin: 0 30px;
+                margin: 0 1.875rem;
             }
     
             .title {
                 font-size: 1.875rem;
                 font-weight: bold;
-                bottom: 55px;
-                
+                bottom: 3.438rem;
             }
     
             .description {
                 font-size: 1.125rem;
                 font-weight: 300;
-                bottom: 30px;
+                bottom: 1.875rem;
             }
         }
     }  
 }
 
 .intro {
-    padding-bottom: 100px;
     z-index: 3;
-    width: 100%;
     background: white;
     position: relative;
+    padding: 0px 50px 100px 50px;
 
     #triangle-grey {
         position: absolute;
@@ -349,30 +345,26 @@ h4 {
         height: 0;
         border-bottom: 697px solid #edf2f4;
         border-left: 660px solid transparent;
-        z-index: 1;
     }
 
-    .large-7 {
-        padding: 0 20px;
-        z-index: 2;
+    .grid-x {
+        width: $container-xlarge;
+        margin: 0 auto;
 
-        .container {
-            width: 690px;
-            margin: 0 auto;
-            text-align: left;
+        .large-8 {
+            z-index: 2;
 
             h2 {
-                margin-bottom: 45px;
+                margin-bottom: 2.813rem
             }
 
             p {
-                font-size: 18px;
+                font-size: 1.125rem;
                 font-weight: 400;
-                line-height: 28px;
                 
                 &.info {
                     color:  #898989;
-                    font-size: 22px;
+                    font-size: 1.375rem;
                 }
     
                 &.audience {
@@ -389,20 +381,20 @@ h4 {
                 }
             }
         }
-    }
-
-    .large-5 {
-        width: calc(100%-690px);
-        text-align: center;
-        padding-top: 75px;
-        position: relative;
-        margin: 0 auto;
-        z-index: 2;
-
-        img {
-            padding-left: 100px;
-            padding-right: 50px;
-            width: 100%;
+    
+        .large-4 {
+            position: relative;
+            z-index: 2;
+            
+            img {
+                padding-left: 20px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
         }
     }
 }

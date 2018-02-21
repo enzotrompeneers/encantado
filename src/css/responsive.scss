@@ -11,6 +11,14 @@
     }
 }
 
+@media (max-width: 1270px){
+    .intro {
+        .grid-x {
+            width: 100%;
+        }
+    }
+}
+
 @media (max-width: 1200px){
     html {
         font-size: 85%;
@@ -58,6 +66,7 @@
     }
 }
 
+
 @media (max-width: 1140px){
     html {
         font-size: 75%;
@@ -84,15 +93,6 @@
             h1 {
                 font-size: 56px;
                 line-height: 56px;
-            }
-        }
-    }
-    .projects {
-        .grid-x {
-            .cell {
-                .title {
-                    ///
-                }
             }
         }
     }
@@ -126,13 +126,6 @@
 @media (max-width: 1023px){
     html {
         font-size: 70%;
-    }
-    .projects {
-        .grid-x {
-            .cell {
-                padding-bottom: calc((50% - 1.875rem)*0.75);
-            }
-        }
     }
 
     .why {
@@ -175,20 +168,6 @@
         }
     }
 
-    .intro {
-        #triangle-grey {
-            display: none;
-        }
-        .cell {
-            .container {
-                h2 {
-                    font-size: 36px;
-                    line-height: 36px;
-                }
-            }
-        }
-    }
-
     .services {
         @include background(0deg, 90deg, #af246f, 0%, #a12577, 100%);
         padding-bottom: 63px;
@@ -219,6 +198,16 @@
     .footer {
         p, a {
             font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 979px){ 
+    .projects {
+        .grid-x {
+            .cell {
+                padding-bottom: calc((50% - 1.875rem)*0.75);
+            }
         }
     }
 }
@@ -310,41 +299,21 @@
 
     .projects {
         margin: 50px 75px;
+    }
+}
 
+@media (max-width: 767px){ 
+    .projects {
         .grid-x {
             .cell {
-                .title {
-                    //font-size: 10%;
-                }
-
-                .description {
-                    font-size: 15px;
-                }
-            }
-        }
-    }
-
-    .intro {
-        .cell {
-            .container {
-                h2 {
-                    font-size: 32px;
-                    line-height: 32px;
-                }
+                width: calc(50% - 1.875rem);
+                padding-bottom: calc((50% - 1.875rem)*0.75);
             }
         }
     }
 }
 
 @media (max-width: 690px){
-    .intro {
-        .cell {
-            .container {
-                width: 100%;
-            }
-        }
-    }
-
     .contact {
         .small-7 {
             h4 {
@@ -360,14 +329,18 @@
 }
 
 @media (max-width: 639px){
+    html {
+        font-size: 60%;
+    }
+
     .projects {
         .grid-x {
             .cell {
+                width: 100%;
                 padding-bottom: calc((100% - 1.875rem)*0.75);
             }
         }
     }
-
 
     .contact {
         padding: 30px 0 0 0;
@@ -409,6 +382,10 @@
 }
 
 @media (max-width: 420px){
+    html {
+        font-size: 50%;
+    }
+
     .hero-slider {
         .container {
             h1 {

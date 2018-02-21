@@ -5201,7 +5201,7 @@ a.thumbnail {
   .hide-for-large {
     display: none !important; } }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: $container-large) {
   .show-for-large {
     display: none !important; } }
 
