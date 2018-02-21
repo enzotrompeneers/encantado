@@ -799,73 +799,86 @@ h4 {
 
 .footer {
     background: white;
-    width: 100%;
-    padding:  55px 20px 55px 100px;
+    padding:  55px 50px 55px 100px;
 
-    .large-5, .large-4, .large-8 {
-        padding-top: 75px;
-    }
+    .grid-container {
+        width: $container-xlarge;
+        margin: 0 auto;
+        padding: 0;
 
-    .logo {
-        left: 40px;
-        width: 240px;
-        height: 70px;
-        margin-left: -67px;
-
-        .image {
-            width: 50px;
-            height: 50px;
-            float: left;
-        }
-
-        .text {
-            padding: 10px 0 0 65px;
-
-            .title {
-                color: $color-primary;
-                font-size: 32px;
-                font-weight: 800;
-                line-height: 34px;
-                position: relative;
-                z-index: 1;
-
-                &:after {
-                    content: "";
-                    position: absolute;
-                    border-bottom: 10px solid #ebe2f5;
-                    width: 100%;
-                    bottom: 0;
-                    display: block;
-                    z-index: -1;
+        .grid-x {
+            .small-9 {
+                width: 60%;
+            }
+    
+            .large-5, .large-4, .large-8 {
+                padding-top: 75px;
+            }
+        
+            .logo {
+                left: 40px;
+                width: 240px;
+                height: 70px;
+                margin-left: -67px;
+        
+                .image {
+                    width: 50px;
+                    height: 50px;
+                    float: left;
+                    margin-top: 10px;
+                }
+        
+                .text {
+                    padding: 10px 0 0 65px;
+        
+                    .title {
+                        color: $color-primary;
+                        font-size: 32px;
+                        font-weight: 800;
+                        position: relative;
+                        z-index: 1;
+        
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            border-bottom: 0.625rem solid #ebe2f5;
+                            width: 100%;
+                            bottom: 0;
+                            display: block;
+                            z-index: -1;
+                        }
+                    }
                 }
             }
-            
+        
+            p {
+                color:  #5d5b5b;
+                font-size: 1.25rem;
+                font-weight: 400;
+                line-height: 1.75rem;
+        
+                b {
+                    font-weight: 700;
+                    line-height: 1.75rem;
+                }
+        
+                a {
+                    color: #8f2782;
+                    text-decoration: none;
+                }
+            }
+        
+            a {
+                color:  #5d5b5b;
+                font-size: 1.125rem;
+                font-weight: 400;
+                line-height: 1.75rem;
+                text-decoration: underline;
+
+                &.is-active, &:hover {
+                    color: $color-active;
+                }
+            }
         }
-    }
-
-    p {
-        color:  #5d5b5b;
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 28px;
-
-        b {
-            font-size: 20px;
-            font-weight: 700;
-            line-height: 28px;
-        }
-
-        a {
-            color: #8f2782;
-            text-decoration: none;
-        }
-    }
-
-    a {
-        color:  #5d5b5b;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 28px;
-        text-decoration: underline;
     }
 }
