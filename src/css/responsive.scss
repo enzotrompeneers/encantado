@@ -1,10 +1,15 @@
-
-@media (max-width: 1280px){
-    .header {
-        .container-icons {
-            .menu {
-                .instagram, .linkedin, .facebook {
-                    display: none;
+@media (max-width: 1340px){
+    .header .container-icons .icons .circle.instagram, .header .container-icons .icons .circle.linkedin, .header .container-icons .icons .circle.facebook {
+        display: none;
+    }
+    
+    .footer {
+        .grid-container {
+            .grid-x {
+                .cell {
+                    .logo {
+                        margin-left: 0;
+                    }
                 }
             }
         }
@@ -12,7 +17,7 @@
 }
 
 @media (max-width: 1270px){
-    .intro .grid-x, .services .grid-x, .why .grid-x, .footer .grid-container {
+    .intro .grid-container, .services .grid-container, .why .grid-container, .contact .grid-container, .footer .grid-container {
         width: 100%;
     }
 }
@@ -25,41 +30,9 @@
     .services {
         padding-bottom: 93px;
 
-        #triangle-left  {
-            border-bottom: 702px solid #af246f;
-            border-left: 742px solid transparent;
-        }
-
-        #triangle-middle {
-            border-bottom: 702px solid #a12577;
-            border-left: 742px solid transparent;
-        }
-
-        #triangle-right { 
-
-            border-bottom: 702px solid #8f2782;
-            border-left: 742px solid transparent;
-        }
-
-        .grid-x {
-            width: 914px;
-
-            .cell {
-                width: 280px;
-                padding-left: 15px;
-                padding-right: 15px;
-            }
-        }
-    }
-
-    .contact {
-        .small-5 {
-            p {
-                span {
-                    margin-top: 0;
-                    margin-right: 0px;
-                }
-            }
+        #triangle-left, #triangle-middle, #triangle-right  {
+            border-bottom-width: 702px;
+            border-left-width: 742px
         }
     }
 }
@@ -89,34 +62,9 @@
     .services {
         padding-bottom: 93px;
 
-        #triangle-left  {
-            border-bottom: 682px solid #af246f;
-            border-left: 722px solid transparent;
-        }
-
-        #triangle-middle {
-            border-bottom: 682px solid #a12577;
-            border-left: 722px solid transparent;
-        }
-
-        #triangle-right { 
-
-            border-bottom: 682px solid #8f2782;
-            border-left: 722px solid transparent;
-        }
-    }
-
-    .contact {
-        .small-7 {
-            width: 420px;
-
-            form {
-                input {
-                    width: 90%;
-                    text-align: left;
-                    margin-left: 12px;
-                }
-            }
+        #triangle-left, #triangle-middle, #triangle-right  {
+            border-bottom-width: 682px;
+            border-left-width: 722px
         }
     }
 }
@@ -127,32 +75,9 @@
     }
 
     .services {
-
-        #triangle-left  {
-            border-bottom: 668px solid #af246f;
-            border-left: 708px solid transparent;
-        }
-
-        #triangle-middle {
-            border-bottom: 668px solid #a12577;
-            border-left: 708px solid transparent;
-        }
-
-        #triangle-right { 
-            border-bottom: 668px solid #8f2782;
-            border-left: 708px solid transparent;
-        }
-    }
-
-    .why {
-        padding-top: 63px;
-
-        .grid-x {
-            .cell {
-                h4 {
-                    text-align: center;
-                }
-            }
+        #triangle-left, #triangle-middle, #triangle-right  {
+            border-bottom-width: 668px;
+            border-left-width: 708px
         }
     }
 }
@@ -174,19 +99,27 @@
         }
     }
 
+    .why {
+        padding-top: 63px;
+
+        .grid-container {
+            .grid-x {
+                .cell {
+                    h4 {
+                        text-align: center;
+                    }
+    
+                    hr {
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+    }
+
     .services {
         @include background(0deg, 90deg, #af246f, 0%, #a12577, 100%);
         padding-bottom: 63px;
-
-        .grid-x {
-            margin: 0 auto;
-            width: 810px;
-
-            .cell {
-                width: 250px;
-                margin: 0 10px;
-            }
-        }
     }
 
     .footer {
@@ -206,9 +139,11 @@
 
 @media (max-width: 979px){ 
     .projects {
-        .grid-x {
-            .cell {
-                padding-bottom: calc((50% - 1.875rem)*0.75);
+        .grid-container {
+            .grid-x {
+                .cell {
+                    padding-bottom: calc((50% - 1.875rem)*0.75);
+                }
             }
         }
     }
@@ -226,22 +161,24 @@
 
 @media (max-width: 954px){
     .contact {
-        padding: 0 80px;
-
-        .small-5 {
-            width: 100%;
-            padding: 88px 0 55px 0;
-
-            p {
-                span {
-                    display: none;
+        .grid-container {
+            .grid-x {
+                .small-5 {
+                    width: 100%;
+                    padding: 80px 0 50px 0;
+        
+                    p {
+                        span {
+                            display: none;
+                        }
+                    }
+                }
+        
+                .small-7 {
+                    margin: 0 0 50px 0;
+                    width: 100%;
                 }
             }
-        }
-
-        .small-7 {
-            margin-top: 0;
-            width: 100%;
         }
     }
 }
@@ -282,20 +219,6 @@
 
 }
 
-@media (max-width: 910px){
-    .services {
-        .grid-x {
-            margin: 0 auto;
-            width: 678px;
-
-            .cell {
-                width: 206px;
-                margin: 0 10px;
-            }
-        }
-    }
-}
-
 @media (max-width: 800px){
     .hero-slider {
         .container {
@@ -314,28 +237,14 @@
         line-height: 300px;
     }
 
-    .projects {
-        margin: 50px 75px;
-    }
-
     .services {
-        .grid-x {
-            width: auto;
-            padding: 0 50px;
-
-            .cell {
-                width: 100%;
-                margin: 10px 0;
-
-                dl {
-                    dd {
-                        a {
-                            color:  #ede8f2;
-                            font-size: 0.9rem;
-                            font-weight: 500;
-                            text-decoration: underline;
-                        }
-                    }
+        .grid-container {
+            .grid-x {
+                padding: 0 50px;
+    
+                .cell {
+                    width: 100%;
+                    margin: 10px 0;
                 }
             }
         }
@@ -344,20 +253,27 @@
 
 @media (max-width: 767px){ 
     .projects {
-        .grid-x {
-            .cell {
-                width: calc(50% - 1.875rem);
-                padding-bottom: calc((50% - 1.875rem)*0.75);
+        padding: 50px;
+
+        .grid-container {
+            .grid-x {
+                .cell {
+                    width: calc(50% - 1.875rem);
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-bottom: calc((50% - 1.875rem)*0.75);
+
+                }
             }
         }
     }
 
-    .intro {
-        padding: 0px 50px 100px 50px;
-    }
-
     .why {
         padding-bottom: 50px;
+    }
+
+    .contact .grid-container .grid-x .small-7 form input, .contact .grid-container .grid-x .small-7 form textarea, .contact .grid-container .grid-x .small-7 select {
+        width: 95%;
     }
 
     .footer {
@@ -376,11 +292,19 @@
         font-size: 60%;
     }
 
+    .intro {
+        .grid-container {
+            padding: 0;
+        }
+    }
+
     .projects {
-        .grid-x {
-            .cell {
-                width: 100%;
-                padding-bottom: calc((100% - 1.875rem)*0.75);
+        .grid-container {
+            .grid-x {
+                .cell {
+                    width: 100%;
+                    padding-bottom: calc((100% - 1.875rem)*0.75);
+                }
             }
         }
     }
@@ -399,29 +323,16 @@
     }
 }
 
-@media (max-width: 580px){
-    .services {
-        .grid-x {
-            width: 100%;
-            padding: 0 20px;
-        }
-    }
-}
-
 @media (max-width: 420px){
     html {
         font-size: 50%;
-    }
-
-    .projects {
-        margin: 50px 25px;
     }
 
     .services {
         padding: 0 20px 50px 20px;
     }
 
-    .why {
+    .projects, .why {
         padding: 50px 20px;
     }
 
