@@ -344,10 +344,11 @@ h4 {
 
         .grid-x {
             .cell {
+                --cellWidth: calc(33.33333%; - 1.875rem);
+                padding-bottom: calc(var(--cellWidth) * 0.75);
                 position: relative;
                 border-radius: 3px;
                 background-color:  #729da0;
-                padding-bottom: calc(33.33333% *0.75 - 1.875rem);
                 z-index: 4;
                
                 .title, .description {
