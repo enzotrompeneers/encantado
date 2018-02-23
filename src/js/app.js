@@ -3,6 +3,7 @@ import Typed from 'typed.js';
 import foundation from 'foundation-sites';
 import ajaxForm from 'jquery-form';
 import '../css/style.scss';
+//require.context('../graphics/', true, /^\.\//);
 
 // START: multi form
 $('form.multi-form a.next').click(function() {

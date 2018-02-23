@@ -49,7 +49,7 @@ module.exports = {
                 exclude: path.resolve(__dirname, 'src/index.html' )
             },
             {
-                test: /\.(jpg|png|svg)$/,
+                test: /\.(jpg|png|svg|gif|jpeg|ico|xml)$/,
                 use: [
                     {
                         loader: 'file-loader', 
@@ -59,7 +59,7 @@ module.exports = {
                         }
                     }
                 ]
-            }
+            },
         ]
     },
     plugins: [
@@ -78,6 +78,6 @@ module.exports = {
             template: 'src/index.html'
         }),
 
-        new CleanWebpackPlugin(['dist'])
+        //new CleanWebpackPlugin(['dist'])
     ]
 };
