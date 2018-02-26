@@ -2966,17 +2966,17 @@ select {
     background-image: none; }
 
 .is-invalid-input:not(:focus) {
-  border-bottom: 5px solid #cc4b37 !important;
+  border-bottom: 3px solid #cc4b37 !important;
   background-color: #f9ecea; }
   .is-invalid-input:not(:focus)::-webkit-input-placeholder {
-    border-bottom: 5px solid #cc4b37 !important;
+    border-bottom: 3px solid #cc4b37 !important;
    }
   .is-invalid-input:not(:focus)::-moz-placeholder {
-    border-bottom: 5px solid #cc4b37 !important;}
+    border-bottom: 3px solid #cc4b37 !important;}
   .is-invalid-input:not(:focus):-ms-input-placeholder {
-    border-bottom: 5px solid #cc4b37 !important;}
+    border-bottom: 3px solid #cc4b37 !important;}
   .is-invalid-input:not(:focus)::placeholder {
-    border-bottom: 5px solid #cc4b37 !important; }
+    border-bottom: 3px solid #cc4b37 !important; }
 
 .is-invalid-label {
   color: #cc4b37 !important; }
