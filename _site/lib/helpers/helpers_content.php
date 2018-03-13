@@ -19,15 +19,44 @@ function getLinksClave($pagina,$clave){
 	return $link;
 }
 
+function getSociales () {
+	$socials = ['instagram', 'linkedin', 'facebook', 'twiiiiter', 'kkk'];
+	$currentSocials = [];
+	foreach($socials as $key=>$s) {
+		//echo webconfig($s);
+
+		$s = webConfig($s);
+
+		if (strcmp(substr($s, 0, 4),'*!!*') != 0) {
+			array_push($currentSocials, $socials[$key]);		
+		}
+	}
+	
+	$output = "";
+	foreach ($currentSocials as $s){
+
+		//echo $s;
+
+		//$url = webconfig($s);
+		//$isSetUrl = isset($url) ? $url : "#";
+		
+		$output .= '<li><a class="circle '.$s.'" ';
+		$output .= 'href="'.webconfig($s).'" ';
+		$output .= 'title="'.strtoupper($s).'"> ';
+		$output .= '<img alt="'.trad('siguenos').' '.$s.'" ';
+		$output .= 'src="graphics/'.$s.'.svg"></a></li>';
+	}
+	return $output;
+}
+
 // Devuelve una lista con banderas
 function getIdiomas ($clave='idiomas', $reverse=false) {
 	global $xname,$language,$languages;
-	$langs = ($reverse==true)?array_reverse($languages):$languages;
-	$output = '<ul name="'.$clave.'" class="'.$clave.'" id="'.$clave.'">'; 
+	$langs = ($reverse==true)?array_reverse($languages):$languages; 
+	$output = "";
 	foreach ($langs as $l){
-		$output .= '<li class="'.$l.'"><a href="'.cambiar_idioma($l).'" title="'.strtoupper($l).'">'.strtoupper($l).'</a></li>';
+		$output .= '<li><a class="circle" href="'.cambiar_idioma($l).'" title="'.strtoupper($l).'">'.strtoupper($l).'</a></li>';
 	}
-	$output .= '</ul>';
 	return $output;
 }
 

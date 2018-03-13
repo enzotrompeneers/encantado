@@ -28,14 +28,14 @@
     
 	<link rel="shortcut icon" href="favicon.ico" />
 
-    <link rel="stylesheet" href="css/foundation-sites.css" />
+     <link rel="stylesheet" href="css/foundation-sites.css" />
 	<link rel="shortcut icon" href="images/favicon.ico" />
 	<link rel="stylesheet" href="css/jquery.bxslider.min.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/layout.min.css" />
+    <link rel="stylesheet" href="css/layout.min.css" /> 
 
-	<link rel="stylesheet" href="css/main.min.css" />
+	<link rel="stylesheet" href="css/main.css" />
     
     <script async>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
