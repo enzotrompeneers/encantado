@@ -6,3 +6,9 @@
     background: linear-gradient($degree2, $color1 $percent1, $color2 $percent2);
 }
 
+@mixin font-size($size) {
+    font-size: $size + px;
+    font-size: $size / 16 + em;
+    font-size: $size / 16 + rem;
+}
+

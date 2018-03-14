@@ -21,7 +21,7 @@ class GlobalMenu extends Menu
 	 *  @return HTML list
 	 *  
 	 */
-	public function createMenu($clave, $options = array())
+	public function createMenu($clave ,$options = array())
 	{
 		
 		$this->getMenuData($clave);

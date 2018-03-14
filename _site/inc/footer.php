@@ -45,25 +45,63 @@
 				<div class="medium-4 cell footer-padding">
 					<div class="grid-x">
 						<div class="medium-12 large-4 cell">
-							<a href="#Inicio">Inicio</a><br>
-							<a href="#Acerca">Acerca</a><br>
-							<a href="#Trabajos">Trabajos</a><br>
-							<a href="#Contacto">Contacto</a><br>
+						<ul>	
+							<li class="inicio ">
+								<a href="es/" title="Encantado">
+									Inicio 
+								</a>
+							</li>
+							<li class="acerca ">
+								<a href="es/acerca/" title="Acerca">
+									Acerca 
+								</a>
+							</li>
+							<li class="trabajos ">
+								<a href="es/trabajos/" title="Trabajos">
+									Trabajos 
+								</a>
+							</li>
+							<li class="contacto ">
+								<a href="es/contacto/" title="Contacto">
+									Contacto 
+								</a>
+							</li>
 						</div>
 						<div class="medium-12 large-8 cell">
-							<a href="#disenio">Diseño web Torrevieja</a><br>
-							<a href="#desarrollo">Desarrollo web</a><br>
-							<a href="#posicionamiento">Posicionamiento web</a><br>
-							<a href="#fotografia">Fotografía</a><br>
+							<ul>
+								<li class="diseno-web-torrevieja ">
+									<a href="es/diseno-web-torrevieja/" title="Diseño web Torrevieja">
+										Diseño web Torrevieja 
+									</a>				
+								</li>
+								<li class="desarrollo-web ">
+									<a href="es/desarrollo-web/" title="Desarrollo web">
+										Desarrollo web 
+									</a>
+								</li>
+								<li class="posicionamiento-web ">
+									<a href="es/posicionamiento-web/" title="Posicionamiento web">
+										Posicionamiento web 
+									</a>
+								</li>
+								<li class="fotografia ">
+									<a href="es/fotografia/" title="Fotografía">
+										Fotografía 
+									</a>
+								</li>	
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
-	<script src="src/js/particles.js">
+	<script src="js/bundle.js"></script>
+	<script src="js/particles.js">
 	</script> 
-	<script src="src/js/particles-config.js">
+	<script src="js/particles-config.js">
 	</script>
+	
+	<?php //if (!empty($log) && is_object($log) && pTEXT==false) echo '<br clear="all" />' . $log->showLog(); ?>
 </body>
 </html>

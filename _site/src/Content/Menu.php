@@ -52,16 +52,14 @@ class Menu
      * @param String $clave 
      * @return String Menu as HTML list
      */
-	public function createMenu($clave = 'header')
+	public function createMenu($clave = 'header', $mobile, $split)
 	{
-		
 		$this->createMainMenu($clave);
 		$this->insertSubmenus($clave);
 		
 		$this->translatedLinks = $this->getTranslatedLinks($this->languages, $this->pagina);
 
-		return $this->renderMenu($clave);
-
+		return $this->renderMenu($clave, $mobile, $split);
 	}
 	
 	/**
@@ -73,20 +71,21 @@ class Menu
 	 */
 	protected function createMainMenu($clave)
 	{
-		
 		$menuData = $this->getMenuData();
 		$menuStructure = array();
-
 		foreach ($menuData as $k => $v){
-
-			if ($v['header_menu'] == 0) continue;
-			if (($v['footer_menu'] == 0 && $clave == 'footer') ||  ($clave == 'footer' && $v['parent_id'])) continue; // Footer has no submenu
-			$menuStructure[$v['id']] = $v;
-
+			if ($clave === 'header') {
+				if ($v['header_menu']) {
+					$menuStructure[$v['id']] = $v;
+				}
+			}
+			if ($clave === 'footer') {
+				if ($v['footer_menu'] ||  $v['parent_id']) { // Footer has no submenu
+					$menuStructure[$v['id']] = $v;
+				} 
+			}
 		}
-
 		$this->menus[$clave] = $menuStructure;
-
 	}
 	
     /**
@@ -270,18 +269,31 @@ class Menu
 	 *  @param String $clave
 	 *  @return String HTML list
 	 */
-	protected function renderMenu($clave)
+	protected function renderMenu($clave = 'header', $mobile = false, $split)
 	{
-		
 		$data = $this->menus[$clave];
+		if ($clave === 'header'){
+			if ($mobile) {
+				$output = '<ul class="vertical menu" data-back-button="<li class=\'js-drilldown-back\'><a tabindex=\'0\'>'.trad('volver').'</a></li>" data-drilldown>';
+			} else {
+				$output = '<ul class="menu align-center dropdown header-menu" data-dropdown-menu>';
+			}
+		} 
+		if ($clave === 'footer'){
+			$output = '<ul>';
+		}
 
-		$output = '<ul>';
 		foreach ($data as $k => $v){
 			$submenu = (array_key_exists('submenu', $v)) ? $v['submenu'] : false;
 			
 			// Insert submenu
 			if ($submenu) {
-				$submenuHTML = '<ul class="' . $this->menuClass . '">';
+				if ($mobile) {
+					$submenuHTML = '<ul class="submenu menu vertical nested">';
+				} else {
+					$submenuHTML = '<ul class="' . $this->menuClass . '">';
+				}
+				
 				foreach($submenu as $x => $y){
 					$submenuHTML .= $this->renderListElement($y);
 				}
@@ -291,7 +303,6 @@ class Menu
 			
 			// Render this element
 			$output .= $this->renderListElement($v);
-			
 		}
 		$output .= '</ul>';
 		
@@ -320,6 +331,7 @@ class Menu
 		$link = LANGUAGE . '/' . $data['slug'] . '/';
 		
 		if ($data['clave'] == 'inicio') $link = LANGUAGE . '/';
+
 		
 		return '	<li class="' . $data['clave'] . ' ' . $hasMenuClass . '">
 						<a href="' . $link . '" title="' . $data['titulo'] . '">

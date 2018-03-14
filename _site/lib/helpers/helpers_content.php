@@ -22,24 +22,14 @@ function getLinksClave($pagina,$clave){
 function getSociales () {
 	$socials = ['instagram', 'linkedin', 'facebook', 'twiiiiter', 'kkk'];
 	$currentSocials = [];
+	$output = "";
 	foreach($socials as $key=>$s) {
-		//echo webconfig($s);
-
 		$s = webConfig($s);
-
 		if (strcmp(substr($s, 0, 4),'*!!*') != 0) {
-			array_push($currentSocials, $socials[$key]);		
+			array_push($currentSocials, $socials[$key]);	
 		}
 	}
-	
-	$output = "";
 	foreach ($currentSocials as $s){
-
-		//echo $s;
-
-		//$url = webconfig($s);
-		//$isSetUrl = isset($url) ? $url : "#";
-		
 		$output .= '<li><a class="circle '.$s.'" ';
 		$output .= 'href="'.webconfig($s).'" ';
 		$output .= 'title="'.strtoupper($s).'"> ';

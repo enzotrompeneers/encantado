@@ -86,9 +86,18 @@ $images = $page->getImages();
 $files = $page->getFiles();
 
 // Menu
+/*
+PARAMS:
+menu: header/footer,
+mobile: true/false,
+split: true/false
+
+*/
 $menu = new Menu($db, $languages, $pagina, $domains);
-$headerMenu = $menu->createMenu('header');
-$footerMenu = $menu->createMenu('footer');
+$headerMenu = $menu->createMenu('header', false, false);
+$headerMenuMobile = $menu->createMenu('header', true, false);
+$footerMenu = $menu->createMenu('footer', false, false);
+$footerMenuSplit = $menu->createMenu('footer', false, true);
 
 // Recaptcha
 $recaptchaConfig = $config->get('recaptcha');
@@ -101,12 +110,12 @@ $recaptchaSecretCode = (!LOCALHOST) ? $recaptchaSecretCodeConfig : '6LfyvjQUAAAA
 $search = new Buscador($db);
 
 // Panoramicas
-$oPanoramicas = new Panoramics($db);
-$panoramicas = $oPanoramicas->getList();
+// $oPanoramicas = new Panoramics($db);
+// $panoramicas = $oPanoramicas->getList();
 
 // Quicklinks
-$oQuicklinks = new Quicklinks($db, $menu);
-$quicklinks = $oQuicklinks->getList();
+// $oQuicklinks = new Quicklinks($db, $menu);
+// $quicklinks = $oQuicklinks->getList();
 
 
 

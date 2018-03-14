@@ -13,13 +13,18 @@ $('form.multi-form a.prev').click(function() {
 })
 // END: multi form
 // START: typed
-let typer = new Typed('.typer', {
-	stringsElement: '#typed-strings',
-	typeSpeed: 30,
-	loop: true,
-	startDelay: 1000,
-	backDelay: 2000
-});
+
+if ($(".typer")[0]){
+   let typer = new Typed('.typer', {
+		stringsElement: '#typed-strings',
+		typeSpeed: 30,
+		loop: true,
+		startDelay: 1000,
+		backDelay: 2000
+	});
+}
+
+
 // END: typed
 // START: foundation
 $(document).foundation()

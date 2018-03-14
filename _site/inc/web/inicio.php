@@ -1,196 +1,203 @@
-    <section  class="content-container">
-    <div class="slider-outercon">
-            <div class="banner-content-outer">
-                <div class="banner-content">
-                    <h2><?= title($pagina) ?></h2>                    
-                    <div class="points-outer">
-                        <?= art($pagina) ?>
-                    </div>                    
-                    <div class="contact-info">
-                        <p><span>Torrevieja  &amp;  Alicante</span>,  Costa Blanca - <?=trad('espana')?></p>
-                        <span class="call"><a href="tel:<?= webConfig('telefono') ?>"><?= webConfig('telefono') ?></a></span>
-                    </div>                    
-                    <a class="contact-btn" href="<?= $language ?>/<?= slugged('contacto') ?>/"><?=trad('contacto')?></a>
+<main>
+    <section class="hero-slider">
+        <div id="particles-js"></div>
+        <div class="container">
+            <h1><?= trad("slogan") ?></h1>
+            <div id="typed-strings">
+                <?= art_sin("slogan") ?>
+            </div>
+            <p><?= trad("expertos_en") ?> <span class="typer"></span></p>
+        </div>
+    </section>
+    <section class="projects">
+        <div class="grid-container full">
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="medium-6 large-4 cell">
+                    <p class="title">Nombre projecto</p>
+                    <p class="description">Web responsive</p>
+                </div>
+                <div class="medium-6 large-4 cell">
+                    <p class="title">Nombre projecto</p>
+                    <p class="description">Web responsive</p>
+                </div>
+                <div class="medium-6 large-4 cell">
+                    <p class="title">Nombre projecto</p>
+                    <p class="description">Web responsive</p>
+                </div>
+                <div class="medium-6 large-4 cell">
+                    <p class="title">Nombre projecto</p>
+                    <p class="description">Web responsive</p>
+                </div>
+                <div class="medium-6 large-4 cell">
+                    <p class="title">Nombre projecto</p>
+                    <p class="description">Web responsive</p>
+                </div>
+                <div class="medium-6 large-4 cell">
+                    <p class="title">Nombre projecto</p>
+                    <p class="description">Web responsive</p>
                 </div>
             </div>
-
-            <div class="slider-content-outer">
-                <div class="slider-wrap">
-                    <ul class="bxslider">
-                        <li>
-                            <div class="slider-image-outer">
-                                <img src="images/content/slide1.png" alt="<?=trad("web_adaptable_para")?> Bastjon Azul real estate Spain" />
-                            </div>
-                            <div class="caption"><?=trad("web_adaptable_para")?> <a href="http://www.bastjonazul.com" target="_blank"> Bastjon Azul real estate</a></div>
-                        </li>
-                        
-                        <li>
-                            <div class="slider-image-outer">
-                                <img src="images/content/slide2.png" alt="<?=trad("web_adaptable_para")?> Plane Parking, Alicante airport parking"/>
-                            </div>
-                            <div class="caption"><?=trad("web_adaptable_para")?> <a href="http://www.planeparking.com" target="_blank"> Plane Parking</a> airport parking</div>
-                        </li>
-                        
-                        <li>
-                            <div class="slider-image-outer">
-                                <img src="images/content/slide3.png" alt="<?=trad("web_adaptable_para")?> Inmo Carpe Diem, Torrevieja"/>
-                            </div>
-                            <div class="caption"><?=trad("web_adaptable_para")?> for <a href="http://www.immocarpediem.com/en/" target="_blank"> Inmo Carpe Diem Torrevieja</a></div>
-                        </li>
-
+        </div>
+    </section>
+    <section class="intro">
+        <div class="show-for-large" id="triangle-grey"></div>
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="medium-12 large-8 cell">
+                    <h2><?= title("inicio"); ?></h2>
+                    <p class="info">Estamos especializados en el diseño de paginas web profesionales, usando los últimos estándares y soluciones de desarrollo web para que pueda promocionar su negocio a través de Internet.</p>
+                    <p>Desde el diseño más sencillo hasta grandes aplicaciones dinámicas, tiendas online o webs para inmobiliarias.</p>
+                    <p>Contamos con <b>más de 12 años de experiencia</b> en el diseño y desarrollo de páginas web, que no sólo parecen buenos sino que son también técnicamente correctos. Además nos encargamos de que su página web esté <b>optimizada para los motores de búsqueda</b> y le proporcionamos un alojamiento web ajustado a sus necesidades.</p>
+                </div>
+                <div class="large-4 cell show-for-large"><img alt="electronics" src="graphics/831284068.jpg" title="electronics"></div>
+            </div>
+        </div>
+    </section>
+    <section class="services">
+        <div class="show-for-large" id="triangle-left"></div>
+        <div class="show-for-large" id="triangle-middle"></div>
+        <div class="show-for-large" id="triangle-right"></div>
+        <div class="grid-container">
+            <h4>Servicios</h4>
+            <hr>
+            <div class="grid-x grid-margin-x">
+                <div class="small-12 medium-4 large-4 cell">
+                    <dl>
+                        <dt>Diseño Web</dt>
+                        <dd>
+                            <a href="#">Desarrollo Web</a>,
+                        </dd>
+                        <dd>
+                            <a href="#">Diseño Web</a>,
+                        </dd>
+                        <dd>
+                            <a href="#">accesibilidad y usabilidad</a>.
+                        </dd>
+                    </dl>
+                </div>
+                <div class="small-12 medium-4 large-4 cell">
+                    <dl>
+                        <dt>Diseño gráfico</dt>
+                        <dd><p>Soluciones creativas:</p></dd>
+                        <dd>
+                            <a href="#">Diseño gráfico</a>,
+                        </dd>
+                        <dd>
+                            <a href="#">fotografía</a>,
+                        </dd>
+                        <dd>
+                            <a href="#">publicidad y logotipos</a>.
+                        </dd>
+                    </dl>
+                </div>
+                <div class="small-12 medium-4 large-4 cell">
+                    <dl>
+                        <dt>Mantenimiento Web</dt>
+                        <dd>
+                            <a href="#">Sistemas de gestión de contenido (CMS)</a>
+                        </dd>
+                        <dd>
+                            y <a href="#">gestión de relaciones con clientes (CRM)</a>.
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="why">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="medium-12 large-3 cell">
+                    <h4>Por qué eligirnos?</h4>
+                    <hr>
+                </div>
+                <div class="medium-6 large-4 cell checkmark">
+                    <ul>
+                        <li>Sabemos que si hacemos <u>un buen trabajo</u>, usted <u>mejora su negocio</u>.</li>
+                        <li>Lo enfocamos de manera profesional. Entregamos <u>trabajos de calidad y en plazo</u>.</li>
+                        <li>Realizamos un trabajo con una <u>excelente calidad-precio</u>.</li>
                     </ul>
                 </div>
-
-            </div>
-        </div>
-    <div class="title-block">
-        <h1><?=trad('slogan')?></h1>
-		<p><?=trad('slogan_frase')?></p>
-    </div>
-    <div class="featured-block-out">  
-          <div class="row collapse">  
-          <?php $cont = 0; ?>
-          <?php foreach($aProjects as $project) : ?>
-            <div class="medium-<?php
-             if ($cont == 0 || $cont == 5 || $cont == 6 || $cont == 11) : 
-                    echo '6';
-                    $cont ++ ;
-             else: 
-                    echo '3'; 
-                    $cont ++;
-             endif ?> columns nopadding">
-                <div class="featured-block">
-                    <!-- <a href="<?= LANGUAGE ?>/proyectos_ficha/?clave=<?= $project['clave'] ?>"> -->
-					<a href="<?= $project['url'] ?>" target="_blank">
-                        <div class="featured-image-inner">
-                          <div class="imgLiquidFill imgLiquid" style="width:100%; height:400px;">
-						   <img src="images/proyectos/<?= $project['id'] ?>/<?= $project['thumbnail'] ?>" alt="<?= $project['nombre'] ?>">
-						</div>                          
-                              <div class="featured-image-details" style="background-color:<?= $project['color'] ?>;">
-                                <h3><?= $project['categoria'] ?> <?=trad("para")?><span> <?= $project['nombre'] ?></span></h3>
-                               <span class="be-icon4">
-                
-                              </span>
-                            </div>
-
-                        </div>
-                    </a>
+                <div class="medium-6 large-5 cell cross">
+                    <ul>
+                        <li>No creemos en el trabajo rápido y descuidado. Realizamos <u>un trabajo sólido</u>.</li>
+                        <li>No creemos en soluciones prefabricadas. Cada trabajo es <u>único y personalizado</u> de acuerdo con las necesidades de cada cliente.</li>
+                    </ul>
                 </div>
             </div>
-            <?php endforeach ?>        
-               </div>
         </div>
-    <div class="design-outer">
-			<div class="design-inner">
-				<div class="design-left-blk">
-					<div class="common-blk">
-						<h2><?=trad('be_visible')?></h2>
-						<p><?= art_sin('be_visible'); ?></p>
-					</div>
-					<div class="common-blk">
-						<h2><?=trad('be_creative')?></h2>
-						<p><?= art_sin('be_creative'); ?></p>
-					</div>
-					
-				</div>
-				<div class="design-middle-blk">
-				<div class="rotate-block">	<div class="middle-left middle-left1">
-						<h2><?=trad('diseno_ux')?></h2>
-						<p><?= art_sin('diseno_ux') ?></p>
-					</div>
-				     <svg class="left-circle"  viewBox="0 0 250 250"
-     xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink" >
-
-    <path class="dashed" fill="none" stroke="#fff" stroke-width="1" stroke-linejoin="round" stroke-miterlimit="1" d="M75,0.05c10.118,0,19.934,1.982,29.174,5.89c8.925,3.775,16.94,9.179,23.823,16.063
-		c6.884,6.883,12.288,14.899,16.063,23.824c3.909,9.24,5.891,19.056,5.891,29.174c0,10.118-1.981,19.933-5.891,29.173
-		c-3.774,8.925-9.179,16.94-16.063,23.823c-6.883,6.884-14.898,12.288-23.823,16.063c-9.24,3.909-19.056,5.891-29.174,5.891
-		s-19.934-1.981-29.174-5.891c-8.925-3.774-16.94-9.179-23.824-16.063c-6.883-6.883-12.288-14.898-16.063-23.823
-		C2.031,94.934,0.049,85.118,0.049,75c0-10.118,1.982-19.934,5.89-29.174c3.775-8.925,9.179-16.94,16.063-23.824
-		S36.901,9.715,45.826,5.94C55.066,2.032,64.882,0.05,75,0.05 M75,0C33.578,0,0,33.579,0,75c0,41.419,33.579,75,75,75
-		c41.421,0,75-33.58,75-75C150,33.579,116.421,0,75,0L75,0z">
-        <animateTransform attributeName="transform"
-                          attributeType="XML"
-                          type="rotate"
-                          from="0 75 75"
-                          to="360 75 75"
-                          dur="15s"
-                          repeatCount="indefinite"/>
-    </path>
-</svg>
-      
-      <div class="middle-left">
-						<h2><?=trad('tecnologia')?></h2>
-						<p><?= art_sin('tecnologia') ?></p>
-					</div>
-       
-     <svg class="right-circle"  viewBox="0 0 250 250"
-     xmlns="http://www.w3.org/2000/svg" version="1.1"
-     xmlns:xlink="http://www.w3.org/1999/xlink" >
-
-    <path class="dashed" fill="none" stroke="#fff" stroke-width="1" stroke-linejoin="round" stroke-miterlimit="1" d="M75,0.05c10.118,0,19.934,1.982,29.174,5.89c8.925,3.775,16.94,9.179,23.823,16.063
-		c6.884,6.883,12.288,14.899,16.063,23.824c3.909,9.24,5.891,19.056,5.891,29.174c0,10.118-1.981,19.933-5.891,29.173
-		c-3.774,8.925-9.179,16.94-16.063,23.823c-6.883,6.884-14.898,12.288-23.823,16.063c-9.24,3.909-19.056,5.891-29.174,5.891
-		s-19.934-1.981-29.174-5.891c-8.925-3.774-16.94-9.179-23.824-16.063c-6.883-6.883-12.288-14.898-16.063-23.823
-		C2.031,94.934,0.049,85.118,0.049,75c0-10.118,1.982-19.934,5.89-29.174c3.775-8.925,9.179-16.94,16.063-23.824
-		S36.901,9.715,45.826,5.94C55.066,2.032,64.882,0.05,75,0.05 M75,0C33.578,0,0,33.579,0,75c0,41.419,33.579,75,75,75
-		c41.421,0,75-33.58,75-75C150,33.579,116.421,0,75,0L75,0z">
-        <animateTransform attributeName="transform"
-                          attributeType="XML"
-                          type="rotate"
-                          from="360 75 75"
-                          to="0 75 75"
-                          dur="15s"
-                          repeatCount="indefinite"/>
-    </path>
-</svg>
-      
-				</div>
-				
-					
-				</div>
-				<div class="design-left-blk right-con">
-					<div class="common-blk">
-						<h2><?=trad('be_effective')?></h2>
-						<p><?= art_sin('be_effective'); ?></p>
-					</div>
-					<div class="common-blk">
-						<h2><?=trad('be_profitable')?></h2>
-						<p><?= art_sin('be_profitable'); ?></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	<div class="two-col-outer">
-			<div class="single-block"></div>
-			<div class="single-block second"></div>
-			
-			<div class="contact-blk">
-				<div class="contact-top">
-					<div class="contact-left">
-						<h3>Torrevieja</h3>
-						<address>
-							<p><?= webConfig('calle') ?>,<br><?= webConfig('detalle_direccion') ?><br>03181 Torrevieja</p>
-						</address>
-					</div>
-					<div class="contact-right">
-						<a href="tel:<?= webConfig('telefono') ?>"><?= webConfig('telefono') ?></a>
-						<a href="mailto:<?= webConfig('email') ?>" class="mail"><?= webConfig('email') ?></a>
-					</div>
-				</div>
-				<div class="contact-top grey-blk">
-					<div class="contact-left">
-						<h3>Alicante</h3>
-						<address>
-							<p><?= webConfig('calle_alicante') ?><br><?= webConfig('codigo_postal_alicante') ?> Alicante</p>
-						</address>
-					</div>
-					<div class="contact-right">
-						<a href="tel:<?= webConfig('telefono_alicante') ?>"><?= webConfig('telefono_alicante') ?></a>
-						<a href="mailto:<?= webConfig('email_alicante') ?>" class="mail"><?= webConfig('email_alicante') ?></a>
-					</div>
-				
-				</div>
-			</div>
-		</div>
     </section>
+    <section class="contact">
+        <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+                <div class="small-5 cell">
+                    <h4>Si buscas:</h4>
+                    <h4 class="above">Si buscas:</h4>
+                    <p>Diseño de paginas web, con cada detalle cuidado al máximo. Hecho a medida, con un diseño único para diferenciarse claramente de la competencia. Facil de mantener. Multilingüe. Responsivo, adaptando a cualquier pantalla o dispositivo. Y preparado para conseguir clientes y vender su producto. <span></span></p>
+                </div>
+                <div class="small-7 cell">
+                    <div class="callout success hide" data-closable="" id="callout">
+                        <h5>Gracias por tu mensaje</h5><button aria-label="Dismiss alert" class="close-button" data-close="" type="button"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <h4>Pide su presupuesto</h4>
+                    <hr>
+                    <form action="#contact-form" class="multi-form" data-abide="" id="contact-form" method="get" name="contact-form" novalidate="">
+                        <fieldset class="active">
+                            <div class="grid-x">
+                                <div class="small-12 medium-6 cell">
+                                    <label for="nombre">Nombre*</label> <input id="nombre" name="nombre" pattern="[a-zA-Z\s]+" required="" type="text">
+                                </div>
+                                <div class="small-12 medium-6 cell">
+                                    <label for="apellido">Apellido(s)*</label> <input id="apellido" name="apellido" pattern="[a-zA-Z\s]+" required="" type="text">
+                                </div>
+                                <div class="small-12 medium-6 cell">
+                                    <label for="email">E-mail*</label> <input id="email" name="email" pattern="email" required="" type="text">
+                                </div>
+                                <div class="small-12 medium-6 cell">
+                                    <label for="telefono">Teléfono*</label> <input id="telefono" name="telefono" pattern="number" required="" type="text">
+                                </div>
+                                <div class="small-12 medium-6 cell">
+                                    <label for="empresa">Empresa</label> <input id="empresa" name="empresa" type="text">
+                                </div>
+                                <div class="small-12 medium-6 cell">
+                                    <label for="localidad">Localidad*</label> <input id="localidad" name="localidad" pattern="[a-zA-Z\s]+" required="" type="text">
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="grid-x">
+                                <div class="small-12 cell">
+                                    <label for="categoria">Categoría* <select id="categoria" name="categoria" required="">
+                                        <option value="">
+                                            escoger
+                                        </option>
+                                        <option value="immo">
+                                            immo
+                                        </option>
+                                        <option value="hotel">
+                                            hotel
+                                        </option>
+                                        <option value="ventas">
+                                            ventas
+                                        </option>
+                                    </select></label>
+                                </div>
+                            </div>
+                            <div class="grid-x">
+                                <div class="small-12 cell">
+                                    <label for="descripcion">Descripción 
+                                    <textarea id="descripcion" name="descripcion" rows="5"></textarea></label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="buttons">
+                            <a class="prev">
+                            <div class="circle"><img alt="Next" src="graphics/noun_1086550.svg"></div></a> <a class="next">
+                            <div class="circle"><img alt="Next" src="graphics/noun_1086550.svg"></div></a> <button class="submit circle"><img alt="Next" src="graphics/send.svg"></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>    

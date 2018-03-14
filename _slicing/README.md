@@ -25,7 +25,7 @@
 - `npm install --save-dev webpack webpack-dev-server sass-loader node-sass css-loader extract-webpack-plugin babel-core babel-loader babel-preset-es2015 html-loader html-webpack-plugin file-loader clean-webpack-plugin`
 - `npm install --save jquery foundation-sites particles.js typed.js jquery-form`
 
-- in **package.js**, add these lines:  
+- in **package.json**, add these lines:  
 ``` javascript
  "scripts": {
     "build": "webpack-dev-server",

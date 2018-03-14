@@ -27,12 +27,38 @@
         font-size: 85%;
     }
     
+    .intro .grid-container .grid-x{
+        //h2{ border: solid 1px orange;}
+        p{ 
+            @include font-size(17);
+        }
+    }
+
     .services {
         padding-bottom: 93px;
+
+        .grid-container .grid-x .cell dl dd{
+            @include font-size(17);
+        }
 
         #triangle-left, #triangle-middle, #triangle-right  {
             border-bottom-width: 702px;
             border-left-width: 742px
+        }
+    }
+
+    .why{
+        padding-bottom: 68px;
+    }
+
+    .contact{
+        .grid-container .grid-x{
+            .small-5{
+                p{
+                    @include font-size(21);
+                    padding-right: 20px;
+                }
+            }
         }
     }
 }
@@ -59,12 +85,79 @@
         }
     }
 
+    .intro .grid-container .grid-x{
+        //h2{ border: solid 1px pink;}
+        p{ 
+            @include font-size(20);
+            line-height: 1.7em;
+            &.info{
+                line-height: 1.7em;
+                @include font-size(22);
+            }
+        }
+    }
+
+    .contact{
+        .grid-container{
+            .grid-x{
+                .small-7{ 
+                    form{
+                        label{
+                            @include font-size(20);
+                            padding-bottom: 8px; 
+                        }
+                    }
+                    h4{
+                        @include font-size(36);
+                    }
+                    hr{
+                        width: 21.8rem;
+                    }
+                }
+                .small-5{
+                    padding-top: 125px;
+                    h4{
+                        @include font-size(36);
+                    }
+                }
+            }
+        }
+    }
+
     .services {
         padding-bottom: 93px;
+
+        .grid-container{
+            h4{
+                @include font-size(40);
+            }
+            hr{
+                width: 10.8rem;
+            }
+            .grid-x .cell dl dd{
+                @include font-size(19);
+            }
+        }
 
         #triangle-left, #triangle-middle, #triangle-right  {
             border-bottom-width: 682px;
             border-left-width: 722px
+        }
+    }
+
+    .why{
+        .grid-container{
+            .grid-x .cell{
+                h4{
+                    @include font-size(30);
+                }
+                hr{
+                    width: 16.3rem;
+                }
+                ul li{
+                    @include font-size(22);
+                }
+            }
         }
     }
 }
@@ -101,16 +194,18 @@
 
     .why {
         padding-top: 63px;
+        padding-bottom: 63px;
 
         .grid-container {
             .grid-x {
                 .cell {
                     h4 {
                         text-align: center;
+                        @include font-size(36);
                     }
-    
                     hr {
                         margin-left: auto;
+                        width: 19.3rem;
                     }
                 }
             }
@@ -268,8 +363,102 @@
         }
     }
 
+    .intro .grid-container .grid-x{ 
+        h2{
+            @include font-size(32);
+            font-weight: 600;
+            border: solid 1px red;  
+        }
+        p.info{
+            margin-bottom: 2.4rem;
+            line-height: 1.58em;
+            @include font-size(24); 
+        }
+        p{
+            @include font-size(22); 
+        }
+    }
+
+    .services{
+        .grid-container{ 
+            hr{
+                margin-bottom: 44px;
+            }
+            .grid-x .cell dl{
+                dt{
+                    @include font-size(28);
+                }
+                dd{
+                    @include font-size(22);
+                }
+            }
+        }
+    }
+
     .why {
         padding-bottom: 50px;
+
+        .grid-container .grid-x .cell{
+            ul{
+                li{
+                    padding-bottom: 1.475rem;
+                    @include font-size(24);
+                }
+            }
+        }
+    }
+
+    .contact{
+        .grid-container{
+            .grid-x{
+                padding-bottom: 20px;
+                .small-7{ 
+                    form{
+                        label{
+                            @include font-size(22);
+                            padding-bottom: 8px; 
+                        }
+                        input,
+                        select{
+                            @include font-size(20);
+                        }
+                        select{
+                            height: 4.4375rem;
+                        }
+                        .buttons .next .circle,
+                        .buttons .submit.circle{
+                            width: 6rem;
+                            height: 6rem;
+                            line-height: 6rem;
+                            bottom: -3rem;
+                        }
+                        .buttons .prev .circle{
+                            width: 4.5rem;
+                            height: 4.5rem;
+                            line-height: 4.5rem;
+                            bottom: -2.25rem;
+                            left: calc(50% - 3.5rem);
+                        }
+                    }
+                    h4{
+                        @include font-size(38);
+                    }
+                    hr{
+                        width: 22.8rem;
+                    }
+                }
+                .small-5{
+                    padding-top: 50px;
+                    padding-bottom: 40px;
+                    h4{
+                        @include font-size(36);
+                    }
+                    p{
+                        @include font-size(26);
+                    }
+                }
+            }
+        }
     }
 
     .contact .grid-container .grid-x .small-7 form input, .contact .grid-container .grid-x .small-7 form textarea, .contact .grid-container .grid-x .small-7 select {
@@ -295,8 +484,25 @@
     .intro {
         .grid-container {
             padding: 0;
+
+            .grid-x{ 
+                h2{
+                    @include font-size(32);
+                    font-weight: 500;
+                    border: solid 1px blue;  
+                }
+                p.info{
+                    margin-bottom: 2.2rem;
+                    @include font-size(24); 
+                }
+                p{
+                    @include font-size(22);
+                    margin-bottom: 1.25rem; 
+                }
+            }
         }
     }
+   
 
     .projects {
         .grid-container {
@@ -321,6 +527,21 @@
             }
         }
     }
+
+    .intro .grid-container .grid-x{ 
+        h2{
+            @include font-size(32);
+            font-weight: 500;
+            border: solid 1px red;  
+        }
+        p.info{
+            margin-bottom: 2.2rem;
+            @include font-size(24); 
+        }
+        p{
+            @include font-size(22); 
+        }
+    }
 }
 
 @media (max-width: 420px){
@@ -330,15 +551,126 @@
 
     .services {
         padding: 0 20px 50px 20px;
+
+        .grid-container{
+            h4{
+                @include font-size(48);
+                padding-top: 36px; 
+            }
+            hr{
+                margin-bottom: 30px;
+                width: 13.2rem;
+            }
+            .grid-x .cell dl{
+                dt{
+                    @include font-size(30);
+                }
+                dd{
+                    @include font-size(24);
+                }
+            }
+        }
     }
 
     .projects, .why {
         padding: 50px 20px;
     }
 
+    .why{
+        padding: 50px 20px 40px 20px;
+
+        .grid-container .grid-x .cell{
+            h4{
+                @include font-size(44);
+            }
+            hr{
+                width: 23.5rem;
+            }
+            ul li{
+                @include font-size(26);
+            }
+        }
+    }
+
     .contact {
         padding: 0 20px;
     }
+
+    .intro .grid-container .grid-x{ 
+        h2{
+            @include font-size(32);
+            font-weight: 500;  
+            border: solid 1px green;
+        }
+        p.info{
+            margin-bottom: 2.2rem;
+            @include font-size(28); 
+        }
+        p{
+            @include font-size(26); 
+        }
+    }
+
+    .contact{
+        .grid-container{
+            .grid-x{
+                padding-bottom: 20px;
+                .small-7{ 
+                    form{
+                        label{
+                            @include font-size(28);
+                            padding-bottom: 8px;
+                            margin-left: 8px; 
+                        }
+                        input,
+                        select{
+                            @include font-size(26);
+                        }
+                        select{
+                            height: 4.4375rem;
+                        }
+                        .buttons .next .circle,
+                        .buttons .submit.circle{
+                            width: 8rem;
+                            height: 8rem;
+                            line-height: 8rem;
+                            bottom: -4rem;
+                            margin-left: -2rem;
+                        }
+                        .buttons .prev .circle{
+                            width: 4.5rem;
+                            height: 4.5rem;
+                            line-height: 4.5rem;
+                            bottom: -2.25rem;
+                            left: calc(50% - 5.5rem);
+                        }
+                    }
+                    h4{
+                        @include font-size(44);
+                    }
+                    hr{
+                        width: 26.8rem;
+                    }
+                }
+                .small-5{
+                    padding-top: 50px;
+                    padding-bottom: 40px;
+                    h4{
+                        @include font-size(44);
+                        &.above {
+                            color: white;
+                            margin-top: -4.05rem;
+                        }
+                        margin: 0;
+                    }
+                    p{
+                        @include font-size(29);
+                    }
+                }
+            }
+        }
+    }
+
 
 }
 
