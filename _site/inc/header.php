@@ -19,7 +19,6 @@
             <ul class="menu mobile-languages">
                 <?= getIdiomas('idiomas', true) ?>
             </ul>
-
             <?= $headerMenuMobile; ?>
 
             <ul class="menu mobile-social">

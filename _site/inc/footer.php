@@ -47,46 +47,46 @@
 						<div class="medium-12 large-4 cell">
 						<ul>	
 							<li class="inicio ">
-								<a href="es/" title="Encantado">
-									Inicio 
+								<a href="<?= LANGUAGE ?>/" title="Encantado">
+									<?= linkit("inicio") ?>  
 								</a>
 							</li>
 							<li class="acerca ">
-								<a href="es/acerca/" title="Acerca">
-									Acerca 
+								<a href="<?= LANGUAGE ?>/<?= slugged("acerca") ?>/">
+									<?= linkit("acerca") ?> 
 								</a>
 							</li>
 							<li class="trabajos ">
-								<a href="es/trabajos/" title="Trabajos">
-									Trabajos 
+								<a href="<?= LANGUAGE ?>/<?= slugged("trabajos") ?>/" title="Trabajos">
+									<?= linkit("trabajos") ?>  
 								</a>
 							</li>
 							<li class="contacto ">
-								<a href="es/contacto/" title="Contacto">
-									Contacto 
+								<a href="<?= LANGUAGE ?>/<?= slugged("contacto") ?>/" title="Contacto">
+									<?= linkit("contacto") ?>   
 								</a>
 							</li>
 						</div>
 						<div class="medium-12 large-8 cell">
 							<ul>
 								<li class="diseno-web-torrevieja ">
-									<a href="es/diseno-web-torrevieja/" title="Diseño web Torrevieja">
-										Diseño web Torrevieja 
+									<a href="<?= LANGUAGE ?>/<?= slugged("diseno-web-torrevieja") ?>/" title="Diseño web Torrevieja">
+										<?= linkit("diseno-web-torrevieja") ?>
 									</a>				
 								</li>
 								<li class="desarrollo-web ">
-									<a href="es/desarrollo-web/" title="Desarrollo web">
-										Desarrollo web 
+									<a href="<?= LANGUAGE ?>/<?= slugged("desarrollo-web") ?>/" title="Desarrollo web">
+										<?= linkit("desarrollo-web") ?>
 									</a>
 								</li>
 								<li class="posicionamiento-web ">
-									<a href="es/posicionamiento-web/" title="Posicionamiento web">
-										Posicionamiento web 
+									<a href="<?= LANGUAGE ?>/<?= slugged("posicionamiento-web") ?>/" title="Posicionamiento web">
+										<?= linkit("posicionamiento-web") ?>
 									</a>
 								</li>
 								<li class="fotografia ">
-									<a href="es/fotografia/" title="Fotografía">
-										Fotografía 
+									<a href="<?= LANGUAGE ?>/<?= slugged("fotografia") ?>/" title="Fotografía">
+										<?= linkit("fotografia") ?>
 									</a>
 								</li>	
 							</ul>
