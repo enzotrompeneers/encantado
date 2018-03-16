@@ -92,6 +92,8 @@
 							</ul>
 						</div>
 
+						<!--  div in 2 -->
+
 						<ul>
 							<?php foreach($footerMenu as $index => $item) : ?>
 
@@ -101,7 +103,7 @@
 
 								</ul><ul>
 
-								<?php endif ?>
+								<?php endif ?> 
 
 							<?php endforeach ?>
 						</ul>
