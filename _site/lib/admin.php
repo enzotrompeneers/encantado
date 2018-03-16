@@ -96,8 +96,10 @@ split: true/false
 $menu = new Menu($db, $languages, $pagina, $domains);
 $headerMenu = $menu->createMenu('header', false, false);
 $headerMenuMobile = $menu->createMenu('header', true, false);
-$footerMenu = $menu->createMenu('footer', false, false);
-$footerMenuSplit = $menu->createMenu('footer', false, true);
+//$footerMenu = $menu->createMenu('footer', false, false);
+$footerMenu = $menu->getFooterArray();
+//printout($footerMenu);
+//echo $footerMenuSplit;
 
 // Recaptcha
 $recaptchaConfig = $config->get('recaptcha');

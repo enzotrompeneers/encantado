@@ -211,3 +211,8 @@
         </div>
     </section>
 </main>    
+
+<script src="js/particles.js">
+</script> 
+<script src="js/particles-config.js">
+</script>

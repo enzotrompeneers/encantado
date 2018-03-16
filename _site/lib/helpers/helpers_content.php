@@ -45,7 +45,7 @@ function getIdiomas ($clave='idiomas', $reverse=false) {
 	$langs = ($reverse==true)?array_reverse($languages):$languages; 
 	$output = "";
 	foreach ($langs as $l){
-		$output .= '<li><a class="circle" href="'.cambiar_idioma($l).'" title="'.strtoupper($l).'">'.strtoupper($l).'</a></li>';
+		$output .= '<li class="'.$l.'"><a class="circle" href="'.cambiar_idioma($l).'" title="'.strtoupper($l).'">'.strtoupper($l).'</a></li>';
 	}
 	return $output;
 }

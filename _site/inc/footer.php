@@ -91,17 +91,27 @@
 								</li>	
 							</ul>
 						</div>
+
+						<ul>
+							<?php foreach($footerMenu as $index => $item) : ?>
+
+								<li><a href="<?= LANGUAGE ?>/<?= $item['slug'] ?>/"><?= $item['link'] ?></a></li>
+
+								<?php if (($index + 1) == ceil(count($footerMenu) / 2)) : ?>
+
+								</ul><ul>
+
+								<?php endif ?>
+
+							<?php endforeach ?>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
 	<script src="js/bundle.js"></script>
-	<script src="js/particles.js">
-	</script> 
-	<script src="js/particles-config.js">
-	</script>
-	
+	<!-- <script src="js/active-links.js"></script> -->
 	<?php //if (!empty($log) && is_object($log) && pTEXT==false) echo '<br clear="all" />' . $log->showLog(); ?>
 </body>
 </html>

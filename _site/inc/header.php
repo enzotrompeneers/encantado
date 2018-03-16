@@ -1,4 +1,3 @@
-
 <header class="header grid-x" id="header-menu">
     <div class="small-3 cell container-logo">
         <div class="logo">

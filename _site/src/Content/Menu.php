@@ -61,6 +61,23 @@ class Menu
 
 		return $this->renderMenu($clave, $mobile, $split);
 	}
+	/**
+     * @brief Returns an array of menu data set to footer menu
+     *
+     * @return Array
+     */
+    public function getFooterArray()
+    {
+
+        $sql = $this->getMenuData();
+        $output = [];
+
+        foreach ($sql as $k => $v) {
+            if($v['footer_menu'] == 1 && parent_id == 0) $output[$k] = $v;
+        }
+
+        return $output;
+    }
 	
 	/**
 	 *  @brief Queries database for menu content
@@ -84,6 +101,7 @@ class Menu
 					$menuStructure[$v['id']] = $v;
 				} 
 			}
+			
 		}
 		$this->menus[$clave] = $menuStructure;
 	}
@@ -276,11 +294,11 @@ class Menu
 			if ($mobile) {
 				$output = '<ul class="vertical menu" data-back-button="<li class=\'js-drilldown-back\'><a tabindex=\'0\'>'.trad('volver').'</a></li>" data-drilldown>';
 			} else {
-				$output = '<ul class="menu align-center dropdown header-menu" data-dropdown-menu>';
+				$output = '<ul class="main-menu menu align-center dropdown header-menu" data-dropdown-menu>';
 			}
 		} 
 		if ($clave === 'footer'){
-			$output = '<ul>';
+			$output = '<ul class="main-menu">';
 		}
 
 		foreach ($data as $k => $v){
