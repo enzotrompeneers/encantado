@@ -367,7 +367,6 @@
         h2{
             @include font-size(32);
             font-weight: 600;
-            border: solid 1px red;  
         }
         p.info{
             margin-bottom: 2.4rem;
@@ -489,7 +488,6 @@
                 h2{
                     @include font-size(32);
                     font-weight: 500;
-                    border: solid 1px blue;  
                 }
                 p.info{
                     margin-bottom: 2.2rem;
@@ -532,7 +530,6 @@
         h2{
             @include font-size(32);
             font-weight: 500;
-            border: solid 1px red;  
         }
         p.info{
             margin-bottom: 2.2rem;
@@ -600,7 +597,6 @@
         h2{
             @include font-size(32);
             font-weight: 500;  
-            border: solid 1px green;
         }
         p.info{
             margin-bottom: 2.2rem;

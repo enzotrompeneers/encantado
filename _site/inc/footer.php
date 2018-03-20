@@ -42,71 +42,24 @@
 						</div>
 					</div>
 				</div>
+						
+
 				<div class="medium-4 cell footer-padding">
 					<div class="grid-x">
 						<div class="medium-12 large-4 cell">
-						<ul>	
-							<li class="inicio ">
-								<a href="<?= LANGUAGE ?>/" title="Encantado">
-									<?= linkit("inicio") ?>  
-								</a>
-							</li>
-							<li class="acerca ">
-								<a href="<?= LANGUAGE ?>/<?= slugged("acerca") ?>/">
-									<?= linkit("acerca") ?> 
-								</a>
-							</li>
-							<li class="trabajos ">
-								<a href="<?= LANGUAGE ?>/<?= slugged("trabajos") ?>/" title="Trabajos">
-									<?= linkit("trabajos") ?>  
-								</a>
-							</li>
-							<li class="contacto ">
-								<a href="<?= LANGUAGE ?>/<?= slugged("contacto") ?>/" title="Contacto">
-									<?= linkit("contacto") ?>   
-								</a>
-							</li>
-						</div>
-						<div class="medium-12 large-8 cell">
 							<ul>
-								<li class="diseno-web-torrevieja ">
-									<a href="<?= LANGUAGE ?>/<?= slugged("diseno-web-torrevieja") ?>/" title="Diseño web Torrevieja">
-										<?= linkit("diseno-web-torrevieja") ?>
-									</a>				
-								</li>
-								<li class="desarrollo-web ">
-									<a href="<?= LANGUAGE ?>/<?= slugged("desarrollo-web") ?>/" title="Desarrollo web">
-										<?= linkit("desarrollo-web") ?>
-									</a>
-								</li>
-								<li class="posicionamiento-web ">
-									<a href="<?= LANGUAGE ?>/<?= slugged("posicionamiento-web") ?>/" title="Posicionamiento web">
-										<?= linkit("posicionamiento-web") ?>
-									</a>
-								</li>
-								<li class="fotografia ">
-									<a href="<?= LANGUAGE ?>/<?= slugged("fotografia") ?>/" title="Fotografía">
-										<?= linkit("fotografia") ?>
-									</a>
-								</li>	
+								<?php $i= 0; foreach($footerMenu as $index => $item) : ?>
+									<li><a href="<?= LANGUAGE ?>/<?= $item['slug'] ?>/"><?= $item['link'] ?></a></li>
+									<?php $i++; if (($i) == ceil(count($footerMenu) / 2)) :?>
 							</ul>
 						</div>
 
-						<!--  div in 2 -->
-
-						<ul>
-							<?php foreach($footerMenu as $index => $item) : ?>
-
-								<li><a href="<?= LANGUAGE ?>/<?= $item['slug'] ?>/"><?= $item['link'] ?></a></li>
-
-								<?php if (($index + 1) == ceil(count($footerMenu) / 2)) : ?>
-
-								</ul><ul>
-
+						<div class="medium-12 large-8 cell">
+							<ul>
 								<?php endif ?> 
-
-							<?php endforeach ?>
-						</ul>
+								<?php endforeach ?>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>

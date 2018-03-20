@@ -12,30 +12,17 @@
     <section class="projects">
         <div class="grid-container full">
             <div class="grid-x grid-margin-x grid-margin-y">
+                <?php foreach ($aProjects as $key => $value): ?> 
                 <div class="medium-6 large-4 cell">
-                    <p class="title">Nombre projecto</p>
-                    <p class="description">Web responsive</p>
+                    <a href="<?= $value['url'] ?>" target="_blank">
+                        <img src="images/proyectos/<?= $value['id'] ?>/<?= $value['thumbnail'] ?>" alt="<?= $value['nombre'] ?>">
+                    </a>
+                    <p class="title"><?= $value['nombre'] ?></p>
+                    <div class="description">
+                        <?= $value['descripcion'] ?>
+                    </div>
                 </div>
-                <div class="medium-6 large-4 cell">
-                    <p class="title">Nombre projecto</p>
-                    <p class="description">Web responsive</p>
-                </div>
-                <div class="medium-6 large-4 cell">
-                    <p class="title">Nombre projecto</p>
-                    <p class="description">Web responsive</p>
-                </div>
-                <div class="medium-6 large-4 cell">
-                    <p class="title">Nombre projecto</p>
-                    <p class="description">Web responsive</p>
-                </div>
-                <div class="medium-6 large-4 cell">
-                    <p class="title">Nombre projecto</p>
-                    <p class="description">Web responsive</p>
-                </div>
-                <div class="medium-6 large-4 cell">
-                    <p class="title">Nombre projecto</p>
-                    <p class="description">Web responsive</p>
-                </div>
+                <?php endforeach ?>
             </div>
         </div>
     </section>

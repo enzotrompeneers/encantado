@@ -73,7 +73,7 @@ class Menu
         $output = [];
 
         foreach ($sql as $k => $v) {
-            if($v['footer_menu'] == 1 && parent_id == 0) $output[$k] = $v;
+            if($v['footer_menu'] == 1 && $v['parent_id'] == 0) $output[$k] = $v;
         }
 
         return $output;
