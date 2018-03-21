@@ -16,11 +16,13 @@
                 <div class="medium-6 large-4 cell">
                     <a href="<?= $value['url'] ?>" target="_blank">
                         <img src="images/proyectos/<?= $value['id'] ?>/<?= $value['thumbnail'] ?>" alt="<?= $value['nombre'] ?>">
+                        <div class="overlay" style="background-color:<?= $value['color'] ?>;">
+                        </div>
+                        <p class="title"><?= $value['nombre'] ?></p>
+                        <div class="description">
+                            <?= $value['descripcion'] ?>
+                        </div>
                     </a>
-                    <p class="title"><?= $value['nombre'] ?></p>
-                    <div class="description">
-                        <?= $value['descripcion'] ?>
-                    </div>
                 </div>
                 <?php endforeach ?>
             </div>

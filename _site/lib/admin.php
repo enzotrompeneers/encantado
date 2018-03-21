@@ -1,7 +1,6 @@
 <?php
 
 use Noodlehaus\Config;
-
 use \Brunelencantado\Logger\Logger;
 use \Brunelencantado\Logger\LoggerWeb;
 use \Brunelencantado\Database\MySqliDatabase;

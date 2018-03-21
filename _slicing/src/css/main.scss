@@ -323,6 +323,17 @@ h4 {
 				    position: absolute;
 				}
 
+				a .overlay {
+					position: absolute;
+					bottom: 5%;
+					left: 0;
+					right: 0;
+					height: 8vh;
+					width: 100%;
+					opacity: 0.9;
+				}
+
+
 				
 				.title, .description {
 					color: white;
@@ -330,14 +341,16 @@ h4 {
 					margin: 0 1.875rem;
 				}
 				.title {
-					font-size: 1.875rem;
+					font-size: 1.6rem;
 					font-weight: bold;
-					bottom: 3.438rem;
+					bottom: 5%;
+					height: 8vh;
 				}
 				.description {
-					font-size: 1.125rem;
+					font-size: 1.1rem;
 					font-weight: 300;
-					bottom: 1.875rem;
+					bottom: 5%;
+					height: 5vh;
 				}
 			}
 		}

@@ -85,6 +85,29 @@
         }
     }
 
+    .projects {
+    padding: 50px 100px;
+    .grid-container {
+        width: 100%;
+        .grid-x {
+            .cell {
+                .title {
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    bottom: 2%;
+                    height: 8vh;
+                }
+                .description {
+                    font-size: 1.125rem;
+                    font-weight: 300;
+                    bottom: 2%;
+                    height: 5vh;
+                }
+            }
+        }
+    }
+}
+
     .intro .grid-container .grid-x{
         //h2{ border: solid 1px pink;}
         p{ 
