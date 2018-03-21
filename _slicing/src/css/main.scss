@@ -310,9 +310,9 @@ h4 {
 				background-color: #729da0;
 				z-index: 4;
 
-				&:hover img {
+				&:hover img, &:active img {
 			    	object-position: bottom center;
-			    	transition: all 1s ease-in-out;
+					@include transition(all 1s ease-in-out);
 			    }
 
 				img {
@@ -333,8 +333,6 @@ h4 {
 					opacity: 0.9;
 				}
 
-
-				
 				.title, .description {
 					color: white;
 					position: absolute;

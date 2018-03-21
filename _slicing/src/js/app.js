@@ -3,6 +3,7 @@ import Typed from 'typed.js';
 import foundation from 'foundation-sites';
 import ajaxForm from 'jquery-form';
 import '../css/style.scss';
+
 //require.context('../graphics/', true, /^\.\//);
 // START: multi form
 $('form.multi-form a.next').click(function() {
@@ -23,9 +24,8 @@ if ($(".typer")[0]){
 		backDelay: 2000
 	});
 }
-
-
 // END: typed
+
 // START: foundation
 $(document).foundation()
 // END: foundation
@@ -35,3 +35,4 @@ $('#contact-form').ajaxForm(function() {
 	$("#callout").removeClass("hide");
 });
 // END: form submit message
+
