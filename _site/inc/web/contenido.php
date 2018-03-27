@@ -2,6 +2,7 @@
     <div class="slider-outercon"></div>
     <div class="title-block">
         <h1><?= title($pagina) ?></h1>
+        <p>nsjkbchjbjkbhjcsbhjsdj</p>
     </div>
     <div class="featured-block-out">
 		<div class="row collapse">

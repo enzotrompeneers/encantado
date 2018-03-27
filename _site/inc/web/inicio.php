@@ -53,7 +53,6 @@
         <div class="show-for-large" id="triangle-right"></div>
         <div class="grid-container">
             <h4><?= title("servicios") ?></h4>
-            <hr>
             <div class="grid-x grid-margin-x">
                 <div class="small-12 medium-4 large-4 cell">
                     <dl>
@@ -119,7 +118,6 @@
             <div class="grid-x grid-margin-x">
                 <div class="medium-12 large-3 cell">
                     <h4><?= title("por-que-eligirnos") ?></h4>
-                    <hr>
                 </div>
                 <?= art("por-que-eligirnos") ?>
             </div>
@@ -139,7 +137,6 @@
                         <h5><?= trad("gracias_por_tu_mensaje") ?></h5><button aria-label="Dismiss alert" class="close-button" data-close type="button"><span aria-hidden="true">&times;</span></button>
                     </div>
                     <h4><?= trad("pide_su_presupuesto") ?></h4>
-                    <hr>
                     <form action="#contact-form" class="multi-form" data-abide="" id="contact-form" method="get" name="contact-form" novalidate>
                         <fieldset class="active">
                             <div class="grid-x">

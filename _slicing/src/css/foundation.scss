@@ -4137,7 +4137,11 @@ select {
   right: 0;
   height: 100%;
   overflow-y: auto;
-  width: 250px;
+  width: 375px;
+
+  @media (max-width: 375px){
+    width: 100%;
+  }
   -ms-transform: translateX(250px);
       transform: translateX(250px); }
   .off-canvas-content .off-canvas.position-right {

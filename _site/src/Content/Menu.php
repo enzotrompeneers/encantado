@@ -292,7 +292,7 @@ class Menu
 		$data = $this->menus[$clave];
 		if ($clave === 'header'){
 			if ($mobile) {
-				$output = '<ul class="vertical menu" data-back-button="<li class=\'js-drilldown-back\'><a tabindex=\'0\'>'.trad('volver').'</a></li>" data-drilldown>';
+				$output = '<ul class="mobile-menu vertical menu" data-back-button="<li class=\'js-drilldown-back\'><a tabindex=\'0\'>'.trad('volver').'</a></li>" data-drilldown>';
 			} else {
 				$output = '<ul class="main-menu menu align-center dropdown header-menu" data-dropdown-menu>';
 			}
@@ -307,7 +307,7 @@ class Menu
 			// Insert submenu
 			if ($submenu) {
 				if ($mobile) {
-					$submenuHTML = '<ul class="submenu menu vertical nested">';
+					$submenuHTML = '<ul class="mobile-menu submenu menu vertical nested">';
 				} else {
 					$submenuHTML = '<ul class="' . $this->menuClass . '">';
 				}

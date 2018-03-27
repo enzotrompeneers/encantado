@@ -13,16 +13,22 @@
     </div>
     <div class="off-canvas position-right" data-off-canvas="" data-transition="overlap" id="offCanvasRightOverlap">
         <aside class="right-off-canvas-menu menu">
-            <button aria-label="Close menu" class="close-button" data-close="" type="button"><img alt="close" src="graphics/cross.svg"></button>
-
-            <ul class="menu mobile-languages">
+            <ul class="menu mobile-social mobile-social-padding">
+                <?= getSociales(); ?>
+            </ul>
+            <ul class="menu mobile-languages-right mobile-social">
                 <?= getIdiomas('idiomas', true) ?>
             </ul>
             <?= $headerMenuMobile; ?>
-
-            <ul class="menu mobile-social">
-                <?= getSociales(); ?>
-            </ul>
+            <p class="address">
+                <b><?= trad("diseno_web"); ?> <?= webConfig("ciudad"); ?></b><br>
+                <?= webConfig("calle"); ?><br>
+                <?= webConfig("detalle_direccion"); ?><br>
+                <?= webConfig("codigo_postal"); ?>
+                <?= webConfig("ciudad"); ?>
+                (<?= webConfig("provincia") ?>), 
+                <?= trad("espana"); ?>
+            </p>
         </aside>
     </div>
     <div class="small-6 cell">
@@ -35,7 +41,6 @@
         <ul class="menu align-right icons social-icons">
             <?= getSociales(); ?>
         </ul>
-        
     </div>
     <div class="title-bar">
         <button aria-hidden="true" data-open="offCanvasRightOverlap" type="button"><span>Menu</span> <img alt="menu" src="graphics/hamburger.svg"></button>

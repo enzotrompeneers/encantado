@@ -17,7 +17,7 @@
 }
 
 @media (max-width: 1270px){
-    .intro .grid-container, .services .grid-container, .why .grid-container, .contact .grid-container, .footer .grid-container {
+    .about .grid-container, .intro .grid-container, .services .grid-container, .why .grid-container, .contact .grid-container, .footer .grid-container {
         width: 100%;
     }
 }
@@ -27,8 +27,7 @@
         font-size: 85%;
     }
     
-    .intro .grid-container .grid-x{
-        //h2{ border: solid 1px orange;}
+    .intro .grid-container .grid-x, .about .grid-container .grid-x{
         p{ 
             @include font-size(17);
         }
@@ -108,8 +107,7 @@
     }
 }
 
-    .intro .grid-container .grid-x{
-        //h2{ border: solid 1px pink;}
+    .intro .grid-container .grid-x, .about .grid-container .grid-x {
         p{ 
             @include font-size(20);
             line-height: 1.7em;
@@ -199,8 +197,8 @@
 }
 
 @media (max-width: 980px){
-    .hero-slider {
-        .container {
+    .hero-slider, .hero-header {
+        .container, .grid-container div {
             left: 0;
             right: 0;
             margin: auto;
@@ -225,10 +223,9 @@
                     h4 {
                         text-align: center;
                         @include font-size(36);
-                    }
-                    hr {
-                        margin-left: auto;
-                        width: 19.3rem;
+                        display: table;
+                        margin: 0 auto;
+                        padding-bottom: 20px;
                     }
                 }
             }
@@ -338,8 +335,8 @@
 }
 
 @media (max-width: 800px){
-    .hero-slider {
-        .container {
+    .hero-slider, .hero-header{
+        .container, .grid-container div {
             width: 100%;
         }
     }
@@ -348,6 +345,15 @@
 @media (max-width: 768px){
     html {
         font-size: 65%;
+    }
+
+    .hero-header .grid-container div {
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+        }
     }
 
     .hero-slider {
@@ -386,7 +392,7 @@
         }
     }
 
-    .intro .grid-container .grid-x{ 
+    .intro .grid-container .grid-x, .about .grid-container .grid-x{ 
         h2{
             @include font-size(32);
             font-weight: 600;
@@ -524,13 +530,19 @@
         }
     }
    
-
     .projects {
         .grid-container {
             .grid-x {
                 .cell {
                     width: 100%;
                     padding-bottom: calc((100% - 1.875rem)*0.75);
+
+                    .title {
+                        @include font-size(32);
+                    }
+                    .description {
+                         @include font-size(20);
+                    }
                 }
             }
         }
