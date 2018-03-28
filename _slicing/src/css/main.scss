@@ -30,7 +30,7 @@ h2 {
 	color: $color-primary;
 	font-weight: bold;
 }
-h4 {
+h3, h4 {
 	font-size: 2rem;
 	color: white;
 	font-weight: 800;
@@ -302,11 +302,10 @@ h4 {
 		}
 	}
 }
+
 .hero-header {
 	height: 124px;
-	background: red;
 	@include background(180deg, -90deg, #d2205a, 0%, #632b9c, 100%);
-	margin-bottom: 86px;
 	padding: 0 50px;
 
 	.grid-container {
@@ -330,7 +329,6 @@ h4 {
 				font-size: 22px;
 				font-weight: 300;
 				margin-top: -10px;
-				line-height: 22px;
 			}
 		}
 	}
@@ -424,7 +422,7 @@ h4 {
 }
 .about {
 	background: white;
-	padding: 0 50px 50px 50px;
+	padding: 86px 50px 50px 50px;
 	position: relative;
 	z-index: 5;
 
@@ -448,12 +446,23 @@ h4 {
 						z-index: 1;
 						margin-top: -13px;
 					}
+
+					&.no-underline:after {
+						content: none;
+					}
 				}
 				p {
 					color: #898989;
 					@include font-size(20);
 					line-height: 1.8rem;
 					margin-bottom: 1.8rem
+				}
+				a {
+					color: #b8144c;
+
+					&:hover {
+						color: darken(#b8144c, 5%);
+					}
 				}
 
 			}
@@ -570,7 +579,7 @@ h4 {
 				opacity: 0.22;
 				display: block;
 				z-index: -1;
-				margin-top: -13px;
+				margin-top: -17px;
 			}
 		}
 
@@ -620,14 +629,16 @@ h4 {
 	.grid-container {
 		width: $container-xlarge;
 		margin: 0 auto;
+
 		.grid-x {
 			.cell {
-				h4 {
+				h3 {
 					color: $color-primary;
 					display: inline-block;
 					z-index: 1;
 					text-align: left;
 					@include font-size(26);
+
 
 					&:after {
 						content: "";
@@ -649,9 +660,30 @@ h4 {
 						font-weight: 400;
 						padding-bottom: 1.875rem;
 					}
+					
 					&.services-list li {
-						padding-bottom: 0;
-						list-style-type: circle;
+						padding-bottom: 1rem;
+						padding-left: 16px;
+
+						&:first-child {
+							padding-top: 20px;
+						}
+
+						&:before {
+							content: ' ';
+							float: left;
+							margin-top: 3px;
+							margin-left: -2.5rem;
+							width: 1.563rem;
+							height: 1.563rem;
+							display: block;
+							@include checkmark-svg(#9bdda0);
+						}
+
+						a {
+							color: #5d5b5b;
+							text-decoration: underline;
+						}
 					}
 				}
 				&.checkmark, &.cross {

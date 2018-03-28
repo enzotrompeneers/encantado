@@ -169,7 +169,7 @@
     .why{
         .grid-container{
             .grid-x .cell{
-                h4{
+                h3{
                     @include font-size(30);
                 }
                 hr{
@@ -220,12 +220,20 @@
         .grid-container {
             .grid-x {
                 .cell {
-                    h4 {
+                    h3 {
                         text-align: center;
                         @include font-size(36);
                         display: table;
                         margin: 0 auto;
                         padding-bottom: 20px;
+                    }
+
+                    ul {
+                        &.services-list {
+                            margin: 0 auto;
+                            width: 300px;
+                            text-align: center;
+                        }
                     }
                 }
             }
@@ -562,7 +570,7 @@
     }
 
     .intro .grid-container .grid-x{ 
-        h2{
+        h2 {
             @include font-size(32);
             font-weight: 500;
         }
@@ -612,7 +620,7 @@
         padding: 50px 20px 40px 20px;
 
         .grid-container .grid-x .cell{
-            h4{
+            h3{
                 @include font-size(44);
             }
             hr{

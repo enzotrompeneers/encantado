@@ -2,8 +2,8 @@
     <section class="hero-header">
         <div class="grid-container">
             <div>
-                <h1><?= title("nosotros") ?></h1>
-                <p class="subtitle"><?= art_sin("la_referencia") ?></p>
+                <h1><?= title("marketing-online") ?></h1>
+                <p class="subtitle"><?= art_sin("companas") ?></p>
             </div>
         </div>
     </section>
@@ -11,7 +11,7 @@
         <div class="grid-container">
             <div class="grid-x">
                 <div class="medium-12 large-8 cell">
-                    <?= art('nosotros') ?>
+                    <?= art('marketing-online') ?>
                 </div>
                 <div class="large-4 cell show-for-large">
                     <picture>
@@ -23,15 +23,5 @@
             </div>
         </div>
     </section>
-    <section class="why attitude">
-        <div class="grid-container">
-            <div class="grid-x grid-margin-x">
-                <div class="medium-12 large-3 cell">
-                    <h3><?= title('nuestra-actitud') ?></h3>
-                </div>
-                <?= art("nuestra-actitud") ?>
-            </div>
-        </div>
-    </section>
     <?php include 'inc/servicios.php' ?>
-</main>    
+</main>

@@ -2,8 +2,8 @@
     <section class="hero-header">
         <div class="grid-container">
             <div>
-                <h1><?= title("nosotros") ?></h1>
-                <p class="subtitle"><?= art_sin("la_referencia") ?></p>
+                <h1><?= title("crm") ?></h1>
+                <p class="subtitle"><?= art_sin("crm") ?></p>
             </div>
         </div>
     </section>
@@ -11,7 +11,7 @@
         <div class="grid-container">
             <div class="grid-x">
                 <div class="medium-12 large-8 cell">
-                    <?= art('nosotros') ?>
+                    <?= art('crm') ?>
                 </div>
                 <div class="large-4 cell show-for-large">
                     <picture>
@@ -20,16 +20,6 @@
                         <img src="<?= $responsiveImages[0]['url'] ?>l_<?= $responsiveImages[0]['file_name'] ?>" alt="<?= webConfig('nombre') ?>">
                     </picture>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section class="why attitude">
-        <div class="grid-container">
-            <div class="grid-x grid-margin-x">
-                <div class="medium-12 large-3 cell">
-                    <h3><?= title('nuestra-actitud') ?></h3>
-                </div>
-                <?= art("nuestra-actitud") ?>
             </div>
         </div>
     </section>
