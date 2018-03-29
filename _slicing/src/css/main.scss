@@ -35,6 +35,13 @@ h3, h4 {
 	color: white;
 	font-weight: 800;
 }
+.filter {
+	display: none;
+}
+.show {
+	display: block;
+}
+
 .header {
 	height: 109px;
 	background: white;
@@ -319,6 +326,7 @@ h3, h4 {
 			width: 100%;
 
 			h1 {
+				padding-top: 5px;
 				color:  white;
 				font-size: 32px;
 				font-weight: 900;
@@ -328,7 +336,6 @@ h3, h4 {
 				color:  white;
 				font-size: 22px;
 				font-weight: 300;
-				margin-top: -10px;
 			}
 		}
 	}
@@ -359,6 +366,46 @@ h3, h4 {
 			font-size: 1.625rem;
 			font-weight: 300;
 			padding: 20px;
+		}
+	}
+}
+.filter-projects {
+	padding: 0 50px;
+	.grid-container {
+		.grid-x {
+			.cell {
+				padding-top: 50px;
+
+				b {
+					padding-left: 10px;
+				}
+				
+				#container-btn {
+					
+					.btn {
+						padding: 5px 10px;
+						background-color: white;
+						cursor: pointer;
+
+						&:hover {
+							color: $color-active;
+						}
+
+						&.active {
+							color: $color-active;
+	
+							&:after {
+								content: "";
+								border-bottom: 0.4rem solid $color-active;
+								opacity: 0.8;
+								display: block;
+								z-index: 1;
+								padding-top: 5px;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }

@@ -35,4 +35,3 @@ $('#contact-form').ajaxForm(function() {
 	$("#callout").removeClass("hide");
 });
 // END: form submit message
-

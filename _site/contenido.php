@@ -1,6 +1,4 @@
 <?php
-// Generic intenral content pages
-
 // ID para el <body>
 $bodyid     = $pagina;
 $bodyclass  = '';

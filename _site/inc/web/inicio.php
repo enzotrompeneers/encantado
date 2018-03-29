@@ -12,7 +12,9 @@
     <section class="projects">
         <div class="grid-container full">
             <div class="grid-x grid-margin-x grid-margin-y">
+                <?php $i = 0; ?>
                 <?php foreach ($aProjects as $key => $value): ?> 
+                <?php if (++$i == 7) break; ?>
                 <div class="medium-6 large-4 cell">
                     <a href="<?= $value['url'] ?>" target="_blank">
                         <img src="images/proyectos/<?= $value['id'] ?>/<?= $value['thumbnail'] ?>" alt="<?= $value['nombre'] ?>">
@@ -131,9 +133,4 @@
             </div>
         </div>
     </section>
-</main>    
-
-<script src="js/particles.js">
-</script> 
-<script src="js/particles-config.js">
-</script>
+</main>
