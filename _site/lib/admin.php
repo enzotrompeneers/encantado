@@ -107,6 +107,8 @@ $recaptchaSecretCodeConfig = $recaptchaConfig['secret'];
 $recaptchaCode = (!LOCALHOST) ? $recaptchaCodeConfig : '6LfyvjQUAAAAAOFPtwFJz0bQI2EKJGVzCP8QbyN6';
 $recaptchaSecretCode = (!LOCALHOST) ? $recaptchaSecretCodeConfig : '6LfyvjQUAAAAAOFPtwFJz0bQI2EKJGVzCP8QbyN6';
 
+// printout(LOCALHOST);
+// printout($recaptchaCode);
 // Search 
 $search = new Buscador($db);
 

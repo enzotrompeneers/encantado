@@ -41,5 +41,5 @@ images:
 test: true
 alquileres: false
 recaptcha:
-  public: 6Lcw8j8UAAAAAOVSHdr7HAd9D7o2P03OTdltQj0o
-  secret: 6Lcw8j8UAAAAANZWn6hnPdMiMv10WuDu7tUCm6xh
+  public: 6LdU6k8UAAAAABHZeJqi21ZgaP84d0r7MsP7HjaE
+  secret: 6LdU6k8UAAAAAJ6erNPi3ONPpW3880mVpAmUjBGd

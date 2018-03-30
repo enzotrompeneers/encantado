@@ -56,6 +56,9 @@ if ($_POST) {
 
 // Cargamos las vistas
 require_once dirname(__FILE__) . '/inc/html_head.php';
+?>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<?php
 require_once dirname(__FILE__) . '/inc/web/contacto.php';
 require_once dirname(__FILE__) . '/inc/footer.php';
 

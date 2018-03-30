@@ -6,21 +6,27 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section class="contact contact-white">
         <div class="grid-container">
-            <div class="grid-x">
-                <div class="medium-12 large-8 cell">
-                    <?= art('contacto') ?>
+            <div class="grid-x grid-margin-x">
+                <div class="cell small-5">
+                    <h2>Encantado</h2>
+						<p>
+							Telefono: <a href="tel:+34965703302">+34 965 703 302</a><br>
+							Movil: <a href="tel:+34651557615">+34 965 703 302</a><br>
+							Email: <a href="mailto:info@encantado.net">info@encantado.net</a>
+						</p>
+						<p>
+							<b>Diseño web Torrevieja</b><br>
+							Avda. de los Nenúfares S/N <br>
+							Vivero de empresas, despacho 15 <br>
+							03181 Torrevieja (Alicante), Spain <br>
+						</p>
                 </div>
-                <div class="large-4 cell show-for-large">
-                    <picture>
-                        <source srcset="<?= $responsiveImages[0]['url'] ?>m_<?= $responsiveImages[0]['file_name'] ?>" media="(max-width: 599px)">
-                        <source srcset="<?= $responsiveImages[0]['url'] ?>l_<?= $responsiveImages[0]['file_name'] ?>">
-                        <img src="<?= $responsiveImages[0]['url'] ?>l_<?= $responsiveImages[0]['file_name'] ?>" alt="<?= webConfig('nombre') ?>">
-                    </picture>
+                <div class="cell small-7">
+                    <?php include("inc/web/{$view}.php") ?>
                 </div>
             </div>
         </div>
     </section>
-    <?php include 'inc/servicios.php' ?>
 </main>    

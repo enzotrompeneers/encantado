@@ -60,6 +60,20 @@
             }
         }
     }
+
+    .contact-white {
+        .grid-container {
+            .grid-x {
+                .small-7 {
+                    form {
+                        .plain-select:after{
+                            margin-top:-40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -127,6 +141,9 @@
                             @include font-size(20);
                             padding-bottom: 8px; 
                         }
+                        select {
+                            background-position: -10px calc(100% + 10px), 0%;
+                        }
                     }
                     h4{
                         @include font-size(36);
@@ -139,6 +156,20 @@
                     padding-top: 125px;
                     h4{
                         @include font-size(36);
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-white {
+        .grid-container {
+            .grid-x {
+                .small-7 {
+                    form {
+                        .plain-select:after{
+                            margin-top: -33px;
+                        }
                     }
                 }
             }
@@ -192,6 +223,20 @@
         #triangle-left, #triangle-middle, #triangle-right  {
             border-bottom-width: 668px;
             border-left-width: 708px
+        }
+    }
+
+    .contact-white {
+        .grid-container {
+            .grid-x {
+                .small-7 {
+                    form {
+                        .plain-select:after{
+                            margin-top: -27px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -300,6 +345,12 @@
                 .small-7 {
                     margin: 0 0 50px 0;
                     width: 100%;
+
+                    form {
+                        select {
+                            //margin-left: 5px;
+                        }
+                    }
                 }
             }
         }
@@ -458,9 +509,6 @@
                         select{
                             @include font-size(20);
                         }
-                        select{
-                            height: 4.4375rem;
-                        }
                         .buttons .next .circle,
                         .buttons .submit.circle{
                             width: 6rem;
@@ -497,8 +545,18 @@
         }
     }
 
-    .contact .grid-container .grid-x .small-7 form input, .contact .grid-container .grid-x .small-7 form textarea, .contact .grid-container .grid-x .small-7 select {
-        width: 95%;
+    .contact-white {
+        .grid-container {
+            .grid-x {
+                .small-7 {
+                    form {
+                        .plain-select:after{
+                            margin-top: 63px;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .footer {
@@ -632,10 +690,6 @@
         }
     }
 
-    .contact {
-        padding: 0 20px;
-    }
-
     .intro .grid-container .grid-x{ 
         h2{
             @include font-size(32);
@@ -651,6 +705,8 @@
     }
 
     .contact{
+        padding: 0 20px;
+
         .grid-container{
             .grid-x{
                 padding-bottom: 20px;
@@ -659,14 +715,13 @@
                         label{
                             @include font-size(28);
                             padding-bottom: 8px;
-                            margin-left: 8px; 
                         }
                         input,
                         select{
                             @include font-size(26);
                         }
                         select{
-                            height: 4.4375rem;
+                            background-position: -10px calc(100% + 8px), 0%;
                         }
                         .buttons .next .circle,
                         .buttons .submit.circle{
@@ -710,7 +765,19 @@
         }
     }
 
-
+    .contact-white {
+        .grid-container {
+            .grid-x {
+                .small-7 {
+                    form {
+                        .plain-select:after{
+                            margin-top: 75px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 

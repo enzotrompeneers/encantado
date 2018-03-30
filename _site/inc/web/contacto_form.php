@@ -1,30 +1,53 @@
-<form id="contactoForm" action="<?=$language?>/<?=slugged('contacto')?>/send/" method="post" class="form">
-    <div class="row">
-        <div class="large-6 medium-6 column">
-            <input type="hidden" name="ref" value="<?=req('ref')?>" />
-            <input type="hidden" name="link" value="<?=req('link')?>" />
-            <label for="nombre"><?=trad('nombre')?>:</label>
-            <input type="text" id="nombre"  class="form-control" value="<?php if (!empty($value['nombre'])) echo $value['nombre']; ?>" name="nombre"  required />
-            <label for="email"><?=trad('email')?>:</label>
-            <input type="text" id="email" name="email"   value="<?php if (!empty($value['email'])) echo $value['email']; ?>" class="form-control" required />
-        </div>	
-        <div class="large-6 medium-6 column">			
-            <label for="telefono" ><?=trad('telefono')?>:</label>
-            <input type="text" id="telefono" name="telefono"  value="<?php if (!empty($value['telefono'])) echo $value['telefono']; ?>" class="form-control" required />
-            <label for="localidad"><?=trad('localidad')?>:</label>
-            <input type="text" id="localidad" name="localidad"  value="<?php if (!empty($value['localidad'])) echo $value['localidad']?>" class="form-control" />
-            <!--<label for="mensaje"><?=trad('mensaje')?></label>-->
-        </div>	
-        <div class="large-12 column">
-            <textarea id="mensaje" rows="5" cols="5" name="mensaje" class="form-control"><?php if (!empty($value['mensaje'])) echo $value['mensaje']?></textarea>
-        </div>
 
 
-        <div class="large-6 column">
-        <div class="g-recaptcha" data-sitekey="<?= $recaptchaCode ?>"></div>
+
+
+<div class="callout success hide" data-closable="" id="callout">
+    <h5>Gracias por tu mensaje</h5><button aria-label="Dismiss alert" class="close-button" data-close="" type="button"><span aria-hidden="true">&times;</span></button>
+</div>
+
+<form action="<?=$language?>/<?=slugged('contacto')?>/send/" data-abide="" id="contactoForm" method="post" novalidate="">
+        <div class="grid-x grid-margin-x">
+            <div class="small-12 medium-6 cell">
+                <input type="hidden" name="ref" value="<?=req('ref')?>" />
+                <input type="hidden" name="link" value="<?=req('link')?>" />
+
+                <label for="nombre"><?=trad('nombre')?>*</label>
+                <input type="text" id="nombre" value="<?php if (!empty($value['nombre'])) echo $value['nombre']; ?>" name="nombre"  required pattern="[a-zA-Z\s]+"/>
+                <label for="email"><?=trad('email')?>*</label>
+                <input type="text" id="email" name="email"   value="<?php if (!empty($value['email'])) echo $value['email']; ?>" required pattern="email"/>
+            </div>
+            <div class="small-12 medium-6 cell">
+                <label for="telefono" ><?=trad('telefono')?>*</label>
+                <input type="text" id="telefono" name="telefono"  value="<?php if (!empty($value['telefono'])) echo $value['telefono']; ?>" required pattern="number"/>
+                <label for="localidad"><?=trad('localidad')?>*</label>
+                <input type="text" id="localidad" name="localidad"  value="<?php if (!empty($value['localidad'])) echo $value['localidad']?>" required pattern="[a-zA-Z\s]+" />
+            </div>
+            <div class="small-12 cell">
+                <label for="categoria">Hoe gevonden?*  
+                    <span class="plain-select">
+                        <select id="categoria inp" name="categoria" required="">
+                            <option value="">
+                                escoger
+                            </option>
+                            <option value="immo">
+                                immo
+                            </option>
+                            <option value="hotel">
+                                hotel
+                            </option>
+                            <option value="ventas">
+                                ventas
+                            </option>
+                        </select>
+                    </span> 
+                </label>
+                <label for="mensaje">mensaje*
+                <textarea id="mensaje" name="mensaje" rows="5" required><?php if (!empty($value['mensaje'])) echo $value['mensaje']?></textarea></label>
+                <div class="buttons">
+                    <button type="button submit btn-enviar" class="button btn-enviar g-recaptcha" data-sitekey="<?= $recaptchaCode ?>"
+                    data-callback="YourOnSubmitFn">Enviar</button>
+                </div>
+            </div>
         </div>
-        <div class="large-6 column">
-            <input id="btnEnviar" name="submit" type="submit" value="<?=trad('enviar')?>"  class="contact_button" />
-        </div>
-    </div>			
 </form>

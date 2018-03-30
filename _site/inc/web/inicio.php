@@ -76,7 +76,7 @@
                     <h4><?= trad("pide_su_presupuesto") ?></h4>
                     <form action="#contact-form" class="multi-form" data-abide="" id="contact-form" method="get" name="contact-form" novalidate>
                         <fieldset class="active">
-                            <div class="grid-x">
+                            <div class="grid-x grid-margin-x">
                                 <div class="small-12 medium-6 cell">
                                     <label for="nombre"><?= trad("nombre") ?>*</label> <input id="nombre" name="nombre" pattern="[a-zA-Z\s]+" required="" type="text">
                                 </div>

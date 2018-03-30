@@ -2,11 +2,11 @@
 
 form#contactoForm{
 	display: block;
-	float: left;
 	clear: none;
 	margin: 0;
 	padding: 0;
 	height: auto;
+	padding: 0 20px;
 }
 
 form#contactoForm #sideDetails{
