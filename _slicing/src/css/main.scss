@@ -893,21 +893,6 @@ h3, h4 {
 						border-left: none;
 						border-right: none;
 						border-top: none;
-
-						&:after {
-							content:"";
-						    position:absolute;
-						    z-index:2;
-						    right:8px;
-						    top:50%;
-						    margin-top:-3px;
-						    height:0;
-						    width:0;
-						    border-top:6px solid #f99300;
-						    border-left:6px solid transparent;
-						    border-right:6px solid transparent;
-						    pointer-events:none;
-						}
 					}
 					select, textarea {
 						margin-top: 13px;
@@ -933,7 +918,7 @@ h3, h4 {
 					    border-right:6px solid transparent;
 					    pointer-events:none;
 					}
-					
+
 					.buttons {
 						padding-top: 30px;
 						.circle {
@@ -1191,6 +1176,12 @@ h3, h4 {
 				}
 			}
 		}
+	}
+}
+.google-maps {
+	#googleMap {
+		width: 100%;
+		height: 400px;
 	}
 }
 

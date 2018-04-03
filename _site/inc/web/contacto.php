@@ -29,4 +29,7 @@
             </div>
         </div>
     </section>
+    <section class="google-maps">
+        <div id="googleMap"></div>
+    </section>
 </main>    

@@ -1,7 +1,3 @@
-
-
-
-
 <div class="callout success hide" data-closable="" id="callout">
     <h5>Gracias por tu mensaje</h5><button aria-label="Dismiss alert" class="close-button" data-close="" type="button"><span aria-hidden="true">&times;</span></button>
 </div>
@@ -44,10 +40,10 @@
                 </label>
                 <label for="mensaje">mensaje*
                 <textarea id="mensaje" name="mensaje" rows="5" required><?php if (!empty($value['mensaje'])) echo $value['mensaje']?></textarea></label>
-                <div class="buttons">
-                    <button type="button submit btn-enviar" class="button btn-enviar g-recaptcha" data-sitekey="<?= $recaptchaCode ?>"
-                    data-callback="YourOnSubmitFn">Enviar</button>
-                </div>
+
+                <input id="btnEnviar" name="submit" type="submit" value="<?=trad('enviar')?>"  class="button btn-enviar"/>
+                <button class="g-recaptcha" data-sitekey="6LdU6k8UAAAAABHZeJqi21ZgaP84d0r7MsP7HjaE" data-callback="YourOnSubmitFn">
+                </button>
             </div>
         </div>
 </form>

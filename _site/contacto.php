@@ -23,7 +23,7 @@ if ($_POST) {
                         );
     
     $formulario = new FormularioContacto($formContent, $required, $db);	
-    // $formulario->setRecaptchaClave($recaptchaSecretCode);
+    $formulario->setRecaptchaClave($recaptchaSecretCode);
     
     $errores = $formulario->hasErrors();
     
@@ -56,12 +56,20 @@ if ($_POST) {
 
 // Cargamos las vistas
 require_once dirname(__FILE__) . '/inc/html_head.php';
-?>
-<script src='https://www.google.com/recaptcha/api.js'></script>
-<?php
 require_once dirname(__FILE__) . '/inc/web/contacto.php';
 require_once dirname(__FILE__) . '/inc/footer.php';
+?>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNPp3lV1T5S0svmrMKTVERMnkk8PlMMbE&callback=myMap" type="text/javascript"></script>
+  <script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(<?=webconfig('lat');?>,<?=webconfig('lon');?>),
+    zoom:<?=webconfig('zoom');?>,
+    marker:new google.maps.Marker({position:this.center}),
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
+}
+</script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 
-
-// End file

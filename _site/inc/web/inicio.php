@@ -13,16 +13,16 @@
         <div class="grid-container full">
             <div class="grid-x grid-margin-x grid-margin-y">
                 <?php $i = 0; ?>
-                <?php foreach ($aProjects as $key => $value): ?> 
+                <?php foreach ($aProjects as $p): ?> 
                 <?php if (++$i == 7) break; ?>
                 <div class="medium-6 large-4 cell">
-                    <a href="<?= $value['url'] ?>" target="_blank">
-                        <img src="images/proyectos/<?= $value['id'] ?>/<?= $value['thumbnail'] ?>" alt="<?= $value['nombre'] ?>">
-                        <div class="overlay" style="background-color:<?= $value['color'] ?>;">
+                    <a href="<?= $p['url'] ?>" target="_blank">
+                        <img src="images/proyectos/<?= $p['id'] ?>/<?= $p['thumbnail'] ?>" alt="<?= $palue['nombre'] ?>">
+                        <div class="overlay" style="background-color:<?= $p['color'] ?>;">
                         </div>
-                        <p class="title"><?= $value['nombre'] ?></p>
+                        <p class="title"><?= $p['nombre'] ?></p>
                         <div class="description">
-                            <?= $value['descripcion'] ?>
+                            <?= $p['descripcion'] ?>
                         </div>
                     </a>
                 </div>
