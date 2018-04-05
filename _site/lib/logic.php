@@ -15,5 +15,6 @@ $fourofour = 'lib/controllers/404.php';
 
 $controller = (file_exists($controller))?$controller:$fourofour;
 include($controller);
+?>
 
 // end file

@@ -12,5 +12,4 @@ require_once dirname(__FILE__) . '/inc/web/'.$pagina.'.php';
 require_once dirname(__FILE__) . '/inc/footer.php';
 
 
-
 // End file

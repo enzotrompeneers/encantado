@@ -1,11 +1,14 @@
 filterSelection("todo");
 function filterSelection(c) {
-    var x, i;
+    var x, i, z;
     x = document.getElementsByClassName("filter");
+
     if (c == "todo") c = "";
     for (i = 0; i < x.length; i++) {
-    RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+        RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) {
+            AddClass(x[i], "show");
+        }
     }
 }
 

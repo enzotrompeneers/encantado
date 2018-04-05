@@ -60,15 +60,15 @@ require_once dirname(__FILE__) . '/inc/web/contacto.php';
 require_once dirname(__FILE__) . '/inc/footer.php';
 ?>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNPp3lV1T5S0svmrMKTVERMnkk8PlMMbE&callback=myMap" type="text/javascript"></script>
-  <script>
-function myMap() {
-var mapProp= {
-    center:new google.maps.LatLng(<?=webconfig('lat');?>,<?=webconfig('lon');?>),
-    zoom:<?=webconfig('zoom');?>,
-    marker:new google.maps.Marker({position:this.center}),
-};
-var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(<?=webconfig('lat');?>,<?=webconfig('lon');?>);
+  var mapCanvas = document.getElementById("googleMap");
+  var mapOptions = {center: myCenter, zoom: <?=webconfig('zoom');?>};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
 }
 </script>
 <script src='https://www.google.com/recaptcha/api.js'></script>

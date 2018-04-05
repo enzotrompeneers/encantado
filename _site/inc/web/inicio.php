@@ -12,7 +12,10 @@
     <section class="projects">
         <div class="grid-container full">
             <div class="grid-x grid-margin-x grid-margin-y">
-                <?php $i = 0; ?>
+                <?php 
+                    $i = 0;
+                    shuffle($aProjects);
+                 ?>
                 <?php foreach ($aProjects as $p): ?> 
                 <?php if (++$i == 7) break; ?>
                 <div class="medium-6 large-4 cell">

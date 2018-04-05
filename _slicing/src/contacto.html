@@ -39,6 +39,7 @@
 	<meta content="Encantado" name="twitter:title">
 	<meta content="Diseño de páginas web profesionales en Torrevieja" name="twitter:description">
 	<meta content="https://encantado.es/graphics/image1200x630.jpg" name="twitter:image">
+	<script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 	<header class="header grid-x" id="header-menu">
@@ -174,65 +175,82 @@
 		<section class="hero-header">
 			<div class="grid-container">
 				<div>
-					<h1>Trabajos</h1>
+					<h1>Contacto</h1>
 				</div>
 			</div>
 		</section>
-		<section class="filter-projects">
+		<section class="contact contact-white">
 			<div class="grid-container">
-				<div class="grid-x">
-					<div class="cell">
-						<b>Filtrar:</b>
-						<div id="container-btn">
-							<button class="btn active" onclick="filterSelection('todo')"> Mostrar todo</button>
-							<button class="btn" onclick="filterSelection('responsivo')"> Responsivo</button>
-							<button class="btn" onclick="filterSelection('immo')"> Immo</button>
-							<button class="btn" onclick="filterSelection('horeca')"> Horeca</button>
-							<button class="btn" onclick="filterSelection('fotografia')"> Fotografia</button>
-							<button class="btn" onclick="filterSelection('impresion')"> Impresion</button>
+				<div class="grid-x grid-margin-x">
+					<div class="small-5 cell">
+						<h2>Encantado</h2>
+						<p>
+							Telefono: <a href="tel:+34965703302">+34 965 703 302</a><br>
+							Movil: <a href="tel:+34651557615">+34 965 703 302</a><br>
+							Email: <a href="mailto:info@encantado.net">info@encantado.net</a>
+						</p>
+						<p>
+							<b>Diseño web Torrevieja</b><br>
+							Avda. de los Nenúfares S/N <br>
+							Vivero de empresas, despacho 15 <br>
+							03181 Torrevieja (Alicante), Spain <br>
+						</p>
+					</div>
+					<div class="small-7 cell">
+						<div class="callout success hide" data-closable="" id="callout">
+							<h5>Gracias por tu mensaje</h5><button aria-label="Dismiss alert" class="close-button" data-close="" type="button"><span aria-hidden="true">&times;</span></button>
 						</div>
+						<form action="#contact-form" class="multi-form" data-abide="" id="contact-form" method="get" name="contact-form" novalidate="">
+								<div class="grid-x grid-margin-x">
+									<div class="small-12 medium-6 cell">
+										<label for="nombre">Nombre*</label> <input id="nombre" name="nombre" pattern="[a-zA-Z\s]+" required="" type="text">
+									</div>
+									<div class="small-12 medium-6 cell">
+										<label for="telefono">Teléfono*</label> <input id="telefono" name="telefono" pattern="number" required="" type="text">
+									</div>
+									<div class="small-12 medium-6 cell">
+										<label for="email">E-mail*</label> <input id="email" name="email" pattern="email" required="" type="text">
+									</div>
+									<div class="small-12 medium-6 cell">
+										<label for="localidad">Localidad*</label> <input id="localidad" name="localidad" pattern="[a-zA-Z\s]+" required="" type="text">
+									</div>
+									<div class="small-12 cell">
+
+										<label for="categoria">Hoe gevonden?*  
+											<span class="plain-select">
+												<select id="categoria inp" name="categoria" required="">
+													<option value="">
+														escoger
+													</option>
+													<option value="immo">
+														immo
+													</option>
+													<option value="hotel">
+														hotel
+													</option>
+													<option value="ventas">
+														ventas
+													</option>
+												</select>
+											</span> 
+										</label>
+									</div>
+									<div class="small-12 cell">
+										<label for="descripcion">Descripción*
+										<textarea id="descripcion" name="descripcion" rows="5" required></textarea></label>
+									</div>
+								</div>
+							<div class="buttons">
+								<button type="button submit btn-enviar" class="button btn-enviar g-recaptcha" data-sitekey="6LdU6k8UAAAAABHZeJqi21ZgaP84d0r7MsP7HjaE"
+								data-callback="YourOnSubmitFn">Enviar</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
 		</section>
-
-        <section class="projects">
-			<div class="grid-container full">
-				<div class="grid-x grid-margin-x grid-margin-y">
-					<div class="medium-6 large-4 cell filter responsivo">
-						<a href="">
-							<img src="graphics/featured1.jpg" alt="featured">
-							<div class="overlay" style="background-color:red;">
-							</div>
-							<p class="title">Nombre projecto</p>
-							<p class="description">Web responsive</p>
-						</a>
-						
-					</div>
-					<div class="medium-6 large-4 cell filter immo">
-						<img class="myimage" src="graphics/featured2.jpg" alt="featured">
-						<p class="title">Nombre projecto</p>
-						<p class="description">Web responsive</p>
-					</div>
-					<div class="medium-6 large-4 cell filter horeca immo">
-						<img src="graphics/featured1.jpg" alt="featured">
-						<p class="title">Nombre test</p>
-						<p class="description">Web responsive</p>
-					</div>
-					<div class="medium-6 large-4 cell filter fotografia">
-						<p class="title">Nombre projecto</p>
-						<p class="description">Web responsive</p>
-					</div>
-					<div class="medium-6 large-4 cell filter impresion">
-						<p class="title">Nombre projecto</p>
-						<p class="description">Web responsive</p>
-					</div>
-					<div class="medium-6 large-4 cell filter">
-						<p class="title">Nombre projecto</p>
-						<p class="description">Web responsive</p>
-					</div>
-				</div>
-			</div>
+		<section class="google-map">
+			<p>google maps</p>
 		</section>
 	</main>
 	<footer class="footer">
@@ -293,6 +311,5 @@
 			</div>
 		</div>
 	</footer>
-	<script src="src/js/filter-projects.js"></script>
 </body>
 </html>

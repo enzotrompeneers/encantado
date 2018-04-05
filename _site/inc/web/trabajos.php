@@ -1,8 +1,3 @@
-<?php
-
-
-?>
-
 <main>
 	<section class="hero-header">
         <div class="grid-container">

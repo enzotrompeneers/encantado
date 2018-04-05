@@ -35,11 +35,17 @@ h3, h4 {
 	color: white;
 	font-weight: 800;
 }
-.filter {
-	display: none;
-}
-.show {
-	display: block;
+
+.btn-enviar {
+	width: 100%;
+	background: #b41a4c; 
+	padding: 20px;
+	font-size: 18px;
+	text-transform: uppercase;
+
+	&:hover {
+		background: darken(#b41a4c, 5%);
+	}
 }
 
 .header {
@@ -102,6 +108,14 @@ h3, h4 {
 		}
 		.is-dropdown-submenu {
 			border: none;
+
+			li a {
+				font-size: 12px;
+			}
+		}
+
+		.is-submenu-item .is-dropdown-submenu-item a {
+			font-size: 12px;
 		}
 	}
 
@@ -376,6 +390,7 @@ h3, h4 {
 			.cell {
 				padding-top: 50px;
 
+
 				b {
 					padding-left: 10px;
 				}
@@ -386,6 +401,7 @@ h3, h4 {
 						padding: 5px 10px;
 						background-color: white;
 						cursor: pointer;
+						font-size: 14px;
 
 						&:hover {
 							color: $color-active;
@@ -401,6 +417,7 @@ h3, h4 {
 								display: block;
 								z-index: 1;
 								padding-top: 5px;
+
 							}
 						}
 					}
@@ -422,6 +439,21 @@ h3, h4 {
 				border-radius: 3px;
 				background-color: #729da0;
 				z-index: 4;
+
+				&.filter {
+					position:absolute;
+					opacity: 0;
+				}
+				&.show {
+					opacity: 1;
+					transition: opacity 1s linear;
+					--cellWidth: calc(33.33333% - 1.875rem);
+					padding-bottom: calc(var(--cellWidth) * 0.75);
+					position: relative;
+					border-radius: 3px;
+					background-color: #729da0;
+					z-index: 4;
+				}
 
 				&:hover img, &:active img {
 			    	object-position: bottom center;
@@ -975,6 +1007,7 @@ h3, h4 {
 							}
 						}
 					}
+
 				}
 				form.multi-form {
 					padding: 20px;
@@ -1080,6 +1113,10 @@ h3, h4 {
 						padding: 20px;
 						font-size: 18px;
 						text-transform: uppercase;
+
+						&:hover {
+							background: darken(#b41a4c, 5%);
+						}
 					}
 				}
 			}

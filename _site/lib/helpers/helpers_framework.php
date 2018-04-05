@@ -40,7 +40,7 @@ function input($type,$clave,$label=TRUE,$required=FALSE){
 		return $output;
 	} else {
 		// Submit
-		return '<label for=""></label><input type="submit" id="'.$clave.'" value="'.trad($clave).'" class="button right form-control" style="margin-right:15px;" name="'.$clave.'" />';
+		return '<label for=""></label><input type="submit" id="'.$clave.'" value="'.trad($clave).'" class="button btn-enviar" style="margin-right:15px;" name="'.$clave.'" />';
 	}
 }
 
