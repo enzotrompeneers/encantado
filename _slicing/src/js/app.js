@@ -32,6 +32,7 @@ $(document).foundation()
 // START: form submit message (when valid)
 $('#contact-form').ajaxForm(function() {
 	$('#contact-form').clearForm();
-	$("#callout").removeClass("hide");
+	$('fieldset.active').removeClass('active').prev('fieldset').addClass('active');
+	$("#callout").removeClass("hide").fadeIn('slow').delay(1000).fadeOut('slow');
 });
 // END: form submit message

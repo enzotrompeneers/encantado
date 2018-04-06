@@ -20,6 +20,14 @@
     .about .grid-container, .intro .grid-container, .services .grid-container, .why .grid-container, .contact .grid-container, .footer .grid-container {
         width: 100%;
     }
+
+    .services {
+        #triangle-left, #triangle-middle, #triangle-right  {
+            border-bottom-width: 850px;
+            border-left-width: 722px
+        }
+    }
+
 }
 
 @media (max-width: 1200px){
@@ -41,8 +49,8 @@
         }
 
         #triangle-left, #triangle-middle, #triangle-right  {
-            border-bottom-width: 702px;
-            border-left-width: 742px
+            border-bottom-width: 800px;
+            border-left-width: 700px
         }
     }
 
@@ -67,7 +75,7 @@
                 .small-7 {
                     form {
                         .plain-select:after{
-                            margin-top:-40px;
+                            margin-top:-30px;
                         }
                     }
                 }
@@ -168,7 +176,7 @@
                 .small-7 {
                     form {
                         .plain-select:after{
-                            margin-top: -33px;
+                            margin-top: -23px;
                         }
                     }
                 }
@@ -192,8 +200,8 @@
         }
 
         #triangle-left, #triangle-middle, #triangle-right  {
-            border-bottom-width: 682px;
-            border-left-width: 722px
+            border-bottom-width: 800px;
+            border-left-width: 680px
         }
     }
 
@@ -221,8 +229,8 @@
 
     .services {
         #triangle-left, #triangle-middle, #triangle-right  {
-            border-bottom-width: 668px;
-            border-left-width: 708px
+            border-bottom-width: 800px;
+            border-left-width: 660px
         }
     }
 
@@ -232,7 +240,7 @@
                 .small-7 {
                     form {
                         .plain-select:after{
-                            margin-top: -27px;
+                            margin-top: -17px;
                         }
                     }
                 }
@@ -309,7 +317,7 @@
     .projects {
         .grid-container {
             .grid-x {
-                .cell {
+                .cell, .cell.show {
                     padding-bottom: calc((50% - 1.875rem)*0.75);
                 }
             }
@@ -440,7 +448,7 @@
 
         .grid-container {
             .grid-x {
-                .cell {
+                .cell, .cell.show {
                     width: calc(50% - 1.875rem);
                     margin-left: auto;
                     margin-right: auto;
@@ -551,7 +559,7 @@
                 .small-7 {
                     form {
                         .plain-select:after{
-                            margin-top: 63px;
+                            margin-top: 73px;
                         }
                     }
                 }
@@ -599,7 +607,7 @@
     .projects {
         .grid-container {
             .grid-x {
-                .cell {
+                .cell, .cell.show {
                     width: 100%;
                     padding-bottom: calc((100% - 1.875rem)*0.75);
 
@@ -771,7 +779,7 @@
                 .small-7 {
                     form {
                         .plain-select:after{
-                            margin-top: 75px;
+                            margin-top: 85px;
                         }
                     }
                 }

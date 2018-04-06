@@ -14,7 +14,10 @@
 	$insert['email'] = req('email');
 	$insert['telefono'] = req('telefono');
 	$insert['mensaje'] = req('mensaje');
+	$insert['encontrado'] = req('encontrado');
 	$insert['clave'] = req('formulario');
+
+	dump($insert);
 	
 	// Get all info
 	$fullEmail = '<table>';

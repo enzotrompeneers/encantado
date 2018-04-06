@@ -75,7 +75,6 @@ class Menu
         foreach ($sql as $k => $v) {
             if($v['footer_menu'] == 1) $output[$k] = $v;
         }
-
         return $output;
     }
 	

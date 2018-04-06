@@ -49,7 +49,9 @@
 					<div class="medium-12 large-4 cell">
 						<ul>
 							<?php $i= 0; foreach($footerMenu as $index => $item) : ?>
-								<li><a href="<?= LANGUAGE ?>/<?= $item['slug'] ?>/"><?= $item['link'] ?></a></li>
+								<li class="<?= $item['clave'] ?>">
+									<a href="<?= LANGUAGE ?>/<?= $item['slug'] ?>/"><?= $item['link'] ?></a>
+								</li>
 								<?php $i++; if (($i) == ceil(count($footerMenu) / 2)) :?>
 						</ul>
 					</div>
@@ -66,6 +68,11 @@
 	</div>
 </footer>
 <script src="js/bundle.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src="js/active-link.js"></script>
 <!-- <script src="js/active-links.js"></script> -->
 <?php //if (!empty($log) && is_object($log) && pTEXT==false) echo '<br clear="all" />' . $log->showLog(); ?>
 </body>

@@ -20,9 +20,9 @@
                 <input type="text" id="localidad" name="localidad"  value="<?php if (!empty($value['localidad'])) echo $value['localidad']?>" required pattern="[a-zA-Z\s]+" />
             </div>
             <div class="small-12 cell">
-                <label for="categoria">Hoe gevonden?*  
+                <label for="encontrado">Hoe gevonden?*  
                     <span class="plain-select">
-                        <select id="categoria inp" name="categoria" required="">
+                        <select id="encontrado" name="encontrado" required="">
                             <option value="">
                                 escoger
                             </option>

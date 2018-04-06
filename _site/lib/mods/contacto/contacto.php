@@ -14,7 +14,7 @@ function show_contacto($mailto,$asunto,$captcha=FALSE){
 	
 	if (!$mailto) { $mailto = webConfig('email'); }
 	if (!$asunto) { $asunto = 'Contact form '.webConfig('nombre'); }
-	$gracias = (art_sin('gracias')!='')?art_sin('gracias'):'Gracias por su interés, le responderemos en breve';
+	$gracias = (art_sin('gracias')!='')?art_sin('gracias'):'Gracias por su interï¿½s, le responderemos en breve';
 
 	if($_POST && chk_crypt(req('code'))){
 		include('controller_contacto.php'); // HTML form

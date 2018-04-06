@@ -130,6 +130,7 @@
                             <a class="prev">
                             <div class="circle"><img alt="Next" src="graphics/noun_1086550.svg"></div></a> <a class="next">
                             <div class="circle"><img alt="Next" src="graphics/noun_1086550.svg"></div></a> <button class="submit circle"><img alt="Next" src="graphics/send.svg"></button>
+                            <button class="g-recaptcha" data-sitekey="6LdU6k8UAAAAABHZeJqi21ZgaP84d0r7MsP7HjaE" data-callback="YourOnSubmitFn"></button>
                         </div>
                     </form>
                 </div>

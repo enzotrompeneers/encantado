@@ -24,3 +24,4 @@ require_once dirname(__FILE__) . '/inc/footer.php';
 ?>
 <script src="js/particles.js"></script> 
 <script src="js/particles-config.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
