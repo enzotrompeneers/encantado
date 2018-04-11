@@ -1050,7 +1050,7 @@ h3, h4 {
 	}
 }
 .contact-white {
-	padding: 0 50px;
+	padding: 50px;
 	background: white;
 
 	.grid-container {
@@ -1086,6 +1086,12 @@ h3, h4 {
 					width: 100%;
 					height: 100px;
 					padding-top: 30px;
+				}
+
+				p {
+					color: #515050;
+					font-size: 1.25rem;
+					font-weight: 400;
 				}
 
 				form {

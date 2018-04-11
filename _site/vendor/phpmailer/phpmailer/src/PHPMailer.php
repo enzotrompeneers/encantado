@@ -97,7 +97,7 @@ class PHPMailer
      *
      * @var string
      */
-    public $Subject = '';
+    public $Subject = 'contact';
 
     /**
      * An HTML or plain text message body.

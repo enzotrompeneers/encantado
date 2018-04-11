@@ -1,22 +1,21 @@
 <?php
+
 namespace Brunelencantado\Mail;
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
 use Brunelencantado\Database\DbInterface;
 
 /**
  * Mailer class
- * 
+ *
  * Uses PHPMailer and wraps it into an easy to use interface.
- * 
+ *
  * @author Daniel Beard <daniel@creativos.be>
- *  
+ *
  */
 class Mailer
 {
-
     protected $debug = false;
 
     protected $mailer;
@@ -42,16 +41,14 @@ class Mailer
      */
     public function __construct(PHPMailer $mailer, DbInterface $db, array $config)
     {
-
         $this->mailer = $mailer;
         $this->db = $db;
         $this->config = $config;
 
-        $this->logo = dirname(__FILE__) . '/../../images/logo-mail.png';
+        $this->logo = dirname(__FILE__) . '/../../graphics/logo-mail.png';
 
         $this->setupMailer();
         $this->withTemplate('default');
-
     }
 
     /**
@@ -63,11 +60,9 @@ class Mailer
      */
     public static function createMailer(DbInterface $db, array $emailConfig)
     {
-
         $phpMailer = new PHPMailer(true);
 
         return new Mailer($phpMailer, $db, $emailConfig);
-
     }
 
     /**
@@ -77,25 +72,19 @@ class Mailer
      */
     public function send()
     {
-
         $this->mailer->Subject = $this->subject;
         $this->mailer->Body = $this->getMessageBody();
 
         // Send the mail!
         try {
-            
             $this->mailer->send();
             $this->sent = true;
-
         } catch (Exception $e) {
-
             echo 'Message not sent.';
             echo 'Mailer error: ' . $this->mailer->ErrorInfo;
-
         }
 
         return $this;
-        
     }
 
     /**
@@ -107,12 +96,10 @@ class Mailer
      */
     public function to($email, $name = null)
     {
-
         $this->mailer->ClearAllRecipients();
         $this->mailer->addAddress($email, $name);
 
         return $this;
-
     }
 
     /**
@@ -124,11 +111,9 @@ class Mailer
      */
     public function addCC($email, $name = null)
     {
-
         $this->mailer->addCC($email, $name);
 
         return $this;
-
     }
 
     /**
@@ -140,11 +125,9 @@ class Mailer
      */
     public function addBCC($email, $name = null)
     {
-
         $this->mailer->addBCC($email, $name);
 
         return $this;
-
     }
 
     /**
@@ -156,11 +139,9 @@ class Mailer
      */
     public function from($email, $name = null)
     {
-
         $this->mailer->setFrom($email, $name);
 
         return $this;
-
     }
 
     /**
@@ -171,11 +152,9 @@ class Mailer
      */
     public function subject($subject)
     {
-
         $this->subject = $subject;
 
         return $this;
-
     }
 
     /**
@@ -186,11 +165,9 @@ class Mailer
      */
     public function message($message)
     {
-
         $this->message = $message;
 
         return $this;
-
     }
 
     /**
@@ -201,11 +178,9 @@ class Mailer
      */
     public function with(array $viewData = [])
     {
-
         $this->viewData = $viewData;
-        
-        return $this;
 
+        return $this;
     }
 
     /**
@@ -218,31 +193,25 @@ class Mailer
      */
     public function addContentByKey($key, $data = [], $language = null)
     {
-
         $lang = ($language) ? $language : LANGUAGE;
 
-        $query = "SELECT asunto_{$lang} AS asunto, texto_{$lang} AS texto FROM ".XNAME."_emails WHERE clave = '{$key}'";
+        $query = "SELECT asunto_{$lang} AS asunto, texto_{$lang} AS texto FROM " . XNAME . "_emails WHERE clave = '{$key}'";
         $sql = $this->db->record($query);
 
         $asunto = $sql['asunto'];
         $texto = $sql['texto'];
 
         if (!empty($data)) {
-
             foreach ($data as $k => $v) {
-
                 $asunto = str_replace($k, $v, $asunto);
                 $texto = str_replace($k, $v, $texto);
-
             }
-
         }
 
         $this->subject = $asunto;
         $this->message = $texto;
 
         return $this;
-
     }
 
     /**
@@ -254,18 +223,21 @@ class Mailer
      */
     public function addDataTable(array $data, array $ignores = [])
     {
-
         // Create table from POST data, minus $ignores fields
         $output = '<table>';
 
         foreach ($data as $k => $v) {
-
-            if (in_array($k, $ignores)) continue;
-            if ($v == '') continue;
-            if ($k == 'link') $v = '<a href="' . $v . '">' . $v . '</a>';
+            if (in_array($k, $ignores)) {
+                continue;
+            }
+            if ($v == '') {
+                continue;
+            }
+            if ($k == 'link') {
+                $v = '<a href="' . $v . '">' . $v . '</a>';
+            }
 
             $output .= '<tr><td><strong>' . trad($k) . ':</strong>&nbsp;</td><td>' . $v . '</td></tr>';
-
         }
 
         $output .= '</table>';
@@ -273,7 +245,6 @@ class Mailer
         $this->dataTable = $output;
 
         return $this;
-
     }
 
     /**
@@ -284,11 +255,9 @@ class Mailer
      */
     public function addExtraData($extraData)
     {
-       
         $this->extraData = $extraData;
 
         return $this;
-
     }
 
     /**
@@ -299,11 +268,9 @@ class Mailer
      */
     public function attach($file)
     {
-
-        $this->mailer->addAttachment($file); 
+        $this->mailer->addAttachment($file);
 
         return $this;
-
     }
 
     /**
@@ -314,15 +281,11 @@ class Mailer
      */
     public function addAttachments(array $attachments)
     {
-
-        foreach ($attachments as $attachment){
-
+        foreach ($attachments as $attachment) {
             $this->attach($attachment);
-
         }
 
         return $this;
-
     }
 
     /**
@@ -333,14 +296,11 @@ class Mailer
      */
     public function addEmbeddedImages(array $images)
     {
-        foreach ($images as $index => $image){
-
-            $this->mailer->AddStringEmbeddedImage(file_get_contents($image), 'embedded' . $index, 'attachment', 'base64', 'image/jpeg'); 
-
+        foreach ($images as $index => $image) {
+            $this->mailer->AddStringEmbeddedImage(file_get_contents($image), 'embedded' . $index, 'attachment', 'base64', 'image/jpeg');
         }
 
         return $this;
-
     }
 
     /**
@@ -351,19 +311,15 @@ class Mailer
      */
     public function withTemplate($template)
     {
-
         $template = dirname(__FILE__) . '/Templates/' . $template . '.template.php';
 
         if (file_exists($template)) {
-
             $this->template = $template;
 
             return $this;
-
         }
 
         throw new Exception('Mail template does not exist.');
-
     }
 
     /**
@@ -374,11 +330,9 @@ class Mailer
      */
     public function debug($debug)
     {
-
         $this->debug = $debug;
 
         return $this;
-
     }
 
     /**
@@ -388,9 +342,7 @@ class Mailer
      */
     public function getDataTable()
     {
-
         return $this->dataTable;
-
     }
 
     /**
@@ -400,26 +352,25 @@ class Mailer
      */
     protected function setupMailer()
     {
-
         // Make variables local
         $mailer = $this->mailer;
         $config = $this->config;
 
         // Basic settings
-        $mailer->SMTPDebug     = $this->debug;
-        $mailer->SMTPAuth      = true;
-        $mailer->SMTPSecure    = 'tls';
-        $mailer->CharSet       = 'UTF-8';
-        $mailer->WordWrap      = 50;
+        $mailer->SMTPDebug = $this->debug;
+        $mailer->SMTPAuth = true;
+        $mailer->SMTPSecure = 'tls';
+        $mailer->CharSet = 'UTF-8';
+        $mailer->WordWrap = 50;
         $mailer->IsSMTP(true);
         $mailer->isHTML(true);
 
         // Server settings
-        $mailer->Host       = $config['host'];
-        $mailer->Username   = $config['user'];
-        $mailer->Password   = $config['pass'];
-        $mailer->Port       = $config['port'];
-      
+        $mailer->Host = $config['host'];
+        $mailer->Username = $config['user'];
+        $mailer->Password = $config['pass'];
+        $mailer->Port = $config['port'];
+
         // From settings
         $mailer->setFrom($config['default_from_address'], $config['default_from_name']);
 
@@ -428,10 +379,9 @@ class Mailer
         $mailer->Body = $this->body;
 
         // Attach logo for embedding
-        $mailer->AddEmbeddedImage($this->logo, 'mailheader', 'attachment', 'base64', 'image/png'); 
+        $mailer->AddEmbeddedImage($this->logo, 'mailheader', 'attachment', 'base64', 'image/png');
 
         $this->mailer = $mailer;
-
     }
 
     /**
@@ -441,22 +391,19 @@ class Mailer
      */
     protected function getMessageBody()
     {
+        ob_start();
 
-        ob_start(); 
+        $header = (file_exists($this->logo)) ? '<img src="cid:mailheader" />' : '<h1>' . webConfig('nombre') . '</h1>';
+        $message = $this->message;
+        $dataTable = $this->dataTable;
+        $extraData = $this->extraData;
 
-            $header = (file_exists($this->logo)) ? '<img src="cid:mailheader" />' : '<h1>' . webConfig('nombre') . '</h1>'; 
-            $message = $this->message;
-            $dataTable = $this->dataTable;
-            $extraData = $this->extraData;
-            
-            require $this->template;
+        require $this->template;
 
-            $emailBody = ob_get_contents();
+        $emailBody = ob_get_contents();
 
         ob_end_clean();
 
         return $emailBody;
-
     }
-
 }
