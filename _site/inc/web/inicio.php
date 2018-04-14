@@ -5,6 +5,7 @@
             <h1>
                 <?= trad('slogan') ?>
             </h1>
+
             <div id="typed-strings">
                 <?= art_sin('slogan') ?>
             </div>
