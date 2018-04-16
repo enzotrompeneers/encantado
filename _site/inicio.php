@@ -20,10 +20,8 @@ $oSliderProjects = new ProjectSliderRepository($db);
 $aSliderProjects = $oSliderProjects->getList();
 
 if ($_POST) {
-    echo 'post';
     function post_captcha($user_response)
     {
-        echo 'post captcha';
         $fields_string = '';
         $fields = [
             'secret' => '6LdU6k8UAAAAAJ6erNPi3ONPpW3880mVpAmUjBGd',
@@ -46,9 +44,10 @@ if ($_POST) {
         return json_decode($result, true);
     }
 
-
-    // out of recaptcha fix this...
-    $formContent = $_POST;
+    // Call the function post_captcha
+    $res = post_captcha($_POST['g-recaptcha-response']);
+    if ($res['success']) {
+        $formContent = $_POST;
         $output = '';
 
         $required = [
@@ -78,14 +77,8 @@ if ($_POST) {
                     ->addContentByKey('contacto')
                     ->send();
 
-            $view = 'contacto_gracias';
+            $view = 'inicio_gracias';
         }
-
-    // Call the function post_captcha
-    $res = post_captcha($_POST['g-recaptcha-response']);
-    if ($res['success']) {
-        echo 'success';
-        
     }
 }
 
@@ -97,11 +90,11 @@ require_once dirname(__FILE__) . '/inc/footer.php';
 <script src="js/particles.js"></script>
 <script src="js/particles-config.js"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+
 <script>
     function onSubmit(token) {
-        document.getElementById("b-recaptcha").submit();
+        document.getElementById("inicioform").submit();
     }
 </script>
 <script src="js/recaptcha.js"></script>
-
-

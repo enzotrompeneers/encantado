@@ -1,6 +1,6 @@
 <div class="grid-x grid-margin-x">
     <div class="cell">
-        <p class="padding-top: 15px;">
+        <p class="gracias-contacto">
             <?= trad('gracias') ?>
         </p>
     </div>

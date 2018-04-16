@@ -81,14 +81,9 @@ require_once dirname(__FILE__) . '/inc/footer.php';
 ?>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNPp3lV1T5S0svmrMKTVERMnkk8PlMMbE&callback=myMap"
     type="text/javascript"></script>
-
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <script>
-    function onSubmit(token) {
-        document.getElementById("i-recaptcha").submit();
-    }
-
     function myMap() {
         var myCenter = new google.maps.LatLng( <?=webconfig('lat');?>,<?=webconfig('lon');?>);
         var mapCanvas = document.getElementById("googleMap");
@@ -100,6 +95,9 @@ require_once dirname(__FILE__) . '/inc/footer.php';
                 position: myCenter
             });
             marker.setMap(map);
+        }
+        function onSubmit(token) {
+            document.getElementById("contactoform").submit();
         }
 </script>
 <script src="js/recaptcha.js"></script>
