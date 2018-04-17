@@ -14,23 +14,40 @@
                 <div class="cell small-5">
                     <h2>Encantado</h2>
                     <p>
-                        Telefono:
-                        <a href="tel:+34965703302">+34 965 703 302</a>
-                        <br> Movil:
-                        <a href="tel:+34651557615">+34 965 703 302</a>
-                        <br> Email:
-                        <a href="mailto:info@encantado.net">info@encantado.net</a>
+                        <?=trad('telefono');?>:
+                        <a href="tel:<?=webConfig('telefono');?>">
+                            <?=webConfig('telefono');?>
+                        </a>
+                        <br>
+                        <?=trad('movil');?>:
+                        <a href="tel:<?=webConfig('movil');?>">
+                            <?=webConfig('movil');?>
+                        </a>
+                        <br>
+                        <?=trad('email');?>:
+                        <a href="mailto:<?=webConfig('email');?>">
+                            <?=webConfig('email');?>
+                        </a>
                     </p>
                     <p>
-                        <b>Diseño web Torrevieja</b>
-                        <br> Avda. de los Nenúfares S/N
-                        <br> Vivero de empresas, despacho 15
-                        <br> 03181 Torrevieja (Alicante), Spain
+                        <b>
+                            <?= trad('diseno_web'); ?>
+                            <?= webConfig('ciudad'); ?>
+                        </b>
                         <br>
+                        <?= webConfig('calle'); ?>
+                        <br>
+                        <?= webConfig('detalle_direccion'); ?>
+                        <br>
+                        <?= webConfig('codigo_postal'); ?>
+                        <?= webConfig('ciudad'); ?>
+                        (
+                        <?= webConfig('provincia') ?>),
+                        <?= trad('espana'); ?>
                     </p>
                 </div>
                 <div class="cell small-7">
-                    <?php include "inc/web/{$view}.php"?>
+                    <?php include "inc/web/{$view}.php" ?>
                 </div>
             </div>
         </div>

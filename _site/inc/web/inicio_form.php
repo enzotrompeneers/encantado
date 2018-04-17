@@ -26,7 +26,7 @@
                 <div class="small-12 medium-6 cell">
                     <label for="telefono">
                         <?= trad('telefono') ?>*</label>
-                    <input id="telefono" name="telefono" required pattern="number" type="text">
+                    <input id="telefono" name="telefono" required pattern="^[0-9\+\.\-\/]+$" type="text">
                 </div>
                 <div class="small-12 medium-6 cell">
                     <label for="empresa">

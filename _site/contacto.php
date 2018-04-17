@@ -79,8 +79,7 @@ require_once dirname(__FILE__) . '/inc/html_head.php';
 require_once dirname(__FILE__) . '/inc/web/contacto.php';
 require_once dirname(__FILE__) . '/inc/footer.php';
 ?>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNPp3lV1T5S0svmrMKTVERMnkk8PlMMbE&callback=myMap"
-    type="text/javascript"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNPp3lV1T5S0svmrMKTVERMnkk8PlMMbE&callback=myMap" type="text/javascript"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <script>

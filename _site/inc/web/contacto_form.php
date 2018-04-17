@@ -9,25 +9,25 @@
                 <label for="nombre">
                     <?=trad('nombre')?>*</label>
                 <input type="text" id="nombre" value="<?php if (!empty($value['nombre'])) {
-        echo $value['nombre'];
-    } ?>" name="nombre" required />
+    echo $value['nombre'];
+} ?>" name="nombre" required />
                 <label for="email">
                     <?=trad('email')?>*</label>
                 <input type="email" id="email" name="email" value="<?php if (!empty($value['email'])) {
-        echo $value['email'];
-    } ?>" required/>
+    echo $value['email'];
+} ?>" required/>
             </div>
             <div class="small-12 medium-6 cell">
                 <label for="telefono">
                     <?=trad('telefono')?>*</label>
                 <input type="text" id="telefono" name="telefono" value="<?php if (!empty($value['telefono'])) {
-        echo $value['telefono'];
-    } ?>" required />
+    echo $value['telefono'];
+} ?>" required pattern="^[0-9\+\.\-\/]+$" />
                 <label for="localidad">
                     <?=trad('localidad')?>*</label>
                 <input type="text" id="localidad" name="localidad" value="<?php if (!empty($value['localidad'])) {
-        echo $value['localidad'];
-    }?>" required />
+    echo $value['localidad'];
+}?>" required />
             </div>
             <div class="small-12 cell">
                 <label for="encontrado">Hoe gevonden?*
@@ -50,8 +50,8 @@
                 </label>
                 <label for="mensaje">mensaje*
                     <textarea id="mensaje" name="mensaje" rows="5" required><?php if (!empty($value['mensaje'])) {
-        echo $value['mensaje'];
-    }?></textarea>
+    echo $value['mensaje'];
+}?></textarea>
                 </label>
                 <!--
                 <button type="submit" class="g-recaptcha button btn-enviar" data-sitekey="6LdU6k8UAAAAABHZeJqi21ZgaP84d0r7MsP7HjaE" data-callback="onSubmit">
